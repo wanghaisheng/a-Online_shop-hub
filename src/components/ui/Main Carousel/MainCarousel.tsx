@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import mc1 from "../../../assets/mc11.jpg";
-import mc2 from "../../../assets/mc22.jpg";
+import mc2 from "../../../assets/mc2.jpg";
 import mc3 from "../../../assets/mc33.jpg";
 import {
   BsChevronCompactLeft,
@@ -43,7 +43,7 @@ function MainCarousel() {
     <div className="relative m-auto flex h-[750px] w-full max-w-[2000px] justify-center">
       <div
         style={{ backgroundImage: `url(${images[imageIndex].image})` }}
-        className="h-full w-full bg-cover bg-top bg-no-repeat duration-500 "
+        className="h-full w-full bg-cover bg-left-top bg-no-repeat duration-500 "
       ></div>
       <h1 className="text-f absolute bottom-[350px] right-[200px] block cursor-pointer  text-red-300">
         {images[imageIndex].title}
