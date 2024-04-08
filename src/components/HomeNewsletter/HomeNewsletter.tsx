@@ -1,31 +1,36 @@
 //import React from 'react'
 import styles from "../HomeNewsletter/homeNewsletter.module.css";
+import { LiaArrowRightSolid } from "react-icons/lia";
 
 
 function HomeNewsletter() {
   return (
     <section className=" flex h-72 w-screen bg-black text-white ">
       <div className=" h-72 w-full p-20 pr-10">
-        <h2 className=" text-3xl">
+        <h2 className=" text-4xl leading-8">
           STAY UP TO DATE WITH THE LATEST TRENDS AND SPECIAL OFFERS
         </h2>
-        <p className=" text-xl">SIGN UP FOR OUR NEWSLETTER</p>
+        <p className="text-xl pt-3 font-extralight">SIGN UP FOR OUR NEWSLETTER</p>
       </div>
       <div className="h-72 w-full  p-20  pl-10">
         <form className="flex  h-full  flex-col ">
-          <span>
+          <span className="flex">
             <input
-              className=" w-[400px] border-[1px] bg-transparent p-1 text-lg rounded-none focus-visible:outline-none"
+              className=" w-[400px] rounded-none border-[1px]  bg-transparent p-1 text-lg focus-visible:outline-none"
               type="email"
               id="email"
               placeholder="ENTER YOUR E-MAIL ADDRESS"
             ></input>
+            <button className="block h-full w-[40px] cursor-pointer border-[1px] border-l-0">
+              {" "}
+              <LiaArrowRightSolid size={30} className="pl-1" />
+            </button>
           </span>
           <div className="mt-5  flex items-start">
             <label className={styles.form_checkbox}>
               <input type="checkbox" />
               <span className={styles.checkbox}></span>
-              <p className=" font-extralight">
+              <p className="font-extralight">
                 I have read and understand the information regarding the use of
                 my personal data contained in the Privacy Policy and consent to
                 receiving personalized commercial communications from
