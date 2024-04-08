@@ -1,0 +1,40 @@
+.form_checkbox {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    /* the rules below move the text <p> of the checkbox content to the right */
+    padding-left: 35px;   
+    margin-bottom: 12px;
+
+    font-size: 14px;
+    line-height: 18px;
+   
+}
+
+.form_checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+.form_checkbox .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: black;
+    border: 1px solid white;
+
+}
+
+.form_checkbox input:checked ~ .checkbox {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/27/White_check.svg);
+    /* svg icon from site: https://commons.wikimedia.org/wiki/File:White_check.svg */
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}

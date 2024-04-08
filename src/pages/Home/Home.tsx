@@ -5,6 +5,7 @@ import HomeTiles from "../../components/HomeTiles/HomeTiles";
 //import imgSpring from "../../assets/secSpring.jpg";
 import imgMix from "../../assets/secMix.jpg";
 import spring from "../../assets/spring.jpg";
+import HomeNewsletter from "../../components/HomeNewsletter/HomeNewsletter";
 
 function Home() {
   return (
@@ -40,6 +41,8 @@ function Home() {
       </section>
 
       <HomeTiles />
+
+      <HomeNewsletter />
       
     </div>
   );
