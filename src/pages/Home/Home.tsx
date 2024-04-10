@@ -1,4 +1,3 @@
-// import React from 'react';
 // import styles from "./home.module.css";
 import MainCarousel from "../../components/ui/Main Carousel/MainCarousel";
 import HomeTiles from "../../components/HomeTiles/HomeTiles";
@@ -6,6 +5,8 @@ import HomeTiles from "../../components/HomeTiles/HomeTiles";
 import imgMix from "../../assets/secMix.jpg";
 import spring from "../../assets/spring.jpg";
 import HomeNewsletter from "../../components/HomeNewsletter/HomeNewsletter";
+import Footer from "../../components/Footer/Footer";
+
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
 
       <section className="h-full w-full">
         <div
-          className="h-[740px] max-h-full w-full bg-cover bg-top bg-no-repeat"
+          className="h-[760px] max-h-full w-full bg-cover bg-top bg-no-repeat"
           style={{
             backgroundImage: `url(${imgMix})`,
           }}
@@ -43,6 +44,8 @@ function Home() {
       <HomeTiles />
 
       <HomeNewsletter />
+
+      <Footer />
       
     </div>
   );

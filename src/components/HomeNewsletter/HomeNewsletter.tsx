@@ -8,9 +8,11 @@ function HomeNewsletter() {
     <section className=" flex h-72 w-screen bg-black text-white ">
       <div className=" h-72 w-full p-20 pr-10">
         <h2 className=" text-4xl leading-8">
-          STAY UP TO DATE WITH THE LATEST TRENDS AND SPECIAL OFFERS
+          STAYUP-TO-DATE ON THE LATEST TRENDS AND EXCLUSIVE OFFERS
         </h2>
-        <p className="text-xl pt-3 font-extralight">SIGN UP FOR OUR NEWSLETTER</p>
+        <p className="pt-3 text-xl font-extralight">
+          SUBSCRIBE TO OUR NEWSLETTER
+        </p>
       </div>
       <div className="h-72 w-full  p-20  pl-10">
         <form className="flex  h-full  flex-col ">
@@ -30,7 +32,7 @@ function HomeNewsletter() {
             <label className={styles.form_checkbox}>
               <input type="checkbox" />
               <span className={styles.checkbox}></span>
-              <p className="font-extralight">
+              <p className="max-w-[450px] font-extralight">
                 I have read and understand the information regarding the use of
                 my personal data contained in the Privacy Policy and consent to
                 receiving personalized commercial communications from
