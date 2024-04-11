@@ -8,7 +8,7 @@ function HomeNewsletter() {
     <section className=" flex h-72 w-screen bg-black text-white ">
       <div className=" h-72 w-full p-20 pr-10">
         <h2 className=" text-4xl leading-8">
-          STAYUP-TO-DATE ON THE LATEST TRENDS AND EXCLUSIVE OFFERS
+          STAY UP-TO-DATE ON THE LATEST TRENDS AND EXCLUSIVE OFFERS
         </h2>
         <p className="pt-3 text-xl font-extralight">
           SUBSCRIBE TO OUR NEWSLETTER
