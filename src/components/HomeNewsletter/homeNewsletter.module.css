@@ -3,12 +3,11 @@
     display: block;
     position: relative;
     /* the rules below move the text <p> of the checkbox content to the right */
-    padding-left: 35px;   
+    padding-left: 30px;   
     margin-bottom: 12px;
 
     font-size: 14px;
     line-height: 18px;
-   
 }
 
 .form_checkbox input {
@@ -28,7 +27,6 @@
     width: 18px;
     background-color: black;
     border: 1px solid white;
-
 }
 
 .form_checkbox input:checked ~ .checkbox {
