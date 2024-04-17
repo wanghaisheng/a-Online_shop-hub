@@ -1,52 +1,63 @@
 // import styles from "./home.module.css";
 import MainCarousel from "../../components/ui/Main Carousel/MainCarousel";
 import HomeTiles from "../../components/HomeTiles/HomeTiles";
-//import imgSpring from "../../assets/secSpring.jpg";
+import manSolo from "../../assets/mansolo.jpg";
 import imgMix from "../../assets/secMix.jpg";
 import spring from "../../assets/spring.jpg";
+import springMobile from "../../assets/springmobile.jpg";
 import HomeNewsletter from "../../components/HomeNewsletter/HomeNewsletter";
 import Footer from "../../components/Footer/Footer";
+import NavLinksHome from "../../components/ui/NavLinksHome/NavLinksHome";
 
 
 function Home() {
   return (
     <div className="h-full w-full max-w-[2000px]">
       <MainCarousel />
-      {/* <section className={styles.hello}>Hello Online_shop!</section> */}
-
-      <section className="h-full w-full">
+      <section className="relative h-full w-full">
+        {/* mobile image */}
         <div
-          className="h-[760px] max-h-full w-full bg-cover bg-top bg-no-repeat"
+          className="h-[760px] max-h-full w-full bg-cover bg-top bg-no-repeat lg:hidden"
+          style={{
+            backgroundImage: `url(${manSolo})`,
+          }}
+        ></div>
+        {/* desktop image */}
+        <div
+          className="hidden h-[760px] max-h-full w-full bg-cover bg-top bg-no-repeat lg:block"
           style={{
             backgroundImage: `url(${imgMix})`,
           }}
-        >
-          <div className="py-[180px] text-center text-5xl font-extrabold">
-            Women
-          </div>
-          <div className="text-center text-5xl font-extrabold">Men</div>
-        </div>
+        ></div>
+        <NavLinksHome title={"Women"} link={"/"} />
+        <h1 className="absolute bottom-4 right-0 p-20 text-5xl font-extrabold">
+          Men
+        </h1>
       </section>
 
-      <section className="h-full w-full">
+      <section className="relative h-full w-full">
+        {/* mobile image */}
         <div
-          className="block h-[600px] w-full bg-cover bg-left-top bg-no-repeat"
+          className="block h-[670px] w-full bg-cover bg-center bg-no-repeat sm:hidden"
+          style={{
+            backgroundImage: `url(${springMobile})`,
+          }}
+        ></div>
+        {/* desktop image */}
+        <div
+          className="hidden h-[670px] w-full bg-cover bg-left-top bg-no-repeat sm:block"
           style={{
             backgroundImage: `url(${spring})`,
           }}
-        >
-          <div className="pr-20 pt-96 text-right text-8xl font-extralight text-pink-400 ">
-            Spring has come!
-          </div>
-        </div>
+        ></div>
+
+        <h1 className="absolute bottom-4 right-0 p-20 text-8xl font-extralight text-pink-400">
+          Spring has come!
+        </h1>
       </section>
-
       <HomeTiles />
-
       <HomeNewsletter />
-
       <Footer />
-      
     </div>
   );
 }

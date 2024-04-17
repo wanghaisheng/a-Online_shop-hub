@@ -4,27 +4,29 @@ import { LiaArrowRightSolid } from "react-icons/lia";
 
 function HomeNewsletter() {
   return (
-    <section className="flex flex-col w-full bg-black text-white p-5 lg:flex-row h-full">
-
-      <div className="p-6 md:p-20 lg:pr-2 w-full">
-        <h2 className="text-3xl sm:text-4xl leading-7 sm:leading-8 font-semibold">
+    <section className="flex h-full w-full flex-col bg-black p-5 text-white lg:flex-row">
+      <div className="w-full p-6 md:p-20 lg:pr-2">
+        <h2 className="text-3xl font-semibold leading-7 sm:text-4xl sm:leading-8">
           STAY UP-TO-DATE ON THE LATEST TRENDS AND EXCLUSIVE OFFERS
         </h2>
-        <p className="sm:pt-3 sm:text-xl font-extralight text-lg pt-2">
+        <p className="pt-2 text-lg font-extralight sm:pt-3 sm:text-xl">
           SUBSCRIBE TO OUR NEWSLETTER
         </p>
       </div>
 
-      <div className="h-full w-full p-6 md:p-20 pt-5 md:pt-0 lg:pt-20">
+      <div className="h-full w-full p-6 pt-5 md:p-20 md:pt-0 lg:pt-20">
         <form className="flex flex-col">
           <span className="flex">
             <input
-              className="w-[220px] sm:w-[400px] rounded-none border-[1px] bg-transparent p-1 sm:text-lg focus-visible:outline-none text-sm"
+              className="w-[220px] rounded-none border-[1px] bg-transparent p-1 text-sm focus-visible:outline-none sm:w-[400px] sm:text-lg"
               type="email"
               id="email"
               placeholder="ENTER YOUR E-MAIL ADDRESS"
             ></input>
-            <button className="block sm:h-[37.6px] h-full sm:w-[40px] cursor-pointer border-[1px] border-l-0 w-[32px]">
+            <button
+              type="submit"
+              className="block h-full w-[32px] cursor-pointer border-[1px] border-l-0 sm:h-[37.6px] sm:w-[40px]"
+            >
               {" "}
               <LiaArrowRightSolid size={30} className="pl-1 pr-1 sm:pr-0" />
             </button>
@@ -33,7 +35,7 @@ function HomeNewsletter() {
             <label className={styles.form_checkbox}>
               <input type="checkbox" />
               <span className={styles.checkbox}></span>
-              <p className=" font-extralight pr-14 2xl:max-w-[750px]">
+              <p className=" pr-14 font-extralight 2xl:max-w-[750px]">
                 I have read and understand the information regarding the use of
                 my personal data contained in the Privacy Policy and consent to
                 receiving personalized commercial communications from

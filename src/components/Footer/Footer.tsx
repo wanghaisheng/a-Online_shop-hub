@@ -15,12 +15,12 @@ function Footer() {
       id="footer"
       className="m-6 flex flex-col  items-center justify-center"
     >
-      <div className=" mt-7 w-dvw border-b-[2px] border-t-[2px] p-5 text-center">
+      <section className=" mt-7 w-dvw border-b-[2px] border-t-[2px] p-5 text-center">
         Tu mogą być wszystkie kategorie też wyszczególnione - zobaczymy
-      </div>
+      </section>
 
-      <div className=" m-10 flex  w-full flex-col items-center  justify-center md:flex-row md:items-start md:justify-evenly">
-        <div className="ml-5 w-[250px] p-5">
+      <section className=" m-10 flex  w-full flex-col items-center  justify-center md:flex-row md:items-start md:justify-evenly">
+        <article className="ml-5 w-[250px] p-5">
           <h3 className="pb-5">Do you need help?</h3>
           <a
             href="#footer"
@@ -46,9 +46,9 @@ function Footer() {
           >
             Cookie preferences
           </a>
-        </div>
+        </article>
 
-        <div className="ml-5 w-[250px] p-5 md:ml-10">
+        <article className="ml-5 w-[250px] p-5 md:ml-10">
           <h3 className=" pb-5">About us</h3>
           <a
             href="#footer"
@@ -69,9 +69,9 @@ function Footer() {
           >
             Work with us
           </a>
-        </div>
+        </article>
 
-        <div className="ml-5 w-[250px] p-5">
+        <article className="ml-5 w-[250px] p-5">
           <h3 className="pb-5">Purchase Gift Card</h3>
           <a
             href="#footer"
@@ -91,11 +91,11 @@ function Footer() {
           >
             Purchase of Gift Card
           </a>
-        </div>
-      </div>
+        </article>
+      </section>
 
-      <div className="flex w-dvw flex-wrap justify-evenly border-b-[2px] border-t-[2px] p-8 sm:h-[67px] sm:flex-nowrap sm:p-0">
-        <div className="container mx-auto flex h-full items-center justify-center">
+      <section className="flex w-dvw flex-wrap justify-evenly border-b-[2px] border-t-[2px] p-8 sm:h-[67px] sm:flex-nowrap sm:p-0">
+        <article className="container mx-auto flex h-full items-center justify-center">
           <BsFacebook
             size={23}
             className="mr-4  h-[25px] w-[25px] cursor-pointer hover:fill-sky-500"
@@ -116,30 +116,30 @@ function Footer() {
             size={23}
             className="h-[25px] w-[25px] cursor-pointer hover:fill-red-600"
           />
-        </div>
+        </article>
 
-        <div className="container mx-auto hidden h-full items-center justify-center border-l-[2px] lg:flex">
+        <article className="container mx-auto hidden h-full items-center justify-center border-l-[2px] lg:flex">
           <BsApple size={22} className="mr-1" />
           <p className=" font-medium">app iOS</p>
-        </div>
+        </article>
 
-        <div className="container mx-auto hidden h-full items-center justify-center border-x-[2px] lg:flex">
+        <article className="container mx-auto hidden h-full items-center justify-center border-x-[2px] lg:flex">
           <BsAndroid2 size={22} className="mr-1 hover:fill-green-600" />
           <p className=" font-medium">app Android</p>
-        </div>
+        </article>
 
-        <div className="container mx-auto flex h-full items-center justify-center pt-10 sm:border-l-[2px] sm:pt-0 lg:border-l-0">
+        <article className="container mx-auto flex h-full items-center justify-center pt-10 sm:border-l-[2px] sm:pt-0 lg:border-l-0">
           <p>
             <span className=" italic">Online_shop</span> | English
           </p>
-        </div>
-      </div>
+        </article>
+      </section>
 
-      <div className="container mx-auto mt-10 box-border flex w-full flex-wrap items-center justify-center text-sm">
+      <section className="container mx-auto mt-10 box-border flex w-full flex-wrap items-center justify-center text-sm">
         <a
           href="https://github.com/RosinskaK"
           target="_blank"
-          className="block cursor-pointer pb-1 text-slate-500 hover:font-bold hover:text-pink-400 hover:underline hover:underline-offset-1"
+          className="block cursor-pointer pb-1 text-slate-500 hover:text-pink-400 hover:underline hover:underline-offset-1"
         >
           Created by &copy;Kasia Rosińska
         </a>
@@ -159,7 +159,7 @@ function Footer() {
         <a href="#footer" className="footer-footers">
           Unsubscribe from newsletter
         </a>
-      </div>
+      </section>
     </footer>
   );
 }

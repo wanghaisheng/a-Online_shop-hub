@@ -43,9 +43,9 @@ function MainCarousel() {
     <div className="relative m-auto flex h-[750px] w-full max-w-[2000px] justify-center">
       <div
         style={{ backgroundImage: `url(${images[imageIndex].image})` }}
-        className="h-full w-full bg-cover bg-left-top bg-no-repeat duration-700"
+        className="h-full w-full bg-cover bg-center bg-no-repeat duration-700"
       ></div>
-      <h1 className="text-f absolute bottom-[350px] right-[200px] block cursor-pointer  text-red-300">
+      <h1 className=" absolute bottom-[350px] right-[200px] block cursor-pointer  text-red-300">
         {images[imageIndex].title}
       </h1>
       <div className="absolute bottom-[50%]  left-8 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110">
