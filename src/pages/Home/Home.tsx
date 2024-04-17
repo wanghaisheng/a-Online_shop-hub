@@ -8,11 +8,13 @@ import springMobile from "../../assets/springmobile.jpg";
 import HomeNewsletter from "../../components/HomeNewsletter/HomeNewsletter";
 import Footer from "../../components/Footer/Footer";
 import NavLinksHome from "../../components/ui/NavLinksHome/NavLinksHome";
+import BarNavigation from "../../components/BarNavigation/BarNavigation";
 
 
 function Home() {
   return (
     <div className="h-full w-full max-w-[2000px]">
+      <BarNavigation />
       <MainCarousel />
       <section className="relative h-full w-full">
         {/* mobile image */}
@@ -38,7 +40,7 @@ function Home() {
       <section className="relative h-full w-full">
         {/* mobile image */}
         <div
-          className="block h-[670px] w-full bg-cover bg-center bg-no-repeat sm:hidden"
+          className="block h-[600px] w-full bg-cover bg-center bg-no-repeat sm:hidden"
           style={{
             backgroundImage: `url(${springMobile})`,
           }}

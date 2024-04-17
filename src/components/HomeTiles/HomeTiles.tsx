@@ -1,4 +1,3 @@
-//import React from 'react'
 import kf1 from "../../assets/kf1.jpg";
 import kf2 from "../../assets/kf2.jpg";
 import kf3 from "../../assets/kf3.jpg";
@@ -12,7 +11,7 @@ function HomeTiles() {
     <section className="h-full w-full">
       <article className="grid grid-cols-1 lg:grid-cols-2">
         <div
-          className="relative h-[730px] max-h-full w-full bg-cover bg-center bg-no-repeat"
+          className="relative aspect-square max-h-full min-h-[500px] w-full bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url(${kf3})`,
           }}
@@ -21,7 +20,7 @@ function HomeTiles() {
         </div>
 
         <div
-          className="relative h-[730px] max-h-full w-full bg-cover bg-top bg-no-repeat"
+          className="relative aspect-square max-h-full min-h-[500px] w-full bg-cover bg-top bg-no-repeat"
           style={{
             backgroundImage: `url(${kf1})`,
           }}
@@ -31,7 +30,7 @@ function HomeTiles() {
       </article>
       <article className="grid grid-cols-1 lg:grid-cols-2">
         <div
-          className="relative h-[730px] max-h-full w-full bg-cover bg-bottom bg-no-repeat"
+          className="relative aspect-square max-h-full min-h-[500px] w-full bg-cover bg-bottom bg-no-repeat"
           style={{
             backgroundImage: `url(${kf4})`,
           }}
@@ -39,7 +38,7 @@ function HomeTiles() {
           <NavLinksHome title={"ACCESSORIES"} link={"/polllll"} />
         </div>
         <div
-          className="relative h-[730px] max-h-full w-full bg-cover bg-top bg-no-repeat"
+          className="relative aspect-square max-h-full min-h-[500px] w-full bg-cover bg-top bg-no-repeat"
           style={{
             backgroundImage: `url(${kf2})`,
           }}

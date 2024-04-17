@@ -7,12 +7,12 @@ function NavLinksHome( {title, link}) {
         <h1 className="absolute right-1/2 top-1/2 block -translate-y-1/2 translate-x-1/2 transform cursor-pointer text-white">
           {title}
         </h1>
-        <a
+        <p
           className="absolute right-1/2 top-1/2 block -translate-y-1/2 translate-x-1/2 transform cursor-pointer border-b-2 text-xl font-normal text-white"
           style={{ marginTop: "60px", textDecorationThickness: "1.5px" }}
         >
           View all
-        </a>
+        </p>
       </article>
     </NavLink>
   );
