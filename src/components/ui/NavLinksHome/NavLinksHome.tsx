@@ -1,6 +1,11 @@
 import { NavLink } from "react-router-dom";
 
-function NavLinksHome( {title, link}) {
+type NavLinksHomeProps = {
+  title: string;
+  link: string;
+};
+
+function NavLinksHome({ title, link }: NavLinksHomeProps) {
   return (
     <NavLink to={link}>
       <article>

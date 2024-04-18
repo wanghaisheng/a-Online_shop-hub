@@ -21,6 +21,7 @@ function HomeNewsletter() {
               className="w-[220px] rounded-none border-[1px] bg-transparent p-1 text-sm focus-visible:outline-none sm:w-[400px] sm:text-lg"
               type="email"
               id="email"
+              name="email"
               placeholder="ENTER YOUR E-MAIL ADDRESS"
             ></input>
             <button
@@ -33,7 +34,7 @@ function HomeNewsletter() {
           </span>
           <div className="mt-5 flex items-start">
             <label className={styles.form_checkbox}>
-              <input type="checkbox" />
+              <input type="checkbox" id="chcecbox" />
               <span className={styles.checkbox}></span>
               <p className=" pr-14 font-extralight 2xl:max-w-[750px]">
                 I have read and understand the information regarding the use of
