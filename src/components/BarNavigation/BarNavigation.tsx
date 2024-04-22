@@ -11,20 +11,22 @@ function BarNavigation() {
     <header className=" fixed top-0 z-10 flex h-16 w-full ">
       <nav className="flex h-full w-full items-center justify-between p-2">
         <div className="flex">
-          <TransparentBtnNavigation link="/">
-            <CgMenuLeft size={40} className=" text-white drop-shadow-md" />
+          <TransparentBtnNavigation link="/clothing">
+            <CgMenuLeft size={40} title="Menu" className=" text-white drop-shadow-md" />
           </TransparentBtnNavigation>
           <Logo />
         </div>
         <div className="flex pr-2">
           <TransparentBtnNavigation link="/favorite">
             <GoHeart
+              title="Favorite"
               size={30}
               className=" cursor-pointer text-white drop-shadow-md"
             />
           </TransparentBtnNavigation>
           <TransparentBtnNavigation link="/cart">
             <BsCart4
+              title="cart"
               size={30}
               className=" cursor-pointer text-white drop-shadow-md"
             />

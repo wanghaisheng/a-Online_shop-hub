@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home";
 import "./css/App.css";
 import Favorite from "./pages/Favorite/Favorite";
 import Cart from "./pages/Cart/Cart";
+import Clothing from "./pages/Clothing/Clothing";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/clothing" element={<Clothing />} />
       </Routes>
     </Router>
   );
