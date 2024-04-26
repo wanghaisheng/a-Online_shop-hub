@@ -16,7 +16,8 @@ function HomeTiles() {
             backgroundImage: `url(${kf3})`,
           }}
         >
-          <NavLinksHome title="SHOES" link="/cart" />
+          <NavLinksHome title="SHOES" link="/clothing" />
+          
         </div>
 
         <div
@@ -25,7 +26,7 @@ function HomeTiles() {
             backgroundImage: `url(${kf1})`,
           }}
         >
-          <NavLinksHome title="CASUAL" link="" />
+          <NavLinksHome title="CASUAL" link="/clothing" />
         </div>
       </article>
       <article className="grid grid-cols-1 lg:grid-cols-2">
@@ -35,7 +36,7 @@ function HomeTiles() {
             backgroundImage: `url(${kf4})`,
           }}
         >
-          <NavLinksHome title="ACCESSORIES" link="" />
+          <NavLinksHome title="ACCESSORIES" link="/clothing" />
         </div>
         <div
           className="relative aspect-square max-h-full min-h-[500px] w-full bg-cover bg-top bg-no-repeat"
@@ -43,7 +44,7 @@ function HomeTiles() {
             backgroundImage: `url(${kf2})`,
           }}
         >
-          <NavLinksHome title="JEWELRY" link="" />
+          <NavLinksHome title="JEWELRY" link="/clothing" />
         </div>
       </article>
     </section>
