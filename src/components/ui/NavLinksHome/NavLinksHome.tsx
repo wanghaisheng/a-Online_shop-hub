@@ -1,14 +1,27 @@
+// import { RootState } from "@reduxjs/toolkit/query";
+
+import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { passingCategory } from "../../../Global state/categoryOfQuery/categorySlice";
 
 type NavLinksHomeProps = {
   title: string;
   link: string;
+  query?: string;
 };
 
-function NavLinksHome({ title, link }: NavLinksHomeProps) {
+function NavLinksHome({ title, link, query }: NavLinksHomeProps) {
+
+ 
+
+  // const handleClick = (category: AppDispatch) => 
+  //   dispatch(passingCategory(category));
+
+  const dispatch = useDispatch();
+
   return (
       <NavLink to={link}>
-        <article>
+        <article onClick={() => dispatch(passingCategory(query))}>
           <h1 className="absolute right-1/2 top-1/2 block -translate-y-1/2 translate-x-1/2 transform cursor-pointer text-white">
             {title}
           </h1>

@@ -16,7 +16,7 @@ function HomeTiles() {
             backgroundImage: `url(${kf3})`,
           }}
         >
-          <NavLinksHome title="SHOES" link="/clothing" />
+          <NavLinksHome title="SHOES" link="/clothing" query="JEWELRY"/>
           
         </div>
 

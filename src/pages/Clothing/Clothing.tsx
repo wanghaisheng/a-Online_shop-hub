@@ -1,18 +1,26 @@
 //import React from 'react'
+import { RootState} from "../../Global state/store";
+import { useSelector } from "react-redux";
 import BarNavigation from "../../components/BarNavigation/BarNavigation";
-import SelectedClothing from "../../components/SelectedClothing/SelectedClothing";
+import QueryFetchedJewelry from "../../QueryFetched/QueryFetchedJewelry";
+//import SelectedClothing from "../../components/SelectedClothing/SelectedClothing";
 
-type QueryProps = {
-  jewelry?: boolean;
-};
+// type QueryProps = {
+//   jewelry?: boolean;
+// };
 
-function Clothing({ jewelry }: QueryProps) {
+ 
+
+function Clothing() {
+
+  const chosedCategory = useSelector((state: RootState) => state.category.value);
+
   return (
     <div className=" flex h-full w-full justify-center">
       <BarNavigation />
       <div className=" mt-20 h-full w-[1000px] border-emerald-700 bg-slate-400">
         <h2 className=" text-center">Clothing</h2>
-        <SelectedClothing jewelry={jewelry} />
+        {chosedCategory === "JEWELRY" && <QueryFetchedJewelry/>}
       </div>
     </div>
   );
