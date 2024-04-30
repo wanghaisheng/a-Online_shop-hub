@@ -15,6 +15,8 @@ function QueryFetchedJewelry() {
     queryFn: fetchJewelry,
   });
 
+  //console.log(fetchedJewelry);
+
   if (fetchedJewelry.isError) {
     return <h3>{JSON.stringify(fetchedJewelry.error.message)}</h3>;
   }

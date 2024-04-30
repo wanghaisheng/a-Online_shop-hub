@@ -6,13 +6,12 @@ import { passingCategory } from "../../../Global state/categoryOfQuery/categoryS
 
 type NavLinksHomeProps = {
   title: string;
-  link: string;
+  link: "/clothing/women" | "/clothing/jewelry";
   query?: string;
 };
 
 function NavLinksHome({ title, link, query }: NavLinksHomeProps) {
 
- 
 
   // const handleClick = (category: AppDispatch) => 
   //   dispatch(passingCategory(category));
@@ -32,7 +31,6 @@ function NavLinksHome({ title, link, query }: NavLinksHomeProps) {
             View all
           </p>
         </article>
-        
       </NavLink>
   );
 }
