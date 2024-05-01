@@ -4,6 +4,7 @@ import "./css/App.css";
 import Favorite from "./pages/Favorite/Favorite";
 import Cart from "./pages/Cart/Cart";
 import Clothing from "./pages/Clothing/Clothing";
+import Product from "./pages/Product/Product";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/clothing/:category" element={<Clothing />} />
+        <Route path="/product/:product" element={<Product />} />
       </Routes>
     </Router>
   );

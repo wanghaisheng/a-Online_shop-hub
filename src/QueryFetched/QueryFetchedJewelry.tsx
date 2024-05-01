@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchJewelry } from "../URLsForFetching/UrlsFetching";
+import { Link } from "react-router-dom";
 
 type JewelryType = {
   id: number;
@@ -7,6 +8,7 @@ type JewelryType = {
   image: string;
   title: string;
   price: number;
+  category: string;
 };
 
 function QueryFetchedJewelry() {
@@ -25,8 +27,10 @@ function QueryFetchedJewelry() {
     <div>
       {fetchedJewelry?.data?.map((item: JewelryType) => (
         <div key={item.id}>
-          {item.title}
-          <img src={item.image} />
+          <Link to={`/product/${item.id}`}>
+            {item.title}
+            <img src={item.image} />
+          </Link>
         </div>
       ))}
     </div>
