@@ -1,4 +1,3 @@
-//import React from 'react'
 import { CgMenuLeft } from "react-icons/cg";
 import { GoHeart } from "react-icons/go";
 //import { GoHeartFill } from "react-icons/go";  <GoHeartFill />;
@@ -11,7 +10,8 @@ function BarNavigation() {
     <header className=" fixed top-0 z-10 flex h-16 w-full ">
       <nav className="flex h-full w-full items-center justify-between p-2">
         <div className="flex">
-          <TransparentBtnNavigation link="/clothing">
+          {/* MENU */}
+          <TransparentBtnNavigation link="/">
             <CgMenuLeft size={40} title="Menu" className=" text-white drop-shadow-md" />
           </TransparentBtnNavigation>
           <Logo />

@@ -1,14 +1,15 @@
 // import styles from "./home.module.css";
 import MainCarousel from "../../components/ui/Main Carousel/MainCarousel";
 import HomeTiles from "../../components/HomeTiles/HomeTiles";
-import manSolo from "../../assets/mansolo.jpg";
-import imgMix from "../../assets/secMix.jpg";
-import spring from "../../assets/spring.jpg";
-import springMobile from "../../assets/springmobile.jpg";
 import HomeNewsletter from "../../components/HomeNewsletter/HomeNewsletter";
 import Footer from "../../components/Footer/Footer";
 import NavLinksHome from "../../components/ui/NavLinksHome/NavLinksHome";
 import BarNavigation from "../../components/BarNavigation/BarNavigation";
+//imported photos
+import manSolo from "../../assets/mansolo.jpg";
+import imgMix from "../../assets/secMix.jpg";
+import spring from "../../assets/spring.jpg";
+import springMobile from "../../assets/springmobile.jpg";
 
 
 function Home() {
@@ -31,9 +32,9 @@ function Home() {
             backgroundImage: `url(${imgMix})`,
           }}
         ></div>
-        <NavLinksHome title={"Women"} link={"/"} />
-        <h1 className="absolute bottom-4 right-0 p-20 text-5xl font-extrabold">
-          Men
+        <NavLinksHome title="Women" link="/clothing/women" />
+        <h1 className="absolute bottom-4 right-0 p-20 text-5xl font-extrabold text-white">
+          Men????
         </h1>
       </section>
 

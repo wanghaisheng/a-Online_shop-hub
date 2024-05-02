@@ -24,7 +24,7 @@ function HomeTiles() {
             backgroundImage: `url(${kf1})`,
           }}
         >
-          <NavLinksHome title="CASUAL" link="/clothing/women" />
+          <NavLinksHome title="MAN" link="/clothing/men" />
         </div>
       </article>
       <article className="grid grid-cols-1 lg:grid-cols-2">
@@ -35,7 +35,7 @@ function HomeTiles() {
             backgroundImage: `url(${kf4})`,
           }}
         >
-          <NavLinksHome title="ACCESSORIES" link="/clothing/women" />
+          <NavLinksHome title="ACCESSORIES" link="/clothing/jewelry" />
         </div>
         {/* bottom rught tile */}
         <div

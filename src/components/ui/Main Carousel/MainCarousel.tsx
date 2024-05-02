@@ -10,7 +10,7 @@ import {
 
 const images = [
   { image: mc1, title: "Glamor and Chic" },
-  { image: mc2, title: "" },
+  { image: mc2, title: "WOMAN" },
   { image: mc3, title: "Dolce Vita" },
 ];
 

@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 
-
+//here must be all categories our store have to navlink them anr for routing
 type NavLinksHomeProps = {
   title: string;
-  link: "/clothing/women" | "/clothing/jewelry";
+  link: "/clothing/women" | "/clothing/jewelry" | "/clothing/men";
 };
 
 function NavLinksHome({ title, link }: NavLinksHomeProps) {
