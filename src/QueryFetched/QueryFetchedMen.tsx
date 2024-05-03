@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchMen } from "../URLsForFetching/UrlsFetching";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
+import CategoryItemStyling from "../components/ui/CategoryItemStyling/CategoryItemStyling";
 
 type MenType = {
   id: number;
@@ -25,14 +26,15 @@ function QueryFetchedMen() {
   }
 
   return (
-    <div>
+    <div className="grid h-full w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 lg:gap-16">
       {fetchedMen?.data?.map((item: MenType) => (
-        <div key={item.id}>
-          <Link to={`/product/${item.id}`}>
-            {item.title}
-            <img src={item.image} />
-          </Link>
-        </div>
+        <CategoryItemStyling item={item} key={item.id} />
+        // <div key={item.id}>
+        //   <Link to={`/product/${item.id}`}>
+        //     {item.title}
+        //     <img src={item.image} />
+        //   </Link>
+        // </div>
       ))}
     </div>
   );

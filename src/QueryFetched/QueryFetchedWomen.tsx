@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchWomen } from "../URLsForFetching/UrlsFetching";
-import { Link } from "react-router-dom";
+import CategoryItemStyling from "../components/ui/CategoryItemStyling/CategoryItemStyling";
+//import { Link } from "react-router-dom";
 
 type WomenType = {
   id: number;
@@ -8,6 +9,7 @@ type WomenType = {
   image: string;
   title: string;
   price: number;
+  category: string;
 };
 
 function QueryFetchedWomen() {
@@ -27,15 +29,15 @@ function QueryFetchedWomen() {
   }
 
   return (
-    <div>
-      <h1>women's clothing</h1>
+    <div className="grid h-full w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 lg:gap-16">
       {data?.map((item: WomenType) => (
-        <div key={item.id}>
-          <Link to={`/product/${item.id}`}>
-            {item.title}
-            <img src={item.image} />
-          </Link>
-        </div>
+        <CategoryItemStyling item={item} key={item.id} />
+        // <div key={item.id}>
+        //   <Link to={`/product/${item.id}`}>
+        //     {item.title}
+        //     <img src={item.image} />
+        //   </Link>
+        // </div>
       ))}
     </div>
   );

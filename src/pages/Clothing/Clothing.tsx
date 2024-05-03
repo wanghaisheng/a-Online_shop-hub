@@ -1,4 +1,5 @@
 import BarNavigation from "../../components/BarNavigation/BarNavigation";
+import Footer from "../../components/Footer/Footer";
 import QueryFetchedJewelry from "../../QueryFetched/QueryFetchedJewelry";
 import QueryFetchedMen from "../../QueryFetched/QueryFetchedMen";
 import QueryFetchedWomen from "../../QueryFetched/QueryFetchedWomen";
@@ -28,12 +29,13 @@ function Clothing() {
 
   
   return (
-    <div className=" flex h-full w-full justify-center">
+    <div className=" flex h-full w-full justify-center flex-col items-center">
       <BarNavigation />
-      <div className=" mt-20 h-full w-[1000px] border-emerald-700 bg-slate-400">
-        <h2 className=" text-center">Clothing</h2>
+      <div className=" mt-20 h-full max-w-[1000px] flex flex-col items-center justify-center">
+        <h2 className="text-center mb-10 text-lg uppercase font-bold italic">{category}</h2>
         { ComponentToRender ? <ComponentToRender /> : null}
       </div>
+      <Footer />
     </div>
   );
 }
