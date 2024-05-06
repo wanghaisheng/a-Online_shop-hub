@@ -15,7 +15,7 @@ function HomeTiles() {
             backgroundImage: `url(${kf3})`,
           }}
         >
-          <NavLinksHome title="SHOES" link="/clothing/women" />
+          <NavLinksHome title="WOMAN" link="/clothing/women" />
         </div>
         {/*top right tile  */}
         <div

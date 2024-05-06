@@ -32,10 +32,11 @@ function Home() {
             backgroundImage: `url(${imgMix})`,
           }}
         ></div>
-        <NavLinksHome title="Women" link="/clothing/women" />
-        <h1 className="absolute bottom-4 right-0 p-20 text-5xl font-extrabold text-white">
+        <NavLinksHome title="Men" link="/clothing/men" />
+
+        {/* <h1 className="absolute bottom-4 right-0 p-20 text-5xl font-extrabold text-white">
           Men????
-        </h1>
+        </h1> */}
       </section>
 
       <section className="relative h-full w-full">
@@ -48,13 +49,13 @@ function Home() {
         ></div>
         {/* desktop image */}
         <div
-          className="hidden h-[670px] w-full bg-cover bg-left-top bg-no-repeat sm:block"
+          className="hidden h-[670px] w-full bg-cover bg-left-top bg-no-repeat sm:block xl:h-[700px] min-[1600px]:h-[950px]"
           style={{
             backgroundImage: `url(${spring})`,
           }}
         ></div>
 
-        <h1 className="absolute bottom-4 right-0 p-20 text-8xl font-extralight text-pink-400">
+        <h1 className="absolute text-right sm:bottom-20 right-0 sm:p-20 sm:text-8xl font-extralight text-pink-400 bottom-10 p-2">
           Spring has come!
         </h1>
       </section>
