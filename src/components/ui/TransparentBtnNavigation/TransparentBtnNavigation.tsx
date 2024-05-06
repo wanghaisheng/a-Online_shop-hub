@@ -13,7 +13,7 @@ function TransparentBtnNavigation({
 }: TransparentBtnNavigationProps) {
   return (
     <NavLink to={link}>
-      <button className=" bg-transparent p-4 duration-500 hover:scale-125">
+      <button className=" bg-transparent p-4 duration-300 hover:scale-110">
         {children}
       </button>
     </NavLink>
