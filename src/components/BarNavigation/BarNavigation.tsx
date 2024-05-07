@@ -11,6 +11,17 @@ function BarNavigation() {
 
   const [openMenu, setOpenMenu] = useState(false);
 
+
+  
+
+  const handlingOpenMenu = () => {
+    setOpenMenu(true);
+  };
+
+  const handlingClosingMenu = () => {
+    setOpenMenu(false); 
+  };
+
   return (
     <>
       <header className=" fixed top-0 z-10 flex h-16 w-full ">
@@ -19,7 +30,7 @@ function BarNavigation() {
             {/* MENU */}
             <button
               className="cursor-pointer bg-transparent p-4 duration-300 hover:scale-110"
-              onClick={() => setOpenMenu(!openMenu)}
+              onClick={handlingOpenMenu}
             >
               <CgMenuLeft
                 size={40}
@@ -51,7 +62,7 @@ function BarNavigation() {
         </nav>
       </header>
       {/* MENU */}
-      {openMenu && <Menu />}
+      {openMenu && <Menu closingMenu={handlingClosingMenu} />}
     </>
   );
 }

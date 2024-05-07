@@ -18,9 +18,9 @@ const images = [
 function MainCarousel() {
   const [imageIndex, setImageIndex] = useState(0);
 
-  const autoSlide: boolean = true;
+  const autoSlideCarouselIsActive: boolean = true;  //activating auto slider in Carousel if true, if false is auto slider is off
 
-  const autoSlideInterval: number = 5000;
+  const autoSlideInterval: number = 5000;  //a time in miliseconds of how long Carousel displays specyfic image
 
   const prevSlide = () => {
     const zeroIndexImage = imageIndex === 0;
@@ -35,10 +35,10 @@ function MainCarousel() {
   }, [imageIndex]);
 
   useEffect(() => {
-    if (!autoSlide) return;
+    if (!autoSlideCarouselIsActive) return;
     const slideInterval = setInterval(nextSlide, autoSlideInterval);
     return () => clearInterval(slideInterval);
-  }, [autoSlide, autoSlideInterval, nextSlide]);
+  }, [autoSlideCarouselIsActive, autoSlideInterval, nextSlide]);
 
   return (
     <div className="relative m-auto flex h-[750px] w-full max-w-[2000px] justify-center">

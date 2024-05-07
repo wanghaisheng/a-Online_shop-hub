@@ -1,18 +1,28 @@
 import { useState } from "react";
 import Logo from "../ui/Logo/Logo";
 import { GoHeart } from "react-icons/go";
-import { BsCart4, BsFacebook, BsInstagram, BsPinterest, BsTwitterX, BsYoutube } from "react-icons/bs";
+import {
+  BsCart4,
+  BsFacebook,
+  BsInstagram,
+  BsPinterest,
+  BsTwitterX,
+  BsYoutube,
+} from "react-icons/bs";
 import { Link } from "react-router-dom";
 import girlMenu from "../../assets/girlmenu.jpg";
 
 
-function Menu() {
+type MenuProps = {
+  closingMenu: () => void;
+};
 
-    const [closeMenu, setCloseMenu] = useState("block");
+function Menu({ closingMenu }: MenuProps) {
+  const [closeMenu, setCloseMenu] = useState("block");
 
-    function closeMenuFn () {
-        setCloseMenu("none")
-    }
+  function closeMenuFn() {
+    setCloseMenu("none");
+  }
 
   return (
     <div
@@ -21,7 +31,7 @@ function Menu() {
     >
       <div className=" flex h-full w-full lg:justify-between">
         <div>
-          <button className="p-5 text-xl" onClick={() => closeMenuFn()}>
+          <button className="p-5 text-xl" onClick={closingMenu}>
             X
           </button>
           <div className="flex w-full sm:pl-14" onClick={() => closeMenuFn()}>
@@ -76,7 +86,7 @@ function Menu() {
               </h2>
             </button>
           </div>
-          <div className=" absolute container flex pl-20  bottom-6">
+          <div className=" container absolute bottom-6 flex  pl-20">
             <BsFacebook
               size={23}
               className="mr-4  h-[25px] w-[25px] cursor-pointer fill-black hover:fill-sky-500"
