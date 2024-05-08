@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
 type CategoryStateType = {
   value: string;
 };
@@ -18,6 +19,9 @@ const categorySlice = createSlice({
     },
   },
 });
+
+
+
 
 //actions
 export const {passingCategory} = categorySlice.actions;
