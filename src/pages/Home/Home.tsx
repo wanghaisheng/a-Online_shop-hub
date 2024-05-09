@@ -55,8 +55,8 @@ function Home() {
           }}
         ></div>
 
-        <h1 className="absolute text-right sm:bottom-20 right-0 sm:p-20 sm:text-8xl font-extralight text-pink-400 bottom-10 p-2">
-          Spring has come!
+        <h1 className="absolute text-right sm:bottom-5 right-0 sm:p-20 sm:text-8xl font-extralight text-pink-400 bottom-10 p-2">
+          Blooming time!
         </h1>
       </section>
       <HomeTiles />
