@@ -8,15 +8,34 @@ import {
   BsPinterest,
   BsDot,
 } from "react-icons/bs";
+import { Link } from "react-router-dom";
+
 
 function Footer() {
   return (
     <footer
       id="footer"
-      className="m-6 flex flex-col  items-center justify-center"
+      className="mb-6 mt-12 flex flex-col  items-center justify-center"
     >
-      <section className=" mt-7 w-dvw border-b-[2px] border-t-[2px] p-5 text-center">
-        Tu mogą być wszystkie kategorie też wyszczególnione - zobaczymy
+      <div className=" h-[30px] w-full text-center">
+        <h3>OTHER CATEGORIES</h3>
+      </div>
+      <section className=" mt-7 w-dvw border-b-[2px] border-t-[2px] p-[15px] text-center">
+        <button>
+          <h3 className=" px-3 text-black">
+            <Link to="/clothing/women">WOMEN</Link>
+          </h3>
+        </button>
+        <button>
+          <h3 className=" text-black px-3 border-x-[2px] ">
+            <Link to="/clothing/men">MEN</Link>
+          </h3>
+        </button>
+        <button>
+          <h3 className=" text-black px-3">
+            <Link to="/clothing/jewelry">JEWELRY</Link>
+          </h3>
+        </button>
       </section>
 
       <section className=" m-10 flex  w-full flex-col items-center  justify-center md:flex-row md:items-start md:justify-evenly">
@@ -119,12 +138,12 @@ function Footer() {
         </article>
 
         <article className="container mx-auto hidden h-full items-center justify-center border-l-[2px] lg:flex">
-          <BsApple size={22} className="mr-1" />
+          <BsApple size={24} className="mr-1" />
           <p className=" font-medium">app iOS</p>
         </article>
 
         <article className="container mx-auto hidden h-full items-center justify-center border-x-[2px] lg:flex">
-          <BsAndroid2 size={22} className="mr-1 hover:fill-green-600" />
+          <BsAndroid2 size={24} className="mr-1 hover:fill-green-600" />
           <p className=" font-medium">app Android</p>
         </article>
 

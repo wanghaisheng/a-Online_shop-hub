@@ -1,4 +1,5 @@
-import { CgMenuLeft } from "react-icons/cg";
+//import { CgMenuLeft } from "react-icons/cg";
+import { CgMenuLeftAlt } from "react-icons/cg";
 import { GoHeart } from "react-icons/go";
 //import { GoHeartFill } from "react-icons/go";  <GoHeartFill />;
 import { BsCart4 } from "react-icons/bs";
@@ -32,8 +33,8 @@ function BarNavigation() {
               className="cursor-pointer bg-transparent p-4 duration-300 hover:scale-110"
               onClick={handlingOpenMenu}
             >
-              <CgMenuLeft
-                size={40}
+              <CgMenuLeftAlt
+                size={38}
                 title="Menu"
                 className=" text-white drop-shadow-md"
               />
