@@ -1,19 +1,20 @@
-//import { CgMenuLeft } from "react-icons/cg";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { GoHeart } from "react-icons/go";
-//import { GoHeartFill } from "react-icons/go";  <GoHeartFill />;
 import { BsCart4 } from "react-icons/bs";
 import TransparentBtnNavigation from "../ui/TransparentBtnNavigation/TransparentBtnNavigation";
 import Logo from "../ui/Logo/Logo";
 import Menu from "../Menu/Menu";
 import { useState } from "react";
 
-function BarNavigation() {
+
+type ColorProps = {
+  color: "white" | "black";
+};
+
+
+function BarNavigation( {color= "white"}: ColorProps ) {
 
   const [openMenu, setOpenMenu] = useState(false);
-
-
-  
 
   const handlingOpenMenu = () => {
     setOpenMenu(true);
@@ -36,12 +37,13 @@ function BarNavigation() {
               <CgMenuLeftAlt
                 size={38}
                 title="Menu"
-                className=" text-white drop-shadow-md"
+                className="drop-shadow-md cursor-pointer"
+                color={`${color}`}
               />
             </button>
 
             <span className="hidden sm:block">
-              <Logo />
+              <Logo color={color} />
             </span>
           </div>
           <div className="flex pr-2">
@@ -49,14 +51,16 @@ function BarNavigation() {
               <GoHeart
                 title="Favorite"
                 size={30}
-                className=" cursor-pointer text-white drop-shadow-md"
+                className="cursor-pointer drop-shadow-md"
+                fill={`${color}`}
               />
             </TransparentBtnNavigation>
             <TransparentBtnNavigation link="/cart">
               <BsCart4
                 title="cart"
                 size={30}
-                className=" cursor-pointer text-white drop-shadow-md"
+                className="cursor-pointer drop-shadow-md"
+                fill={`${color}`}
               />
             </TransparentBtnNavigation>
           </div>

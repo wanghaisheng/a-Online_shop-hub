@@ -22,7 +22,7 @@ function FavoriteItemStyling({ item }: { item: ItemType }) {
     <div>
       <Link to={`/product/${item?.id}`}>
         <div key={item?.id} className=" relative">
-          <img src={item?.image} className=" h-[360px] w-[277px]" />
+          <img src={item?.image} className=" h-[360px] w-[277px] object-contain bg-white" />
           <h6 className=" absolute bottom-0 left-0 max-w-[200px] truncate text-ellipsis">
             {item?.title}
           </h6>

@@ -1,11 +1,16 @@
-//import React from 'react'
 import { Link } from "react-router-dom";
 
-function Logo() {
+
+type ColorProps = {
+  color: "white" | "black"
+};
+
+
+function Logo( {color= "white"}: ColorProps ) {
   return (
     <p
-      style={{ textShadow: "1px 1px 2px black" }}
-      className="p-4  pl-5 text-3xl font-bold  italic text-white"
+      style={{ color: `${color}` }}
+      className="p-4 pl-5 text-3xl font-bold italic"
     >
       <Link to="/">Online_shop</Link>
     </p>

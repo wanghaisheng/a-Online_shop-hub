@@ -15,7 +15,7 @@ import springMobile from "../../assets/springmobile.jpg";
 function Home() {
   return (
     <div className="h-full w-full max-w-[2000px] relative">
-      <BarNavigation />
+      <BarNavigation color="white"/>
       <MainCarousel />
       <section className="relative h-full w-full">
         {/* mobile image */}

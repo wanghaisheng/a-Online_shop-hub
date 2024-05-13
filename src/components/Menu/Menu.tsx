@@ -31,11 +31,11 @@ function Menu({ closingMenu }: MenuProps) {
     >
       <div className=" flex h-full w-full lg:justify-between">
         <div>
-          <button className="p-5 text-xl" onClick={closingMenu}>
+          <button className="p-5 text-xl ml-4" onClick={closingMenu}>
             X
           </button>
           <div className="flex w-full sm:pl-14" onClick={() => closeMenuFn()}>
-            <Logo />
+            <Logo color="black"/>
             <div className="flex pt-5 sm:ml-36 ">
               <Link to="/favorite">
                 <GoHeart

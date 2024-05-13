@@ -13,7 +13,7 @@ function Cart() {
             className="cursor-pointer text-black drop-shadow-md"
           />
         </TransparentBtnNavigation>
-        <Logo />
+        <Logo color="black"/>
         <div>koszyk</div>
       </section>
       <div>Cart</div>
