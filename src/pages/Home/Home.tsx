@@ -14,8 +14,8 @@ import springMobile from "../../assets/springmobile.jpg";
 
 function Home() {
   return (
-    <div className="h-full w-full max-w-[2000px] relative">
-      <BarNavigation color="white"/>
+    <div className="relative h-full w-full max-w-[2000px]">
+      <BarNavigation color="white" />
       <MainCarousel />
       <section className="relative h-full w-full">
         {/* mobile image */}
@@ -55,8 +55,8 @@ function Home() {
           }}
         ></div>
 
-        <h1 className="absolute text-right sm:bottom-5 right-0 sm:p-20 sm:text-8xl font-extralight text-pink-400 bottom-10 p-2">
-          Blooming time!
+        <h1 className="absolute bottom-10 right-[-125px] p-2 text-right font-extralight text-pink-400 sm:p-5 sm:text-8xl">
+          Blooming <span className="-rotate-90 transform inline-block origin-bottom-left ml-14">TIME!</span>
         </h1>
       </section>
       <HomeTiles />
