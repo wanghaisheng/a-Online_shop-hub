@@ -1,5 +1,5 @@
 // import styles from "./home.module.css";
-import MainCarousel from "../../components/ui/Main Carousel/MainCarousel";
+import MainCarousel from "../../components/Main Carousel/MainCarousel";
 import HomeTiles from "../../components/HomeTiles/HomeTiles";
 import HomeNewsletter from "../../components/HomeNewsletter/HomeNewsletter";
 import Footer from "../../components/Footer/Footer";

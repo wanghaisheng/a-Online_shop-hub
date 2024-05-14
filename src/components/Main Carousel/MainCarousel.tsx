@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
-import mc1 from "../../../assets/mc11.jpg";
-import mc2 from "../../../assets/mc2.jpg";
-import mc3 from "../../../assets/mc33.jpg";
+import mc1 from "../../assets/mc11.jpg";
+import mc2 from "../../assets/mc2.jpg";
+import mc3 from "../../assets/mc33.jpg";
 import {
   BsChevronCompactLeft,
   BsChevronCompactRight,
