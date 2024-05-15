@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchWomen } from "../URLsForFetching/UrlsFetching";
+import { useEffect } from "react";
 import CategoryItemStyling from "../components/ui/CategoryItemStyling/CategoryItemStyling";
-//import { Link } from "react-router-dom";
+
 
 type WomenType = {
   id: number;
@@ -20,6 +21,10 @@ function QueryFetchedWomen() {
 
   //console.log(data);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   if (isLoading) {
     return <h3>Loading women's clothing...</h3>;
   }
@@ -32,12 +37,6 @@ function QueryFetchedWomen() {
     <div className="grid h-full w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 lg:gap-16">
       {data?.map((item: WomenType) => (
         <CategoryItemStyling item={item} key={item.id} />
-        // <div key={item.id}>
-        //   <Link to={`/product/${item.id}`}>
-        //     {item.title}
-        //     <img src={item.image} />
-        //   </Link>
-        // </div>
       ))}
     </div>
   );

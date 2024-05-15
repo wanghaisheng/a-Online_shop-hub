@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchMen } from "../URLsForFetching/UrlsFetching";
-//import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import CategoryItemStyling from "../components/ui/CategoryItemStyling/CategoryItemStyling";
+
 
 type MenType = {
   id: number;
@@ -21,6 +22,10 @@ function QueryFetchedMen() {
 
   //console.log(fetchedJewelry);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   if (fetchedMen.isError) {
     return <h3>{JSON.stringify(fetchedMen.error.message)}</h3>;
   }
@@ -29,12 +34,6 @@ function QueryFetchedMen() {
     <div className="grid h-full w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 lg:gap-16">
       {fetchedMen?.data?.map((item: MenType) => (
         <CategoryItemStyling item={item} key={item.id} />
-        // <div key={item.id}>
-        //   <Link to={`/product/${item.id}`}>
-        //     {item.title}
-        //     <img src={item.image} />
-        //   </Link>
-        // </div>
       ))}
     </div>
   );
