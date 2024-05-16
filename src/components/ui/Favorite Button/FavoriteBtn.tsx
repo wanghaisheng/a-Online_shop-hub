@@ -42,7 +42,7 @@ function FavoriteBtn({item}: {item: ItemType}) {
           //dodać animacje!!!!!!!!!!!!!!!!
         />
       ) : (
-        <GoHeart size={24} className="cursor-pointer" />
+        <GoHeart size={24} className="cursor-pointer" title="Add to Favorite" />
       )}
     </button>
   );

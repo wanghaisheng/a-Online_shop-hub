@@ -3,6 +3,7 @@ import useFetchingProduct from "../../Custom Hooks/useFetchingProduct";
 import BarNavigation from "../../components/BarNavigation/BarNavigation";
 import Footer from "../../components/Footer/Footer";
 import FavoriteBtn from "../../components/ui/Favorite Button/FavoriteBtn";
+import AddingToCartBtn from "../../components/ui/Cart Buttons/AddingToCartBtn";
 
 function Product() {
   const { product } = useParams();
@@ -29,14 +30,16 @@ function Product() {
             <h2 className="">{data?.title}</h2>
             <h2 className=" text-right">{data?.price} USD</h2>
             <p className="mb-1">in Stock</p>
-            <p>ROZMIARY tabela rozmiarów komponent</p>
-            <div className="relative mt-6 ">
-              <button className="mr-20 rounded-lg bg-cyan-400  p-2 px-5 font-medium text-white hover:bg-cyan-500">
+            <div className="relative mt-14 ">
+              <AddingToCartBtn item={data} />
+              {/* <button className="mr-20 rounded-lg bg-cyan-400  p-2 px-5 font-medium text-white hover:bg-cyan-500">
                 ADD TO CART
-              </button>
+              </button> */}
               <FavoriteBtn item={data} />
             </div>
-            <p className="mt-6">{data?.description}</p>
+            <p className="mt-10">
+              <span className=" font-semibold">Product description:</span> {data?.description}
+            </p>
           </div>
         </div>
       </div>

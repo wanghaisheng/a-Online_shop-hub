@@ -1,10 +1,11 @@
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { GoHeart } from "react-icons/go";
-import { BsCart4 } from "react-icons/bs";
+//import { BsCart4 } from "react-icons/bs";
 import TransparentBtnNavigation from "../ui/TransparentBtnNavigation/TransparentBtnNavigation";
 import Logo from "../ui/Logo/Logo";
 import Menu from "../Menu/Menu";
 import { useState } from "react";
+import { LiaShoppingBagSolid } from "react-icons/lia";
 
 
 type ColorProps = {
@@ -37,7 +38,7 @@ function BarNavigation( {color= "white"}: ColorProps ) {
               <CgMenuLeftAlt
                 size={38}
                 title="Menu"
-                className="drop-shadow-md cursor-pointer"
+                className="cursor-pointer drop-shadow-md"
                 color={`${color}`}
               />
             </button>
@@ -50,17 +51,18 @@ function BarNavigation( {color= "white"}: ColorProps ) {
             <TransparentBtnNavigation link="/favorite">
               <GoHeart
                 title="Favorite"
-                size={30}
+                size={28}
                 className="cursor-pointer drop-shadow-md"
                 fill={`${color}`}
               />
             </TransparentBtnNavigation>
             <TransparentBtnNavigation link="/cart">
-              <BsCart4
+              <LiaShoppingBagSolid
                 title="cart"
                 size={30}
                 className="cursor-pointer drop-shadow-md"
                 fill={`${color}`}
+                style={{paddingBottom: "1px"}}
               />
             </TransparentBtnNavigation>
           </div>
