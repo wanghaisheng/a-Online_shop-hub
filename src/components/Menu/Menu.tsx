@@ -34,7 +34,7 @@ function Menu({ closingMenu }: MenuProps) {
           <button className="p-5 text-xl ml-4" onClick={closingMenu}>
             X
           </button>
-          <div className="flex w-full sm:pl-14" onClick={() => closeMenuFn()}>
+          <div className="flex w-full sm:pl-14 p-6" onClick={() => closeMenuFn()}>
             <Logo color="black"/>
             <div className="flex pt-5 sm:ml-36 ">
               <Link to="/favorite">

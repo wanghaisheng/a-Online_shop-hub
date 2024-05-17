@@ -4,8 +4,14 @@ import BarNavigation from "../../components/BarNavigation/BarNavigation";
 import Footer from "../../components/Footer/Footer";
 import FavoriteBtn from "../../components/ui/Favorite Button/FavoriteBtn";
 import AddingToCartBtn from "../../components/ui/Cart Buttons/AddingToCartBtn";
+import { useEffect } from "react";
 
 function Product() {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }, []);
+
   const { product } = useParams();
 
   const singleProduct = product ? product : "1";  //zostawiamy tak czy dać co innego??????
