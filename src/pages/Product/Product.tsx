@@ -8,16 +8,16 @@ import { useEffect } from "react";
 
 function Product() {
 
-  useEffect(() => {
-    window.scrollTo({top: 0, behavior: "smooth"});
-  }, []);
-
   const { product } = useParams();
 
   const singleProduct = product ? product : "1";  //zostawiamy tak czy dać co innego??????
 
   //calling custom hook useFetchingProduct and forwarding string with specific product id from link props from QueryFetchedMen and so on...
   const { data, isError, error } = useFetchingProduct(singleProduct);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   if (isError) {
     return <h4>{error.message}</h4>;

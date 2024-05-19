@@ -14,13 +14,13 @@ function Cart() {
   const cartQuantity = useSelector((state: RootState) => state.cart.cartQuantity)
 
   return (
-    <div className="flex h-full w-full max-w-[1500px] flex-col items-center justify-center bg-amber-300">
+    <div className="flex h-full w-full max-w-[1500px] flex-col items-center bg-amber-300 min-h-dvh">
       <section className=" flex h-14 w-full items-center justify-between ">
         <TransparentBtnNavigation link="/">
           <BsArrowLeft size={32} className="mt-5 cursor-pointer text-black" />
         </TransparentBtnNavigation>
         <Logo color="black" />
-        <div className="mt-2">
+        <div className="mt-2 pr-2">
           <TransparentBtnNavigation link="/favorite">
             <GoHeart
               title="Favorite"
