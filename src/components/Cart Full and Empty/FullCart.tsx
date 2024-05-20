@@ -9,6 +9,8 @@ import { AppDispatch, RootState } from "../../Global state/store";
 import { TfiMinus } from "react-icons/tfi";
 import { TfiPlus } from "react-icons/tfi";
 import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
+
 
 type ItemType = {
   id: number;
@@ -33,18 +35,22 @@ function FullCart() {
     <div className="mb-10 flex h-full flex-col gap-5 md:justify-start">
       {cartList.map((p: ItemType) => (
         <div key={p?.id} className="flex h-full pr-5 md:w-full">
-          <div key={p?.id} className="w-[100px] md:w-[140px]">
-            <img
-              src={p?.image}
-              className="h-[130px] min-w-[100px] bg-white object-contain py-1 md:h-[180px] md:w-[140px]"
-            />
-          </div>
+          <Link to={`/product/${p?.id}`}>
+            <div key={p?.id} className="w-[100px] md:w-[140px]">
+              <img
+                src={p?.image}
+                className="h-[130px] min-w-[100px] bg-white object-contain py-1 md:h-[180px] md:w-[140px]"
+              />
+            </div>
+          </Link>
           <div className=" relative flex min-w-[100px] flex-col pl-2 md:w-[700px] md:pl-7">
             <div className="md:flex md:w-full md:justify-between">
               <div className="flex justify-between ">
-                <h6 className="max-w-[400px] truncate text-ellipsis ">
-                  {p?.title}
-                </h6>
+                <Link to={`/product/${p?.id}`}>
+                  <h6 className="truncate text-ellipsis max-[480px]:w-[150px] w-[300px] sm:w-[420px]">
+                    {p?.title}
+                  </h6>
+                </Link>
                 {/* mobile view */}
                 <button
                   onClick={() => dispatch(deletingProductFromCart(p?.id))}
@@ -60,7 +66,7 @@ function FullCart() {
                   ""
                 )}
                 <h5 className="whitespace-nowrap font-semibold">
-                  {p?.price} USD
+                  {p?.price?.toFixed(2)} USD
                 </h5>
               </div>
             </div>

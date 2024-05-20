@@ -20,7 +20,7 @@ const dispatch = useDispatch<AppDispatch>();
   return (
     <button 
     onClick={() => dispatch(addingProductToCart(item))}
-    className="mr-20 rounded-lg bg-cyan-400  p-2 px-5 font-medium text-white hover:bg-cyan-500">
+    className="rounded-xl bg-cyan-400  p-2 px-5 font-medium text-white hover:bg-cyan-500">
       ADD TO CART
     </button>
   );

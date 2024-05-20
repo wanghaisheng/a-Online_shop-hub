@@ -34,7 +34,7 @@ function Product() {
           ></img>
           <div className="lg:pl-5">
             <h2 className="">{data?.title}</h2>
-            <h2 className=" text-right">{data?.price} USD</h2>
+            <h2 className=" text-right">{data?.price?.toFixed(2)} USD</h2>
             <p className="mb-1">in Stock</p>
             <div className="relative mt-14 ">
               <AddingToCartBtn item={data} />
