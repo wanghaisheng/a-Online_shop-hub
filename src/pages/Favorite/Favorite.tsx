@@ -1,9 +1,9 @@
 import { RootState} from "../../Global state/store";
 import { useSelector } from "react-redux";
-
 import BarNavigation from "../../components/BarNavigation/BarNavigation";
 import Footer from "../../components/Footer/Footer";
 import FavoriteItemStyling from "../../components/ui/FavoriteItemStyling/FavoriteItemStyling";
+import { useEffect } from "react";
 
 
 function Favorite() {
@@ -11,6 +11,9 @@ function Favorite() {
  const favoriteList = useSelector((state: RootState) => state.favorite.myFavorite);
 
  //console.log(favoriteList);
+ useEffect(() => {
+   window.scrollTo({ top: 0, behavior: "smooth" });
+ }, []);
 
 
   return (

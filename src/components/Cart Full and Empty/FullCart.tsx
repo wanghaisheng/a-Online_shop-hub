@@ -31,6 +31,7 @@ function FullCart() {
 
   const dispatch = useDispatch<AppDispatch>();
 
+
   return (
     <div className="mb-10 flex h-full flex-col gap-5 md:justify-start">
       {cartList.map((p: ItemType) => (

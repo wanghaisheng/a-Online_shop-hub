@@ -6,37 +6,44 @@ import Logo from "../ui/Logo/Logo";
 import Menu from "../Menu/Menu";
 import { useState } from "react";
 import { LiaShoppingBagSolid } from "react-icons/lia";
-
+import { useSelector } from "react-redux";
+import { RootState } from "../../Global state/store";
 
 type ColorProps = {
   color: "white" | "black";
 };
 
-
-function BarNavigation( {color= "white"}: ColorProps ) {
-
+function BarNavigation({ color = "white" }: ColorProps) {
   const [openMenu, setOpenMenu] = useState(false);
+
+  const cartQuantity = useSelector(
+    (state: RootState) => state.cart.cartQuantity,
+  );
+
+  const favoriteList = useSelector(
+    (state: RootState) => state.favorite.myFavorite,
+  );
 
   const handlingOpenMenu = () => {
     setOpenMenu(true);
   };
 
   const handlingClosingMenu = () => {
-    setOpenMenu(false); 
+    setOpenMenu(false);
   };
 
   return (
     <>
-      <header className=" fixed top-0 z-10 flex h-16 w-full ">
+      <header className=" fixed top-0 z-10 flex h-14 w-full bg-white-smoke sm:bg-transparent">
         <nav className="flex h-full w-full items-center justify-between p-2">
           <div className="flex">
             {/* MENU */}
             <button
-              className="cursor-pointer bg-transparent p-4 duration-300 hover:scale-110"
+              className="cursor-pointer bg-transparent p-4 pl-0 duration-300 hover:scale-110"
               onClick={handlingOpenMenu}
             >
               <CgMenuLeftAlt
-                size={38}
+                size={33}
                 title="Menu"
                 className="cursor-pointer drop-shadow-md"
                 color={`${color}`}
@@ -47,24 +54,46 @@ function BarNavigation( {color= "white"}: ColorProps ) {
               <Logo color={color} />
             </span>
           </div>
-          <div className="flex pr-2">
+          <div className="flex">
+            {/* FAVORITE ICON */}
             <TransparentBtnNavigation link="/favorite">
               <GoHeart
                 title="Favorite"
                 size={28}
-                className="cursor-pointer drop-shadow-md"
+                className="relative cursor-pointer drop-shadow-md"
                 fill={`${color}`}
               />
             </TransparentBtnNavigation>
+            {favoriteList.length > 0 ? (
+              <span
+                className="absolute bottom-[14px] right-20 flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
+            bg-black text-xs font-semibold text-white"
+              >
+                {favoriteList.length}
+              </span>
+            ) : (
+              ""
+            )}
             <TransparentBtnNavigation link="/cart">
+              {/* CART ICON */}
               <LiaShoppingBagSolid
                 title="cart"
                 size={30}
-                className="cursor-pointer drop-shadow-md"
+                className="relative cursor-pointer drop-shadow-md"
                 fill={`${color}`}
-                style={{paddingBottom: "1px"}}
+                style={{ paddingBottom: "2px" }}
               />
             </TransparentBtnNavigation>
+            {cartQuantity > 0 ? (
+              <span
+                className="absolute bottom-3 right-5 flex h-5 w-5 items-center justify-center rounded-full border-[1px] 
+            border-white bg-black text-xs font-semibold text-white"
+              >
+                {cartQuantity}
+              </span>
+            ) : (
+              ""
+            )}
           </div>
         </nav>
       </header>

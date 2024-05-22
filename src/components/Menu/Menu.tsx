@@ -1,14 +1,16 @@
 import { useState } from "react";
+import { RootState } from "../../Global state/store";
+import { useSelector } from "react-redux";
 import Logo from "../ui/Logo/Logo";
 import { GoHeart } from "react-icons/go";
 import {
-  BsCart4,
   BsFacebook,
   BsInstagram,
   BsPinterest,
   BsTwitterX,
   BsYoutube,
 } from "react-icons/bs";
+import { LiaShoppingBagSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
 import girlMenu from "../../assets/girlmenu.jpg";
 
@@ -19,6 +21,10 @@ type MenuProps = {
 
 function Menu({ closingMenu }: MenuProps) {
   const [closeMenu, setCloseMenu] = useState("block");
+
+  const favoriteList = useSelector((state: RootState) => state.favorite.myFavorite);
+
+   const cartQuantity = useSelector((state: RootState) => state.cart.cartQuantity);
 
   function closeMenuFn() {
     setCloseMenu("none");
@@ -31,28 +37,56 @@ function Menu({ closingMenu }: MenuProps) {
     >
       <div className=" flex h-full w-full lg:justify-between">
         <div>
-          <button className="p-5 text-xl ml-4" onClick={closingMenu}>
+          <button className="ml-4 p-5 text-xl" onClick={closingMenu}>
             X
           </button>
-          <div className="flex w-full sm:pl-14 p-6" onClick={() => closeMenuFn()}>
-            <Logo color="black"/>
+          <div
+            className="flex w-full p-6 sm:pl-14"
+            onClick={() => closeMenuFn()}
+          >
+            <Logo color="black" />
             <div className="flex pt-5 sm:ml-36 ">
-              <Link to="/favorite">
-                <GoHeart
-                  title="Favorite"
-                  size={28}
-                  className=" ml-5 cursor-pointer fill-black"
-                  onClick={() => closeMenuFn()}
-                />
-              </Link>
-              <Link to="/cart">
-                <BsCart4
-                  title="cart"
-                  size={28}
-                  className=" ml-7 cursor-pointer fill-black"
-                  onClick={() => closeMenuFn()}
-                />
-              </Link>
+              <div className=" relative">
+                <Link to="/favorite">
+                  <GoHeart
+                    title="Favorite"
+                    size={28}
+                    className=" ml-5 cursor-pointer fill-black"
+                    onClick={() => closeMenuFn()}
+                  />
+                </Link>
+                {favoriteList.length > 0 ? (
+                  <span
+                    className="absolute bottom-5 right-[-5px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
+            bg-black text-xs font-semibold text-white"
+                  >
+                    {favoriteList.length}
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div className=" relative">
+                <Link to="/cart">
+                  <LiaShoppingBagSolid
+                    title="cart"
+                    size={31}
+                    className=" ml-7 cursor-pointer fill-black"
+                    style={{ paddingBottom: "2px" }}
+                    onClick={() => closeMenuFn()}
+                  />
+                </Link>
+                {cartQuantity > 0 ? (
+                  <span
+                    className=" absolute bottom-[19px] right-[-5px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
+            bg-black text-xs font-semibold text-white"
+                  >
+                    {cartQuantity}
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
           </div>
           <div className="flex flex-col items-start pl-20 pt-28">
