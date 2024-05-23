@@ -14,6 +14,8 @@ type CartStateType = {
   myCart: CartType[];
   cartQuantity: number;
   cartTotalAmount: number;
+  animationPingOnce: boolean;
+  animationPingOnceCart: boolean;
 };
 
 const storedData = sessionStorage.getItem("myCart"); //checking if storedData in myCart isn't null
@@ -33,6 +35,8 @@ const initialState: CartStateType = {
         0,
       )
     : 0,
+  animationPingOnce: false,
+  animationPingOnceCart: false,
 };
 
 const cartSlice = createSlice({
@@ -93,6 +97,18 @@ const cartSlice = createSlice({
         sessionStorage.setItem("myCart", JSON.stringify(state.myCart));
       }
     },
+    triggerPingOnceAnimation: (state) => {
+      state.animationPingOnce = true;
+    },
+    resetPingOnceAnimation: (state) => {
+      state.animationPingOnce = false;
+    },
+    triggerPingOnceCartAnimation: (state) => {
+      state.animationPingOnceCart = true;
+    },
+    resetPingOnceCartAnimation: (state) => {
+      state.animationPingOnceCart = false;
+    },
   },
 });
 
@@ -101,6 +117,10 @@ export const {
   addingProductToCart,
   deletingProductFromCart,
   productQuantitySubtraction,
+  triggerPingOnceAnimation,
+  resetPingOnceAnimation,
+  triggerPingOnceCartAnimation,
+  resetPingOnceCartAnimation,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -107,7 +107,7 @@ function FullCart() {
         <div className="mb-5 ml-10 font-bold md:mb-0">
           <div>
             <span>TOTAL</span>
-            <span className="ml-3 text-2xl">{cartTotalAmount} USD</span>
+            <span className="ml-3 text-2xl">{cartTotalAmount.toFixed(2)} USD</span>
           </div>
           <div className="text-sm font-normal text-slate-600">
             Taxes Included

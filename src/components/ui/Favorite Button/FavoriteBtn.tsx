@@ -1,8 +1,9 @@
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go"; 
-import { RootState } from "../../../Global state/store";
+import { AppDispatch, RootState } from "../../../Global state/store";
 import { useDispatch, useSelector } from "react-redux";
 import { addingFavorite, deletingFavorite } from "../../../Global state/favorite/favoriteSlice";
+import { triggerPingOnceAnimation } from "../../../Global state/cart/cartSlice";
 
 
 type ItemType = {
@@ -16,7 +17,7 @@ type ItemType = {
 
 
 function FavoriteBtn({item}: {item: ItemType}) {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   //we get the current state and check whether a given item is already there
   const isFavorite = useSelector((state: RootState) =>
@@ -30,6 +31,7 @@ function FavoriteBtn({item}: {item: ItemType}) {
     } else {
       dispatch(addingFavorite(item));
     }
+    dispatch(triggerPingOnceAnimation());
   };
 
   return (

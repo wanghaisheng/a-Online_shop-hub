@@ -4,10 +4,11 @@ import { GoHeart } from "react-icons/go";
 import TransparentBtnNavigation from "../ui/TransparentBtnNavigation/TransparentBtnNavigation";
 import Logo from "../ui/Logo/Logo";
 import Menu from "../Menu/Menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LiaShoppingBagSolid } from "react-icons/lia";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Global state/store";
+import { resetPingOnceAnimation, resetPingOnceCartAnimation } from "../../Global state/cart/cartSlice";
 
 type ColorProps = {
   color: "white" | "black";
@@ -23,6 +24,31 @@ function BarNavigation({ color = "white" }: ColorProps) {
   const favoriteList = useSelector(
     (state: RootState) => state.favorite.myFavorite,
   );
+
+  const dispatch = useDispatch();
+  const animatePingOnce = useSelector(
+    (state: RootState) => state.cart.animationPingOnce,
+  );
+
+const animatePingOnceCart = useSelector(
+  (state: RootState) => state.cart.animationPingOnceCart,
+);
+
+  useEffect(() => {
+    if (animatePingOnce) {
+      setTimeout(() => {
+        dispatch(resetPingOnceAnimation());
+      }, 1500); // Duration of the animation
+    }
+  }, [animatePingOnce, dispatch]);
+
+  useEffect(() => {
+    if (animatePingOnceCart) {
+      setTimeout(() => {
+        dispatch(resetPingOnceCartAnimation());
+      }, 1500); // Duration of the animation
+    }
+  }, [animatePingOnceCart, dispatch]);
 
   const handlingOpenMenu = () => {
     setOpenMenu(true);
@@ -66,8 +92,8 @@ function BarNavigation({ color = "white" }: ColorProps) {
             </TransparentBtnNavigation>
             {favoriteList.length > 0 ? (
               <span
-                className="absolute bottom-[14px] right-20 flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
-            bg-black text-xs font-semibold text-white"
+                className={`absolute bottom-[14px] right-20 flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
+            bg-black text-xs font-semibold text-white ${animatePingOnce ? "animate-pingOnce" : ""}`}
               >
                 {favoriteList.length}
               </span>
@@ -86,8 +112,8 @@ function BarNavigation({ color = "white" }: ColorProps) {
             </TransparentBtnNavigation>
             {cartQuantity > 0 ? (
               <span
-                className="absolute bottom-3 right-5 flex h-5 w-5 items-center justify-center rounded-full border-[1px] 
-            border-white bg-black text-xs font-semibold text-white"
+                className={`absolute bottom-3 right-5 flex h-5 w-5 items-center justify-center rounded-full border-[1px] 
+            border-white bg-black text-xs font-semibold text-white ${animatePingOnceCart ? "animate-pingOnceCart" : ""}`}
               >
                 {cartQuantity}
               </span>

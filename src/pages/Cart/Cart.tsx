@@ -19,6 +19,7 @@ function Cart() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
+
   return (
     <div className="flex h-full min-h-dvh w-full max-w-[1500px] flex-col items-center">
       <section className=" flex h-14 w-full items-center justify-between ">
@@ -26,7 +27,7 @@ function Cart() {
           <BsArrowLeft size={32} className="mt-5 cursor-pointer text-black" />
         </TransparentBtnNavigation>
         <Logo color="black" />
-        <div className="relative mt-2 pr-2">
+        <div className="relative mt-2 pr-2"> 
           <TransparentBtnNavigation link="/favorite">
             <GoHeart
               title="Favorite"
