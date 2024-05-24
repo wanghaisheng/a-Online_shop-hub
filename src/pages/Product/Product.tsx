@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import useFetchingProduct from "../../Custom Hooks/useFetchingProduct";
-import BarNavigation from "../../components/BarNavigation/BarNavigation";
 import Footer from "../../components/Footer/Footer";
 import FavoriteBtn from "../../components/ui/Favorite Button/FavoriteBtn";
 import AddingToCartBtn from "../../components/ui/Cart Buttons/AddingToCartBtn";
-import { useEffect } from "react";
+import BarNavigationWhiteBg from "../../components/BarNavigation/BarNavigationWhiteBg";
+
 
 function Product() {
 
@@ -25,12 +26,12 @@ function Product() {
 
   return (
     <div className=" flex h-full w-full flex-col items-center justify-center">
-      <BarNavigation color="black" />
+      <BarNavigationWhiteBg color="black" />
       <div className=" mb-10 mt-32 flex h-full max-w-[1000px] flex-col items-center justify-center">
         <div className="flex h-full w-full max-w-[300px] flex-col items-center justify-center sm:max-w-[600px] lg:h-[550px] lg:max-w-[950px] lg:flex-row lg:items-start">
           <img
             src={data?.image}
-            className="h-[400px] w-full max-w-[300px] bg-white bg-center bg-no-repeat object-contain lg:h-[500px] lg:max-w-[450px]"
+            className="h-[400px] w-full max-w-[300px] bg-white bg-center bg-no-repeat object-contain lg:h-[500px] lg:max-w-[450px] p-3"
           ></img>
           <div className="lg:pl-5">
             <h2 className="">{data?.title}</h2>
@@ -38,13 +39,11 @@ function Product() {
             <p className="mb-1">in Stock</p>
             <div className="relative mt-14 ">
               <AddingToCartBtn item={data} />
-              {/* <button className="mr-20 rounded-lg bg-cyan-400  p-2 px-5 font-medium text-white hover:bg-cyan-500">
-                ADD TO CART
-              </button> */}
               <FavoriteBtn item={data} />
             </div>
             <p className="mt-10">
-              <span className=" font-semibold">Product description:</span> {data?.description}
+              <span className=" font-semibold">Product description:</span>{" "}
+              <span className="font-sans text-sm">{data?.description}</span>
             </p>
           </div>
         </div>

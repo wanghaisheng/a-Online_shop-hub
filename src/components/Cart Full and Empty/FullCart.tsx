@@ -48,7 +48,7 @@ function FullCart() {
             <div className="md:flex md:w-full md:justify-between">
               <div className="flex justify-between ">
                 <Link to={`/product/${p?.id}`}>
-                  <h6 className="truncate text-ellipsis max-[480px]:w-[150px] w-[300px] sm:w-[420px]">
+                  <h6 className="w-[300px] truncate text-ellipsis max-[480px]:w-[150px] sm:w-[420px]">
                     {p?.title}
                   </h6>
                 </Link>
@@ -60,7 +60,7 @@ function FullCart() {
                   <IoTrashOutline size={20} title="delete" />
                 </button>
               </div>
-              <div className=" flex pt-3 md:pt-0">
+              <div className=" flex pt-3 md:pt-0 ">
                 {p?.productQuantity >= 2 ? (
                   <p className="mr-2">{p?.productQuantity}x</p>
                 ) : (
@@ -94,20 +94,22 @@ function FullCart() {
       ))}
       <div className="flex min-w-[100px] flex-col-reverse md:max-w-[860px] md:flex-row md:justify-between md:pr-5">
         <div className="flex flex-col-reverse items-center md:flex-row">
-          <button className="mt-2 flex w-28 items-center justify-center rounded-full bg-gray-800 px-5 py-3 md:mt-0 md:w-40">
+          <button className="mt-2 flex w-28 items-center justify-center rounded-full bg-gray-800 px-5 py-3 font-sans md:mt-0 md:w-40">
             <FcGoogle size={21} />
             <span className="text-lg font-medium leading-none text-white">
               Pay
             </span>
           </button>
-          <button className="ml-3 w-[200px] rounded-full bg-cyan-400 py-3 font-semibold uppercase hover:font-bold md:w-[285px]">
+          <button className="ml-3 w-[200px] rounded-full bg-cyan-400 py-3 font-sans font-semibold uppercase hover:font-bold md:w-[285px]">
             Process Order
           </button>
         </div>
         <div className="mb-5 ml-10 font-bold md:mb-0">
           <div>
-            <span>TOTAL</span>
-            <span className="ml-3 text-2xl">{cartTotalAmount.toFixed(2)} USD</span>
+            <span className=" text-xl">TOTAL</span>
+            <span className="ml-3 text-3xl">
+              {cartTotalAmount.toFixed(2)} USD
+            </span>
           </div>
           <div className="text-sm font-normal text-slate-600">
             Taxes Included

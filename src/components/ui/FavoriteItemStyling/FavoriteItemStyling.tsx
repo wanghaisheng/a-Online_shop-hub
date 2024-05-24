@@ -20,14 +20,19 @@ function FavoriteItemStyling({ item }: { item: ItemType }) {
 
 
   return (
-    <div>
+    <div className="pl-5">
       <Link to={`/product/${item?.id}`}>
         <div key={item?.id} className=" relative">
-          <img src={item?.image} className=" h-[360px] w-[277px] object-contain bg-white" />
+          <img
+            src={item?.image}
+            className=" h-[360px] w-[277px] bg-white object-contain"
+          />
           <h6 className=" absolute bottom-0 left-0 max-w-[200px] truncate text-ellipsis">
             {item?.title}
           </h6>
-          <h5 className=" absolute bottom-0 right-0">{item?.price?.toFixed(2)} USD</h5>
+          <h5 className=" absolute bottom-0 right-0">
+            {item?.price?.toFixed(2)} USD
+          </h5>
         </div>
       </Link>
       <div className=" flex justify-between pb-5 pl-1 pt-3">

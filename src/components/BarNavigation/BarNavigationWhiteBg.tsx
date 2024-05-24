@@ -7,14 +7,16 @@ import { useEffect, useState } from "react";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Global state/store";
-import { resetPingOnceAnimation, resetPingOnceCartAnimation } from "../../Global state/cart/cartSlice";
-
+import {
+  resetPingOnceAnimation,
+  resetPingOnceCartAnimation,
+} from "../../Global state/cart/cartSlice";
 
 type ColorProps = {
   color: "white" | "black";
 };
 
-function BarNavigation({ color = "white" }: ColorProps) {
+function BarNavigationWhiteBg({ color = "white" }: ColorProps) {
   const [openMenu, setOpenMenu] = useState(false);
 
   const cartQuantity = useSelector(
@@ -30,9 +32,9 @@ function BarNavigation({ color = "white" }: ColorProps) {
     (state: RootState) => state.cart.animationPingOnce,
   );
 
-const animatePingOnceCart = useSelector(
-  (state: RootState) => state.cart.animationPingOnceCart,
-);
+  const animatePingOnceCart = useSelector(
+    (state: RootState) => state.cart.animationPingOnceCart,
+  );
 
   useEffect(() => {
     if (animatePingOnce) {
@@ -60,7 +62,7 @@ const animatePingOnceCart = useSelector(
 
   return (
     <>
-      <header className=" fixed top-0 z-10 flex h-14 w-full bg-transparent">
+      <header className=" fixed top-0 z-10 flex h-14 w-full bg-white-smoke">
         <nav className="flex h-full w-full items-center justify-between p-2">
           <div className="flex">
             {/* MENU */}
@@ -129,4 +131,4 @@ const animatePingOnceCart = useSelector(
   );
 }
 
-export default BarNavigation;
+export default BarNavigationWhiteBg;

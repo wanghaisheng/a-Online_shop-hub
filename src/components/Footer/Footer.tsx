@@ -15,7 +15,7 @@ function Footer() {
   return (
     <footer
       id="footer"
-      className="mb-6 mt-12 flex flex-col  items-center justify-center"
+      className="mb-4 flex flex-col items-center justify-center border-t-[2px] pt-12"
     >
       <div className=" h-[30px] w-full text-center">
         <h3>OTHER CATEGORIES</h3>
@@ -27,86 +27,87 @@ function Footer() {
           </h3>
         </button>
         <button>
-          <h3 className=" text-black px-3 border-x-[2px] ">
+          <h3 className=" border-x-[2px] px-3 text-black ">
             <Link to="/clothing/men">MEN</Link>
           </h3>
         </button>
         <button>
-          <h3 className=" text-black px-3">
+          <h3 className=" px-3 text-black">
             <Link to="/clothing/jewelry">JEWELRY</Link>
           </h3>
         </button>
       </section>
 
       <section className=" m-10 flex  w-full flex-col items-center  justify-center md:flex-row md:items-start md:justify-evenly">
-        <article className="ml-5 w-[250px] p-5">
+        <article className="ml-5 w-[250px] p-5 text-sm">
           <h3 className="pb-5">Do you need help?</h3>
           <a
             href="#footer"
-            className=" block cursor-pointer pb-1 text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
+            className=" block cursor-pointer pb-1 font-sans text-slate-500 hover:text-black hover:underline 
+            hover:underline-offset-1"
           >
             FAQs & Contact Information
           </a>
           <a
             href="#footer"
-            className="block cursor-pointer pb-1 text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
+            className="block cursor-pointer pb-1 font-sans text-slate-500 hover:text-black hover:underline hover:underline-offset-1 "
           >
             Online_shop ID
           </a>
           <a
             href="#footer"
-            className="block cursor-pointer pb-1 text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
+            className="block cursor-pointer pb-1 font-sans text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
           >
             Guest return
           </a>
           <a
             href="#footer"
-            className="block cursor-pointer pb-1 text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
+            className="block cursor-pointer pb-1 font-sans text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
           >
             Cookie preferences
           </a>
         </article>
 
-        <article className="ml-5 w-[250px] p-5 md:ml-10">
+        <article className="ml-5 w-[250px] p-5 text-sm md:ml-10">
           <h3 className=" pb-5">About us</h3>
           <a
             href="#footer"
-            className="block cursor-pointer pb-1 text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
+            className="block cursor-pointer pb-1 font-sans text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
           >
             Company
           </a>
           <a
             href="#footer"
-            className="block cursor-pointer pb-1 text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
+            className="block cursor-pointer pb-1 font-sans text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
           >
             Press Room
           </a>
           <a
             href="https://www.linkedin.com/in/katarzyna-rosinska/"
             target="_blank"
-            className="block cursor-pointer pb-1 text-slate-500 hover:text-amber-500 hover:underline hover:underline-offset-1"
+            className="block cursor-pointer pb-1 font-sans text-slate-500 hover:text-amber-500 hover:underline hover:underline-offset-1"
           >
             Work with us
           </a>
         </article>
 
-        <article className="ml-5 w-[250px] p-5">
+        <article className="ml-5 w-[250px] p-5 text-sm">
           <h3 className="pb-5">Purchase Gift Card</h3>
           <a
             href="#footer"
-            className="block cursor-pointer pb-1 text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
+            className="block cursor-pointer pb-1 font-sans text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
           >
             Balance Inquiry
           </a>
           <a
             href="#footer"
-            className="block cursor-pointer pb-1 text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
+            className="block cursor-pointer pb-1 font-sans text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
           >
             Gift card activation
           </a>
           <a
             href="#footer"
-            className="block cursor-pointer pb-1 text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
+            className="block cursor-pointer pb-1 font-sans text-slate-500 hover:text-black hover:underline hover:underline-offset-1"
           >
             Purchase of Gift Card
           </a>
@@ -148,13 +149,13 @@ function Footer() {
         </article>
 
         <article className="container mx-auto flex h-full items-center justify-center pt-10 sm:border-l-[2px] sm:pt-0 lg:border-l-0">
-          <p>
-            <span className=" italic">Online_shop</span> | English
+          <p className="font-sans italic">
+            <span className=" font-[Oswald]">Online_shop</span> | English
           </p>
         </article>
       </section>
 
-      <section className="container mx-auto mt-10 box-border flex w-full flex-wrap items-center justify-center text-sm">
+      <section className="container mt-10 flex w-full flex-wrap items-center justify-center font-sans text-[13.5px] h-full px-1">
         <a
           href="https://github.com/RosinskaK"
           target="_blank"

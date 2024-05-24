@@ -6,10 +6,10 @@ function HomeNewsletter() {
   return (
     <section className="flex h-full w-full flex-col bg-black p-5 text-white lg:flex-row">
       <div className="w-full p-6 md:p-20 lg:pr-2">
-        <h2 className="text-3xl font-semibold leading-7 sm:text-4xl sm:leading-8">
+        <h2 className="text-3xl font-[400] leading-8 sm:text-4xl sm:leading-9">
           STAY UP-TO-DATE ON THE LATEST TRENDS AND EXCLUSIVE OFFERS
         </h2>
-        <p className="pt-2 text-lg font-extralight sm:pt-3 sm:text-xl">
+        <p className="pt-2 text-lg font-extralight sm:pt-3 sm:text-xl font-sans">
           SUBSCRIBE TO OUR NEWSLETTER
         </p>
       </div>
@@ -36,7 +36,7 @@ function HomeNewsletter() {
             <label className={styles.form_checkbox}>
               <input type="checkbox" id="chcecbox" />
               <span className={styles.checkbox}></span>
-              <p className=" pr-14 font-extralight 2xl:max-w-[750px]">
+              <p className=" pr-14 font-extralight 2xl:max-w-[750px] font-sans">
                 I have read and understand the information regarding the use of
                 my personal data contained in the Privacy Policy and consent to
                 receiving personalized commercial communications from

@@ -49,7 +49,7 @@ function Cart() {
         </div>
       </section>
       <div className="mt-10 h-full w-full max-w-[1400px] pl-5 lg:pl-20">
-        <div className=" mb-10 text-left">Your cart ({cartQuantity})</div>
+        <div className=" mb-10 text-left text-2xl font-medium">Your cart ({cartQuantity})</div>
         {cartList?.length > 0 ? <FullCart /> : <EmptyCart />}
       </div>
     </div>

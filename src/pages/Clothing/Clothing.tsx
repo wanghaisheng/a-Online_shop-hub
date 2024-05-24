@@ -1,19 +1,18 @@
-import BarNavigation from "../../components/BarNavigation/BarNavigation";
+import { useParams } from "react-router-dom";
+import BarNavigationWhiteBg from "../../components/BarNavigation/BarNavigationWhiteBg";
 import Footer from "../../components/Footer/Footer";
 import QueryFetchedJewelry from "../../QueryFetched/QueryFetchedJewelry";
 import QueryFetchedMen from "../../QueryFetched/QueryFetchedMen";
 import QueryFetchedWomen from "../../QueryFetched/QueryFetchedWomen";
-import { useParams } from "react-router-dom";
 
 
 type ComponentType = React.ComponentType;
 
 type CategoryComponents = {
-  [key: string]: ComponentType; 
+  [key: string]: ComponentType;
 };
 
 function Clothing() {
-
   const { category } = useParams();
 
   const categoryComponents: CategoryComponents = {
@@ -22,18 +21,20 @@ function Clothing() {
     men: QueryFetchedMen,
   };
 
-  const ComponentToRender = category ? categoryComponents[category] || null : null;
-
+  const ComponentToRender = category
+    ? categoryComponents[category] || null
+    : null;
 
   //dorobić komponent zwracany w razie błędu w return patrz niżej zamiast null
 
-  
   return (
-    <div className=" flex h-full w-full justify-center flex-col items-center">
-      <BarNavigation color="black"/>
-      <div className=" mt-20 h-full max-w-[1000px] flex flex-col items-center justify-center mb-20">
-        <h2 className="text-center mb-10 text-lg uppercase font-bold italic">{category}</h2>
-        { ComponentToRender ? <ComponentToRender /> : null}
+    <div className=" flex h-full w-full flex-col items-center justify-center">
+      <BarNavigationWhiteBg color="black" />
+      <div className=" mb-24 mt-28 flex h-full max-w-[1000px] flex-col items-center justify-center">
+        <h2 className="mb-16 text-center font-bold uppercase italic">
+          {category}
+        </h2>
+        {ComponentToRender ? <ComponentToRender /> : null}
       </div>
       <Footer />
     </div>

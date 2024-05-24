@@ -55,7 +55,7 @@ function Home() {
           }}
         ></div>
 
-        <h1 className="absolute bottom-10 right-[-125px] p-2 text-right font-extralight text-pink-400 sm:p-5 sm:text-8xl">
+        <h1 className="absolute bottom-10 right-[-125px] p-2 text-right font-extralight text-pink-400 sm:p-5 sm:text-8xl font-sans">
           Blooming <span className="-rotate-90 transform inline-block origin-bottom-left ml-14">TIME!</span>
         </h1>
       </section>
