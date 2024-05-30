@@ -45,7 +45,7 @@ function Menu({ closingMenu }: MenuProps) {
             onClick={() => closeMenuFn()}
           >
             <Logo color="black" />
-            <div className="flex pt-5 sm:ml-36 ">
+            <div className="flex  sm:ml-36 items-center justify-center">
               <div className=" relative">
                 <Link to="/favorite">
                   <GoHeart

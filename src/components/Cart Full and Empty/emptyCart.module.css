@@ -1,0 +1,21 @@
+
+.bgImage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .bgImage {
+    background-image: url('../../assets/emptycarthorizont.jpg');
+    background-position: top center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bgImage {
+    background-image: url('../../assets/emptycartmobile.jpg');
+    background-position: center;
+  }
+}

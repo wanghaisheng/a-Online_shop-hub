@@ -80,7 +80,7 @@ const animatePingOnceCart = useSelector(
               <Logo color={color} />
             </span>
           </div>
-          <div className="flex">
+          <div className="flex items-center">
             {/* FAVORITE ICON */}
             <TransparentBtnNavigation link="/favorite">
               <GoHeart
@@ -107,7 +107,7 @@ const animatePingOnceCart = useSelector(
                 size={30}
                 className="relative cursor-pointer drop-shadow-md"
                 fill={`${color}`}
-                style={{ paddingBottom: "2px" }}
+                // style={{ paddingBottom: "2px" }}
               />
             </TransparentBtnNavigation>
             {cartQuantity > 0 ? (

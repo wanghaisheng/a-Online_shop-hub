@@ -82,7 +82,7 @@ function BarNavigationWhiteBg({ color = "white" }: ColorProps) {
               <Logo color={color} />
             </span>
           </div>
-          <div className="flex">
+          <div className="flex items-center">
             {/* FAVORITE ICON */}
             <TransparentBtnNavigation link="/favorite">
               <GoHeart
@@ -109,7 +109,7 @@ function BarNavigationWhiteBg({ color = "white" }: ColorProps) {
                 size={30}
                 className="relative cursor-pointer drop-shadow-md"
                 fill={`${color}`}
-                style={{ paddingBottom: "2px" }}
+                // style={{ paddingBottom: "2px" }}
               />
             </TransparentBtnNavigation>
             {cartQuantity > 0 ? (

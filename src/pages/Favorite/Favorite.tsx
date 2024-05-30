@@ -17,7 +17,7 @@ function Favorite() {
   }, []);
 
   return (
-    <div className=" flex h-full w-full flex-col items-center justify-center">
+    <div className=" flex h-full w-full flex-col items-center justify-center min-h-dvh">
       <BarNavigation color="black" />
       <div className="mt-20 h-full max-w-[1500px] ">
         <h2 className=" text-center">Favorite</h2>
