@@ -27,8 +27,12 @@ function QueryFetchedJewelry() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  if (fetchedJewelry.isError) {
-    return <h3>{JSON.stringify(fetchedJewelry.error.message)}</h3>;
+  if (fetchedJewelry?.isLoading) {
+    return <h3>Loading jewelry...</h3>;
+  }
+
+  if (fetchedJewelry?.isError) {
+    return <h3>{JSON.stringify(fetchedJewelry?.error.message)}</h3>;
   }
 
 

@@ -39,9 +39,6 @@ function Favorite() {
         <div className=" mb-10 flex flex-wrap items-center justify-center  gap-5 sm:justify-start">
           {favoriteList.map((el) => (
             <FavoriteItemStyling item={el} key={el.id} />
-            // <div key={el.id}>
-            //   <h3>{el.title}</h3>
-            // </div>
           ))}
         </div>
       </div>

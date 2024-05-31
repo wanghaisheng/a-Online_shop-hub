@@ -34,7 +34,7 @@ function HomeNewsletter() {
           </span>
           <div className="mt-5 flex items-start">
             <label className={styles.form_checkbox}>
-              <input type="checkbox" id="chcecbox" />
+              <input type="checkbox" id="checkbox" />
               <span className={styles.checkbox}></span>
               <p className=" pr-14 font-extralight 2xl:max-w-[750px] font-sans">
                 I have read and understand the information regarding the use of

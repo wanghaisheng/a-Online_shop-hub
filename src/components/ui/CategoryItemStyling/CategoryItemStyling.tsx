@@ -15,7 +15,7 @@ function CategoryItemStyling({ item }: { item: ItemType }) {
   return (
     <div
       key={item?.id}
-      className="group relative w-full max-w-[300px] lg:h-[550px] lg:max-w-[450px]"
+      className="group relative w-full max-w-[300px] lg:h-[550px] lg:max-w-[400px]"
     >
       <Link to={`/product/${item?.id}`}>
         <img

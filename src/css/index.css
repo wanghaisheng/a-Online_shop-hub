@@ -43,25 +43,28 @@ body {
   align-items: center;
 }
 
+/* navlinks in Home */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
   font-weight: 800;
 }
 
-/* title of specyfic product in Product */
+/* title of specyfic product in Product, title of page in favorite */
 h2 {
-  /* title pages fav i clothing */
+  /* title pages fav i clothing, menu category links */
   font-size: 2rem;
   
 }
 
+/* price in product, empty list favorite and start adding favorite,  */
 h3 {
   font-size: 1.1rem;
   line-height: 1.1;
   font-weight: 600;
 }
 
+/* clothing in price, price in favorite styling, price in fullcart */
 h5 {
   @media screen and (max-width: 600px) {
       font-size: 15px;
@@ -69,6 +72,7 @@ h5 {
   
 }
 
+/* title in clothing, title in favorite styling, title in fullcart */
 h6 {
   @media screen and (max-width: 600px) {
       font-size: 14px;

@@ -20,12 +20,13 @@ function FavoriteItemStyling({ item }: { item: ItemType }) {
 
 
   return (
-    <div className="pl-5">
+    <div className="pl-5 mb-7">
       <Link to={`/product/${item?.id}`}>
         <div key={item?.id} className=" relative">
           <img
             src={item?.image}
-            className=" h-[360px] w-[277px] bg-white object-contain"
+            className=" h-[360px] w-[277px] bg-white object-contain p-6"
+            loading="lazy"
           />
           <h6 className=" absolute bottom-0 left-0 max-w-[200px] truncate text-ellipsis">
             {item?.title}
