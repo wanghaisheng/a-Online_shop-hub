@@ -1,4 +1,3 @@
-// import styles from "./home.module.css";
 import MainCarousel from "../../components/Main Carousel/MainCarousel";
 import HomeTiles from "../../components/HomeTiles/HomeTiles";
 import HomeNewsletter from "../../components/HomeNewsletter/HomeNewsletter";
@@ -20,7 +19,7 @@ function Home() {
       <section className="relative h-full w-full">
         {/* mobile image */}
         <div
-          className="h-[760px] max-h-full w-full bg-cover bg-top bg-no-repeat lg:hidden"
+          className="h-[600px] max-h-full w-full bg-cover bg-top bg-no-repeat lg:hidden"
           style={{
             backgroundImage: `url(${manSolo})`,
           }}
@@ -33,10 +32,6 @@ function Home() {
           }}
         ></div>
         <NavLinksHome title="Men" link="/clothing/men" />
-
-        {/* <h1 className="absolute bottom-4 right-0 p-20 text-5xl font-extrabold text-white">
-          Men????
-        </h1> */}
       </section>
 
       <section className="relative h-full w-full">

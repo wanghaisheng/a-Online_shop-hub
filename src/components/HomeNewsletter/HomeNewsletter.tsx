@@ -36,7 +36,7 @@ function HomeNewsletter() {
             <label className={styles.form_checkbox}>
               <input type="checkbox" id="checkbox" />
               <span className={styles.checkbox}></span>
-              <p className=" pr-14 font-extralight 2xl:max-w-[750px] font-sans">
+              <p className=" pr-14 font-extralight 2xl:max-w-[750px] font-sans text-xs sm:text-sm">
                 I have read and understand the information regarding the use of
                 my personal data contained in the Privacy Policy and consent to
                 receiving personalized commercial communications from

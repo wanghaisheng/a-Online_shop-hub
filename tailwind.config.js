@@ -20,6 +20,11 @@ export default {
         pingOnce: "pingOnce 1.5s cubic-bezier(0, 0, 0.2, 1) forwards",
         pingOnceCart: "pingOnce 1.5s cubic-bezier(0, 0, 0.2, 1) forwards",
       },
+      fontFamily: {
+        LibreBodoni: ["Libre Bodoni", "serif"],
+        Oswald: ["Oswald", "serif"],
+        GreatVibes: ["Great Vibes", "cursive", "serif"],
+      },
     },
   },
   plugins: [],
