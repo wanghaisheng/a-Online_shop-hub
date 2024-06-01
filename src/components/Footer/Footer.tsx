@@ -9,6 +9,7 @@ import {
   BsDot,
 } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import ExpandableContainer from "./ExpandableContainer";
 
 
 function Footer() {
@@ -37,8 +38,9 @@ function Footer() {
           </h3>
         </button>
       </section>
-
-      <section className=" m-10 flex  w-full flex-col items-center  justify-center md:flex-row md:items-start md:justify-evenly">
+      
+      <ExpandableContainer />
+      <section className="m-10 hidden w-full flex-row items-start justify-evenly md:flex">
         <article className="ml-5 w-[250px] p-5 text-sm">
           <h3 className="pb-5">Do you need help?</h3>
           <a
@@ -155,7 +157,7 @@ function Footer() {
         </article>
       </section>
 
-      <section className="container mt-10 flex w-full flex-wrap items-center justify-center font-sans text-[13.5px] h-full px-1">
+      <section className="container mt-10 flex h-full w-full flex-wrap items-center justify-center px-1 font-sans text-[13.5px]">
         <a
           href="https://github.com/RosinskaK"
           target="_blank"

@@ -65,7 +65,7 @@ const animatePingOnceCart = useSelector(
           <div className="flex">
             {/* MENU */}
             <button
-              className="cursor-pointer bg-transparent p-4 pl-0 duration-300 hover:scale-110"
+              className="cursor-pointer bg-transparent p-4 duration-300 hover:scale-110"
               onClick={handlingOpenMenu}
             >
               <CgMenuLeftAlt

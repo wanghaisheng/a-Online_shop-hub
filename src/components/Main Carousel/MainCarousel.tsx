@@ -62,7 +62,7 @@ function MainCarousel() {
         className="aspect-[16/9] max-h-full min-h-[600px] w-full bg-cover bg-center bg-no-repeat duration-700"
       ></div>
       <h1
-        className={`absolute bottom-[230px] block cursor-pointer text-center italic ${images[imageIndex].color} ${images[imageIndex].font} text-6xl`}
+        className={`absolute bottom-[200px] block cursor-pointer text-center italic ${images[imageIndex].color} ${images[imageIndex].font} text-6xl`}
       >
         <NavLink to="/clothing/women">
           {images[imageIndex].title}
