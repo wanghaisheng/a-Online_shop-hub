@@ -7,16 +7,22 @@ import AddingToCartBtn from "../../components/ui/Cart Buttons/AddingToCartBtn";
 import BarNavigationWhiteBg from "../../components/BarNavigation/BarNavigationWhiteBg";
 
 function Product() {
+  // product is from memory of react router - App component <Route path="/product/:product" element={<Product />} /> and 
+  //<Link to={`/product/${item?.id}`}> in CategoryItemStyling
   const { product } = useParams();
 
-  const singleProduct = product ? product : "1"; //zostawiamy tak czy dać co innego??????
+  const singleProduct = product ? product : "1";
 
   //calling custom hook useFetchingProduct and forwarding string with specific product id from link props from QueryFetchedMen and so on...
-  const { data, isError, error } = useFetchingProduct(singleProduct);
+  const { data, isLoading, isError, error } = useFetchingProduct(singleProduct);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  if (isLoading) {
+    return <h3 className="pt-32">Loading product...</h3>;
+  }
 
   if (isError) {
     return <h4>{error.message}</h4>;
