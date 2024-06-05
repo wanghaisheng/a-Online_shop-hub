@@ -45,7 +45,7 @@ function Menu({ closingMenu }: MenuProps) {
             onClick={() => closeMenuFn()}
           >
             <Logo color="black" />
-            <div className="flex  sm:ml-36 items-center justify-center">
+            <div className="flex  items-center justify-center sm:ml-36">
               <div className=" relative">
                 <Link to="/favorite">
                   <GoHeart
@@ -90,7 +90,7 @@ function Menu({ closingMenu }: MenuProps) {
             </div>
           </div>
           <div className="flex flex-col items-start pl-20 pt-28">
-            <button>
+            <button onClick={closingMenu}>
               <h2
                 onClick={() => closeMenuFn()}
                 className="pb-5 font-bold text-black hover:underline"
@@ -98,7 +98,7 @@ function Menu({ closingMenu }: MenuProps) {
                 <Link to="/clothing/women">WOMEN</Link>
               </h2>
             </button>
-            <button>
+            <button onClick={closingMenu}>
               <h2
                 onClick={() => closeMenuFn()}
                 className="pb-5 font-bold text-black hover:underline"
@@ -106,7 +106,7 @@ function Menu({ closingMenu }: MenuProps) {
                 <Link to="/clothing/men">MEN</Link>
               </h2>
             </button>
-            <button>
+            <button onClick={closingMenu}>
               <h2
                 onClick={() => closeMenuFn()}
                 className="pb-5 font-bold text-black hover:underline"

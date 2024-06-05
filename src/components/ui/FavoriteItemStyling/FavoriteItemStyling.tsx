@@ -3,16 +3,16 @@ import { useDispatch } from "react-redux";
 import { deletingFavorite } from "../../../Global state/favorite/favoriteSlice";
 import { Link } from "react-router-dom";
 import AddingToCartBtn from "../Cart Buttons/AddingToCartBtn";
+import { ItemType } from "../../../types/types";
 
-
-type ItemType = {
-  id: number;
-  description: string;
-  image: string;
-  title: string;
-  price: number;
-  category: string;
-};
+// type ItemType = {
+//   id: number;
+//   description: string;
+//   image: string;
+//   title: string;
+//   price: number;
+//   category: string;
+// };
 
 function FavoriteItemStyling({ item }: { item: ItemType }) {
 

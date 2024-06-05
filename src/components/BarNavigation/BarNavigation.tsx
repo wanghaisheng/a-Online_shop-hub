@@ -52,10 +52,12 @@ const animatePingOnceCart = useSelector(
 
   const handlingOpenMenu = () => {
     setOpenMenu(true);
+    console.log("menu is open");
   };
 
   const handlingClosingMenu = () => {
     setOpenMenu(false);
+    console.log("menu is closed");
   };
 
   return (

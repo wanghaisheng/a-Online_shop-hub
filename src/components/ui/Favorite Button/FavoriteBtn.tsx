@@ -4,16 +4,16 @@ import { AppDispatch, RootState } from "../../../Global state/store";
 import { useDispatch, useSelector } from "react-redux";
 import { addingFavorite, deletingFavorite } from "../../../Global state/favorite/favoriteSlice";
 import { triggerPingOnceAnimation } from "../../../Global state/cart/cartSlice";
+import { ItemType } from "../../../types/types";
 
-
-type ItemType = {
-  id: number;
-  description: string;
-  image: string;
-  title: string;
-  price: number;
-  category: string;
-};
+// type ItemType = {
+//   id: number;
+//   description: string;
+//   image: string;
+//   title: string;
+//   price: number;
+//   category: string;
+// };
 
 
 function FavoriteBtn({item}: {item: ItemType}) {
@@ -36,7 +36,6 @@ function FavoriteBtn({item}: {item: ItemType}) {
 
   return (
     <button className=" absolute right-2 top-2" onClick={handleStateFavorite}>
-      {/* <GoHeart size={24} className={isFavorite ? "cursor-pointer text-rose-600" : "cursor-pointer" }/> */}
       {isFavorite ? (
         <GoHeartFill
           size={24}

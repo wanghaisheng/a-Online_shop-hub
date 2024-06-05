@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import FavoriteBtn from "../Favorite Button/FavoriteBtn";
+import { ItemType } from "../../../types/types";
 
-
-type ItemType = {
-  id: number;
-  description: string;
-  image: string;
-  title: string;
-  price: number;
-  category: string;
-};
+// type ItemType = {
+//   id: number;
+//   description: string;
+//   image: string;
+//   title: string;
+//   price: number;
+//   category: string;
+// };
 
 function CategoryItemStyling({ item }: { item: ItemType }) {
   return (
