@@ -10,16 +10,19 @@
   category: string;
 };
 
-//Logo
-// type ColorProps = {
-//   color: "white" | "black";
-// };
-
 // //NavLinksHome
 // type NavLinksHomeProps = {
 //   title: string;
 //   link: "/clothing/women" | "/clothing/jewelry" | "/clothing/men";
 // };
+
+
+
+//Logo
+// type ColorProps = {
+//   color: "white" | "black";
+// };
+
 // // BarNavigation
 // type ColorProps = {
 //   color: "white" | "black";
@@ -55,8 +58,3 @@
   //   line4: string;
   //   url?: string;
   // };
-
-// //   Menu
-// type MenuProps = {
-//   closingMenu: () => void;
-// };

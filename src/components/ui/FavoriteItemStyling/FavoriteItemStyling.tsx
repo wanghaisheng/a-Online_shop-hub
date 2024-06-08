@@ -28,10 +28,10 @@ function FavoriteItemStyling({ item }: { item: ItemType }) {
             className=" h-[360px] w-[277px] bg-white object-contain p-6"
             loading="lazy"
           />
-          <h6 className=" absolute bottom-0 left-0 max-w-[200px] truncate text-ellipsis">
+          <h6 className=" absolute bottom-0 left-0 max-w-[200px] truncate text-ellipsis pl-1 font-light">
             {item?.title}
           </h6>
-          <h5 className=" absolute bottom-0 right-0">
+          <h5 className=" absolute bottom-0 right-0 pr-1 font-light">
             {item?.price?.toFixed(2)} USD
           </h5>
         </div>

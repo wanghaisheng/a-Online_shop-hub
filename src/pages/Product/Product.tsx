@@ -1,39 +1,50 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import useFetchingProduct from "../../Custom Hooks/useFetchingProduct";
 import Footer from "../../components/Footer/Footer";
-import FavoriteBtn from "../../components/ui/Favorite Button/FavoriteBtn";
-import AddingToCartBtn from "../../components/ui/Cart Buttons/AddingToCartBtn";
 import BarNavigationWhiteBg from "../../components/BarNavigation/BarNavigationWhiteBg";
+import ProductItemStyling from "../../components/ui/ProductItemStyling/ProductItemStyling";
+import ErrorInfoBtn from "../../components/ui/ErrorInfoBtn/ErrorInfoBtn";
+
+// import useFetchingProduct from "../../Custom Hooks/useFetchingProduct";
+// import FavoriteBtn from "../../components/ui/Favorite Button/FavoriteBtn";
+// import AddingToCartBtn from "../../components/ui/Cart Buttons/AddingToCartBtn";
 
 function Product() {
-  // product is from memory of react router - App component <Route path="/product/:product" element={<Product />} /> and 
+  // product is from memory of react router - App component <Route path="/product/:product" element={<Product />} /> and
   //<Link to={`/product/${item?.id}`}> in CategoryItemStyling
   const { product } = useParams();
 
-  const singleProduct = product ? product : "1";
+  const productId = product || null ? product : null;
 
   // tu sparwadzam czy jest prawidłowe i product lub null daje komunikat o błędzie (osobny komponent) i dopiero przekazuje props z id prawidłowym
 
   //calling custom hook useFetchingProduct and forwarding string with specific product id from link props from QueryFetchedMen and so on...
-  const { data, isLoading, isError, error } = useFetchingProduct(singleProduct);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  if (isLoading) {
-    return <h3 className="pt-32">Loading product...</h3>;
-  }
+  // const { data, isLoading, isError, error } = useFetchingProduct(singleProduct);
 
-  if (isError) {
-    return <h4>{error.message}</h4>;
-  }
+  //   if (isLoading) {
+  //     return <h3 className="pt-32">Loading product...</h3>;
+  //   }
+
+  //   if (isError) {
+  //     return <h4>{error.message}</h4>;
+  //   }
 
   return (
     <div className=" flex h-full w-full flex-col items-center justify-center">
       <BarNavigationWhiteBg color="black" />
-      <div className=" mb-10 mt-32 flex h-full max-w-[1000px] flex-col items-center justify-center">
+
+      {productId ? (
+        <ProductItemStyling productId={productId} />
+      ) : (
+        <ErrorInfoBtn />
+      )}
+
+      {/* <div className=" mb-10 mt-32 flex h-full max-w-[1000px] flex-col items-center justify-center">
         <div className="flex h-full w-full max-w-[550px] flex-col items-center justify-center sm:max-w-[600px] lg:h-[550px] lg:max-w-[950px] lg:flex-row lg:items-start px-7">
           <img
             src={data?.image}
@@ -56,7 +67,8 @@ function Product() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
+
       <Footer />
     </div>
   );

@@ -20,10 +20,10 @@ function Favorite() {
     <div className=" flex h-full w-full flex-col items-center justify-center min-h-dvh">
       <BarNavigation color="black" />
       <div className="mt-20 h-full max-w-[1500px] ">
-        <h2 className=" text-center">Favorite</h2>
+        {/* <h2 className=" text-center">Favorite</h2> */}
         {favoriteList.length > 0 ? (
-          <div className=" mb-10 mt-10 text-2xl pl-5 font-medium">
-            Your wish list ({favoriteList.length})
+          <div className=" mb-10 mt-10 text-3xl pl-5 font-medium">
+            YOUR WISH LIST ({favoriteList.length})
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center p-20">

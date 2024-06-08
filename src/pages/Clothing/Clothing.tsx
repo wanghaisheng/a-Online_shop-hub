@@ -1,9 +1,10 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import BarNavigationWhiteBg from "../../components/BarNavigation/BarNavigationWhiteBg";
 import Footer from "../../components/Footer/Footer";
 import QueryFetchedJewelry from "../../QueryFetched/QueryFetchedJewelry";
 import QueryFetchedMen from "../../QueryFetched/QueryFetchedMen";
 import QueryFetchedWomen from "../../QueryFetched/QueryFetchedWomen";
+import ErrorInfoBtn from "../../components/ui/ErrorInfoBtn/ErrorInfoBtn";
 
 
 type ComponentType = React.ComponentType;
@@ -37,13 +38,14 @@ function Clothing() {
         {ComponentToRender ? (
           <ComponentToRender />
         ) : (
-          <div>
-            <h3>Ups! Sorry, something went wrong...</h3>
-            <p className="p-5">Please go to Home page</p>
-            <button className="rounded-xl bg-black px-9 py-4 text-lg text-white">
-              <Link to="/">Home Page</Link>
-            </button>
-          </div>
+          <ErrorInfoBtn />
+          // <div>
+          //   <h3>Ups! Sorry, something went wrong...</h3>
+          //   <p className="p-5">Please go to Home page</p>
+          //   <button className="rounded-xl bg-black px-9 py-4 text-lg text-white">
+          //     <Link to="/">Home Page</Link>
+          //   </button>
+          // </div>
         )}
       </div>
       <Footer />

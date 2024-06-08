@@ -62,13 +62,13 @@ function MainCarousel() {
         className="aspect-[16/9] max-h-full min-h-[600px] w-full bg-cover bg-center bg-no-repeat duration-700"
       ></div>
       <h1
-        className={`absolute bottom-[200px] block cursor-pointer text-center italic ${images[imageIndex].color} ${images[imageIndex].font} text-6xl`}
+        className={`absolute top-[490px] block cursor-pointer text-center ${images[imageIndex].color} ${images[imageIndex].font} w-[210px] leading-[41px]`}
       >
         <NavLink to="/clothing/women">
           {images[imageIndex].title}
           <p
             className="font-Oswald absolute right-1/2 top-1/2 block -translate-y-1/2 translate-x-1/2 transform cursor-pointer border-b-2 text-lg font-normal text-white"
-            style={{ marginTop: "70px", textDecorationThickness: "1.5px" }}
+            style={{ marginTop: "75px", textDecorationThickness: "1.5px" }}
           >
             View all
           </p>
