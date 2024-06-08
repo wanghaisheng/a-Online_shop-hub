@@ -13,6 +13,8 @@ function Product() {
 
   const singleProduct = product ? product : "1";
 
+  // tu sparwadzam czy jest prawidłowe i product lub null daje komunikat o błędzie (osobny komponent) i dopiero przekazuje props z id prawidłowym
+
   //calling custom hook useFetchingProduct and forwarding string with specific product id from link props from QueryFetchedMen and so on...
   const { data, isLoading, isError, error } = useFetchingProduct(singleProduct);
 
@@ -32,15 +34,15 @@ function Product() {
     <div className=" flex h-full w-full flex-col items-center justify-center">
       <BarNavigationWhiteBg color="black" />
       <div className=" mb-10 mt-32 flex h-full max-w-[1000px] flex-col items-center justify-center">
-        <div className="flex h-full w-full max-w-[300px] flex-col items-center justify-center sm:max-w-[600px] lg:h-[550px] lg:max-w-[950px] lg:flex-row lg:items-start">
+        <div className="flex h-full w-full max-w-[550px] flex-col items-center justify-center sm:max-w-[600px] lg:h-[550px] lg:max-w-[950px] lg:flex-row lg:items-start px-7">
           <img
             src={data?.image}
             className="h-[400px] w-full max-w-[300px] bg-white bg-center bg-no-repeat object-contain p-8 lg:h-[500px] lg:max-w-[400px]"
             loading="lazy"
           />
           <div className="lg:pl-5">
-            <h2 className="">{data?.title}</h2>
-            <h3 className="pt-3 text-right font-sans text-2xl">
+            <h2 className=" text-xl md:text-3xl pt-3 lg:pt-0">{data?.title}</h2>
+            <h3 className="pt-3 text-right font-sans md:text-2xl text-xl">
               {data?.price?.toFixed(2)} USD
             </h3>
             <p className="mb-1 font-sans">in Stock</p>

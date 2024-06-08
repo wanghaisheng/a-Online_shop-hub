@@ -49,7 +49,7 @@ function FullCart() {
                 <div key={p?.id} className="w-[100px] md:w-[140px]">
                   <img
                     src={p?.image}
-                    className="h-[130px] min-w-[100px] bg-white object-contain py-1 md:h-[180px] md:w-[140px] p-2"
+                    className="h-[130px] min-w-[100px] bg-white object-contain py-2 md:h-[180px] md:w-[140px] md:py-4"
                     loading="lazy"
                   />
                 </div>
@@ -116,14 +116,14 @@ function FullCart() {
                 Process Order
               </button>
             </div>
-            <div className="mb-5 ml-10 font-bold md:mb-0 md:text-right text-center">
+            <div className="mb-5 ml-2 md:ml-10 font-bold md:mb-0 md:text-right text-center">
               <div>
                 <span className=" text-xl">TOTAL</span>
                 <span className="ml-3 text-3xl">
                   {cartTotalAmount.toFixed(2)} USD
                 </span>
               </div>
-              <div className="text-sm font-normal text-slate-600 md:text-left text-center">
+              <div className="text-sm font-normal text-slate-600 md:text-left text-center pt-1">
                 Taxes Included
               </div>
             </div>

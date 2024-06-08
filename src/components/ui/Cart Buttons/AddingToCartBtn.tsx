@@ -25,7 +25,7 @@ const handleAddingToCart = () => {
   return (
     <button 
     onClick={handleAddingToCart}
-    className="rounded-xl bg-cyan-400  p-2 px-5 font-bold text-white hover:bg-cyan-500 font-sans">
+    className=" rounded-md bg-cyan-400 p-2 hover:font-bold text-white font-sans font-semibold w-40">
       ADD TO CART
     </button>
   );

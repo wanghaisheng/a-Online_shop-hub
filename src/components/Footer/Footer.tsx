@@ -89,7 +89,7 @@ function Footer() {
             target="_blank"
             className="block cursor-pointer pb-1 font-sans text-slate-500 hover:text-amber-500 hover:underline hover:underline-offset-1"
           >
-            Work with us
+            Work with us!
           </a>
         </article>
 

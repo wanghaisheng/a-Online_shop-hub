@@ -51,13 +51,13 @@ function Menu({ closingMenu }: MenuProps) {
                   <GoHeart
                     title="Favorite"
                     size={28}
-                    className=" ml-5 cursor-pointer fill-black"
+                    className="ml-5 cursor-pointer fill-black"
                     onClick={() => closeMenuFn()}
                   />
                 </Link>
                 {favoriteList.length > 0 ? (
                   <span
-                    className="absolute bottom-5 right-[-5px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
+                    className="absolute bottom-0 right-[-5px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
             bg-black text-xs font-semibold text-white"
                   >
                     {favoriteList.length}
@@ -78,7 +78,7 @@ function Menu({ closingMenu }: MenuProps) {
                 </Link>
                 {cartQuantity > 0 ? (
                   <span
-                    className=" absolute bottom-[19px] right-[-5px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
+                    className=" absolute bottom-[1px] right-[-5px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
             bg-black text-xs font-semibold text-white"
                   >
                     {cartQuantity}

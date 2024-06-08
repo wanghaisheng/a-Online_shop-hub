@@ -38,12 +38,12 @@ function FavoriteBtn({item}: {item: ItemType}) {
     <button className=" absolute right-2 top-2" onClick={handleStateFavorite}>
       {isFavorite ? (
         <GoHeartFill
-          size={24}
+          size={26}
           className=" cursor-pointer fill-red-600 transition duration-500"
           //dodać animacje!!!!!!!!!!!!!!!!
         />
       ) : (
-        <GoHeart size={24} className="cursor-pointer" title="Add to Favorite" />
+        <GoHeart size={26} className="cursor-pointer" title="Add to Favorite" />
       )}
     </button>
   );

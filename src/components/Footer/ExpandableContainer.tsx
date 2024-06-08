@@ -27,7 +27,7 @@ const containerContent: ContainerContentProps[] = [
     title: "About us",
     line1: "Company",
     line2: "Press Room",
-    line3: "Work with us",
+    line3: "Work with us!",
     line4: "",
     url: "https://www.linkedin.com/in/katarzyna-rosinska/",
   },
