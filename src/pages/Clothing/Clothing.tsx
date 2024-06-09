@@ -31,10 +31,9 @@ function Clothing() {
     <div className=" flex h-full w-full flex-col items-center justify-center">
       <BarNavigationWhiteBg color="black" />
       <div className=" mb-24 mt-28 flex h-full max-w-[1000px] flex-col items-center justify-center">
-        <h2 className="mb-16 text-center font-bold uppercase italic">
+        <h2 className="mb-4 text-center font-bold uppercase italic">
           {category}
         </h2>
-
         {ComponentToRender ? (
           <ComponentToRender />
         ) : (

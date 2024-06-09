@@ -14,7 +14,7 @@ function Product() {
   //<Link to={`/product/${item?.id}`}> in CategoryItemStyling
   const { product } = useParams();
 
-  const productId = product || null ? product : null;
+  const productId = product ? product : null;
 
   // tu sparwadzam czy jest prawidłowe i product lub null daje komunikat o błędzie (osobny komponent) i dopiero przekazuje props z id prawidłowym
 
