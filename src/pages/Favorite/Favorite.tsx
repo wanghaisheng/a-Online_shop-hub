@@ -26,7 +26,7 @@ function Favorite() {
             YOUR WISH LIST ({favoriteList.length})
           </div>
         ) : (
-          <div className="flex flex-col items-center justify-center p-20">
+          <div className="flex flex-col items-center justify-center p-20 my-20">
             <h3 className="pb-4 font-bold">Your list is empty</h3>
             <h3 className="font-sans font-normal">start adding products :)</h3>
             <GoHeart

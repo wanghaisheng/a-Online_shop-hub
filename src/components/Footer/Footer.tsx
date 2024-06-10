@@ -1,21 +1,11 @@
 import {
   BsAndroid2,
   BsApple,
-  BsFacebook,
-  BsInstagram,
-  BsTwitterX,
-  BsYoutube,
-  BsPinterest,
   BsDot,
 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import ExpandableContainer from "./ExpandableContainer";
-
-
-
-//import { BsGithub } from "react-icons/bs";
-{/* <BsGithub />; */}
-
+import SocialIcons from "../ui/SocialIcons/SocialIcons";
 
 
 function Footer() {
@@ -124,26 +114,7 @@ function Footer() {
 
       <section className="flex w-dvw flex-wrap justify-evenly border-b-[2px] border-t-[2px] p-8 sm:h-[67px] sm:flex-nowrap sm:p-0">
         <article className="container mx-auto flex h-full items-center justify-center">
-          <BsFacebook
-            size={23}
-            className="mr-4  h-[25px] w-[25px] cursor-pointer hover:fill-sky-500"
-          />
-          <BsInstagram
-            size={23}
-            className="mr-4 h-[25px] w-[25px] cursor-pointer hover:fill-pink-400"
-          />
-          <BsYoutube
-            size={25}
-            className="mr-4 h-[25px] w-[25px] cursor-pointer hover:fill-red-600"
-          />
-          <BsTwitterX
-            size={23}
-            className="mr-4 h-[25px] w-[25px] cursor-pointer hover:fill-amber-400"
-          />
-          <BsPinterest
-            size={23}
-            className="h-[25px] w-[25px] cursor-pointer hover:fill-red-600"
-          />
+          <SocialIcons />
         </article>
 
         <article className="container mx-auto hidden h-full items-center justify-center border-l-[2px] lg:flex">

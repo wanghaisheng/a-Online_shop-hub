@@ -3,16 +3,10 @@ import { RootState } from "../../Global state/store";
 import { useSelector } from "react-redux";
 import Logo from "../ui/Logo/Logo";
 import { GoHeart } from "react-icons/go";
-import {
-  BsFacebook,
-  BsInstagram,
-  BsPinterest,
-  BsTwitterX,
-  BsYoutube,
-} from "react-icons/bs";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
 import girlMenu from "../../assets/girlmenu.jpg";
+import SocialIcons from "../ui/SocialIcons/SocialIcons";
 
 
 type MenuProps = {
@@ -121,26 +115,7 @@ function Menu({ closingMenu }: MenuProps) {
             </button>
           </div>
           <div className=" container absolute bottom-6 flex  pl-20">
-            <BsFacebook
-              size={23}
-              className="mr-4  h-[25px] w-[25px] cursor-pointer fill-black hover:fill-sky-500"
-            />
-            <BsInstagram
-              size={23}
-              className="mr-4 h-[25px] w-[25px] cursor-pointer hover:fill-pink-400"
-            />
-            <BsYoutube
-              size={25}
-              className="mr-4 h-[25px] w-[25px] cursor-pointer hover:fill-red-600"
-            />
-            <BsTwitterX
-              size={23}
-              className="mr-4 h-[25px] w-[25px] cursor-pointer hover:fill-amber-400"
-            />
-            <BsPinterest
-              size={23}
-              className="h-[25px] w-[25px] cursor-pointer hover:fill-red-600"
-            />
+            <SocialIcons />
           </div>
         </div>
         <img src={girlMenu} className=" relative hidden lg:block"></img>
