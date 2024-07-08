@@ -54,12 +54,10 @@ function BarNavigationWhiteBg({ color = "white" }: ColorProps) {
 
   const handlingOpenMenu = () => {
     setOpenMenu(true);
-    console.log("menu is open bgwhite");
   };
 
   const handlingClosingMenu = () => {
     setOpenMenu(false);
-    console.log("menu closed bg white");
   };
 
   return (

@@ -67,7 +67,7 @@ function MainCarousel() {
         <NavLink to="/clothing/women">
           {images[imageIndex].title}
           <p
-            className="font-Oswald absolute right-1/2 top-1/2 block -translate-y-1/2 translate-x-1/2 transform cursor-pointer border-b-2 text-lg font-normal text-white"
+            className="absolute right-1/2 top-1/2 block -translate-y-1/2 translate-x-1/2 transform cursor-pointer border-b-2 font-Oswald text-lg font-normal text-white"
             style={{ marginTop: "75px", textDecorationThickness: "1.5px" }}
           >
             View all
@@ -75,10 +75,16 @@ function MainCarousel() {
         </NavLink>
       </h1>
 
-      <div className="absolute bottom-[50%] left-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:left-8">
+      <div
+        className="absolute bottom-[50%] left-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:left-8"
+        data-test-id="carousel-arrow-left"
+      >
         <BsChevronCompactLeft size={40} onClick={prevSlide} />
       </div>
-      <div className="absolute bottom-[50%] right-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:right-8">
+      <div
+        className="absolute bottom-[50%] right-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:right-8"
+        data-test-id="carousel-arrow-right"
+      >
         <BsChevronCompactRight size={40} onClick={nextSlide} />
       </div>
       <div className=" absolute bottom-1 flex cursor-pointer gap-[1px]">
