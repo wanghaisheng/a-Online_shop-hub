@@ -12,7 +12,7 @@ import { NavLink } from "react-router-dom";
 const images = [
   {
     image: mc1,
-    title: "Glamor and Chic",
+    title: "GLAMOUR AND CHIC",
     font: "font-LibreBodoni",
     color: "text-rose-300",
   },
@@ -62,7 +62,7 @@ function MainCarousel() {
         className="aspect-[16/9] max-h-full min-h-[600px] w-full bg-cover bg-center bg-no-repeat duration-700"
       ></div>
       <h1
-        className={`absolute top-[490px] block cursor-pointer text-center ${images[imageIndex].color} ${images[imageIndex].font} w-[210px] leading-[41px]`}
+        className={`absolute bottom-[180px] block cursor-pointer text-center ${images[imageIndex].color} ${images[imageIndex].font} leading-[41px] w-[250px]`}
       >
         <NavLink to="/clothing/women">
           {images[imageIndex].title}

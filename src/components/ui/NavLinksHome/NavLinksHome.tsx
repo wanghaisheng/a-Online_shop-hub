@@ -17,7 +17,7 @@ function NavLinksHome({ title, link }: NavLinksHomeProps) {
         </h1>
         <p
           className="absolute right-1/2 top-1/2 block -translate-y-1/2 translate-x-1/2 transform cursor-pointer border-b-2 text-lg font-normal text-white"
-          style={{ marginTop: "50px", textDecorationThickness: "1.5px" }}
+          style={{ marginTop: "70px", textDecorationThickness: "1.5px" }}
         >
           View all
         </p>

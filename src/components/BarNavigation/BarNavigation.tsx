@@ -63,7 +63,7 @@ const animatePingOnceCart = useSelector(
   return (
     <>
       <header className=" fixed top-0 z-10 flex h-14 w-full bg-transparent">
-        <nav className="flex h-full w-full items-center justify-between p-2">
+        <nav className="flex h-full w-full items-center justify-between">
           <div className="flex">
             {/* MENU */}
             <button
