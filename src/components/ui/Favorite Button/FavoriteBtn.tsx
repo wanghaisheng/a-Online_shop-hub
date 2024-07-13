@@ -2,8 +2,11 @@ import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go"; 
 import { AppDispatch, RootState } from "../../../Global state/store";
 import { useDispatch, useSelector } from "react-redux";
-import { addingFavorite, deletingFavorite } from "../../../Global state/favorite/favoriteSlice";
-import { triggerPingOnceAnimation } from "../../../Global state/cart/cartSlice";
+import {
+  addingFavorite,
+  deletingFavorite,
+  triggerPingOnceAnimation,
+} from "../../../Global state/favorite/favoriteSlice";
 import { ItemType } from "../../../types/types";
 
 // type ItemType = {

@@ -7,14 +7,22 @@ import { useEffect, useState } from "react";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Global state/store";
-import { resetPingOnceAnimation, resetPingOnceCartAnimation } from "../../Global state/cart/cartSlice";
+import { resetPingOnceCartAnimation } from "../../Global state/cart/cartSlice";
+import {
+  resetPingOnceAnimation,
+} from "../../Global state/favorite/favoriteSlice";
 
-
-type ColorProps = {
+type BarNavigationProps = {
   color: "white" | "black";
+  bgWhite: boolean;
+  visibleHeartIcon?: boolean;
 };
 
-function BarNavigation({ color = "white" }: ColorProps) {
+function BarNavigation({
+  color = "white",
+  bgWhite = false,
+  visibleHeartIcon = true,
+}: BarNavigationProps) {
   const [openMenu, setOpenMenu] = useState(false);
 
   const cartQuantity = useSelector(
@@ -27,18 +35,18 @@ function BarNavigation({ color = "white" }: ColorProps) {
 
   const dispatch = useDispatch();
   const animatePingOnce = useSelector(
-    (state: RootState) => state.cart.animationPingOnce,
+    (state: RootState) => state.favorite.animationPingOnce,
   );
 
-const animatePingOnceCart = useSelector(
-  (state: RootState) => state.cart.animationPingOnceCart,
-);
+  const animatePingOnceCart = useSelector(
+    (state: RootState) => state.cart.animationPingOnceCart,
+  );
 
   useEffect(() => {
     if (animatePingOnce) {
       setTimeout(() => {
         dispatch(resetPingOnceAnimation());
-      }, 1500); // Duration of the animation
+      }, 1000); // Duration of the animation
     }
   }, [animatePingOnce, dispatch]);
 
@@ -46,7 +54,7 @@ const animatePingOnceCart = useSelector(
     if (animatePingOnceCart) {
       setTimeout(() => {
         dispatch(resetPingOnceCartAnimation());
-      }, 1500); // Duration of the animation
+      }, 1000); // Duration of the animation
     }
   }, [animatePingOnceCart, dispatch]);
 
@@ -62,7 +70,9 @@ const animatePingOnceCart = useSelector(
 
   return (
     <>
-      <header className=" fixed top-0 z-10 flex h-14 w-full bg-transparent">
+      <header
+        className={` ${bgWhite ? "bg-white-smoke" : "bg-transparent"} fixed top-0 z-10 flex h-14 w-full bg-transparent`}
+      >
         <nav className="flex h-full w-full items-center justify-between">
           <div className="flex">
             {/* MENU */}
@@ -84,26 +94,32 @@ const animatePingOnceCart = useSelector(
           </div>
           <div className="flex items-center">
             {/* FAVORITE ICON */}
-            <TransparentBtnNavigation link="/favorite">
-              <GoHeart
-                title="Favorite"
-                size={28}
-                className="relative cursor-pointer drop-shadow-md"
-                fill={`${color}`}
-              />
-            </TransparentBtnNavigation>
-            {favoriteList.length > 0 ? (
-              <span
-                className={`absolute bottom-[14px] right-20 flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
+            {visibleHeartIcon ? (
+              <>
+                <TransparentBtnNavigation link="/favorite">
+                  <GoHeart
+                    title="Favorite"
+                    size={28}
+                    className="relative cursor-pointer drop-shadow-md"
+                    fill={`${color}`}
+                  />
+                </TransparentBtnNavigation>
+                {favoriteList.length > 0 ? (
+                  <span
+                    className={`absolute bottom-[14px] right-20 flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
             bg-black text-xs font-semibold text-white ${animatePingOnce ? "animate-pingOnce" : ""}`}
-              >
-                {favoriteList.length}
-              </span>
+                  >
+                    {favoriteList.length}
+                  </span>
+                ) : (
+                  ""
+                )}
+              </>
             ) : (
               ""
             )}
+            {/* CART ICON */}
             <TransparentBtnNavigation link="/cart">
-              {/* CART ICON */}
               <LiaShoppingBagSolid
                 title="cart"
                 size={30}

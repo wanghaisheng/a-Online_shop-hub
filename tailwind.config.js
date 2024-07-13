@@ -17,8 +17,8 @@ export default {
         },
       },
       animation: {
-        pingOnce: "pingOnce 1.5s cubic-bezier(0, 0, 0.2, 1) forwards",
-        pingOnceCart: "pingOnce 1.5s cubic-bezier(0, 0, 0.2, 1) forwards",
+        pingOnce: "pingOnce 1s cubic-bezier(0, 0, 0.2, 1) forwards",
+        pingOnceCart: "pingOnce 1s cubic-bezier(0, 0, 0.2, 1) forwards",
       },
       fontFamily: {
         LibreBodoni: ["Libre Bodoni", "serif"],

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import BarNavigationWhiteBg from "../../components/BarNavigation/BarNavigationWhiteBg";
+import BarNavigation from "../../components/BarNavigation/BarNavigation";
 import Footer from "../../components/Footer/Footer";
 import QueryFetchedJewelry from "../../QueryFetched/QueryFetchedJewelry";
 import QueryFetchedMen from "../../QueryFetched/QueryFetchedMen";
@@ -29,7 +29,7 @@ function Clothing() {
 
   return (
     <div className=" flex h-full w-full flex-col items-center justify-center">
-      <BarNavigationWhiteBg color="black" />
+      <BarNavigation color="black" bgWhite={true} />
       <div className=" mb-24 mt-28 flex h-full max-w-[1000px] flex-col items-center justify-center">
         <h2 className="mb-4 text-center font-bold uppercase italic">
           {category}

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
-import BarNavigationWhiteBg from "../../components/BarNavigation/BarNavigationWhiteBg";
+import BarNavigation from "../../components/BarNavigation/BarNavigation";
 import ProductItemStyling from "../../components/ui/ProductItemStyling/ProductItemStyling";
 import ErrorInfoBtn from "../../components/ui/ErrorInfoBtn/ErrorInfoBtn";
 
@@ -36,7 +36,7 @@ function Product() {
 
   return (
     <div className=" flex h-full w-full flex-col items-center justify-center">
-      <BarNavigationWhiteBg color="black" />
+      <BarNavigation color="black" bgWhite={true} />
 
       {productId ? (
         <ProductItemStyling productId={productId} />

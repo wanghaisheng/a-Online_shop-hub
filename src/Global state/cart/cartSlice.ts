@@ -14,7 +14,7 @@ type CartStateType = {
   myCart: CartType[];
   cartQuantity: number;
   cartTotalAmount: number;
-  animationPingOnce: boolean;
+  // animationPingOnce: boolean;
   animationPingOnceCart: boolean;
 };
 
@@ -35,7 +35,7 @@ const initialState: CartStateType = {
         0,
       )
     : 0,
-  animationPingOnce: false,
+  // animationPingOnce: false,
   animationPingOnceCart: false,
 };
 
@@ -97,12 +97,12 @@ const cartSlice = createSlice({
         sessionStorage.setItem("myCart", JSON.stringify(state.myCart));
       }
     },
-    triggerPingOnceAnimation: (state) => {
-      state.animationPingOnce = true;
-    },
-    resetPingOnceAnimation: (state) => {
-      state.animationPingOnce = false;
-    },
+    // triggerPingOnceAnimation: (state) => {
+    //   state.animationPingOnce = true;
+    // },
+    // resetPingOnceAnimation: (state) => {
+    //   state.animationPingOnce = false;
+    // },
     triggerPingOnceCartAnimation: (state) => {
       state.animationPingOnceCart = true;
     },
@@ -117,8 +117,8 @@ export const {
   addingProductToCart,
   deletingProductFromCart,
   productQuantitySubtraction,
-  triggerPingOnceAnimation,
-  resetPingOnceAnimation,
+  // triggerPingOnceAnimation,
+  // resetPingOnceAnimation,
   triggerPingOnceCartAnimation,
   resetPingOnceCartAnimation,
 } = cartSlice.actions;
