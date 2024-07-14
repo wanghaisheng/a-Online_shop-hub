@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { RootState } from "../../Global state/store";
 import { useSelector } from "react-redux";
-import Logo from "../ui/Logo/Logo";
+import { Link } from "react-router-dom";
 import { GoHeart } from "react-icons/go";
 import { LiaShoppingBagSolid } from "react-icons/lia";
-import { Link } from "react-router-dom";
 import girlMenu from "../../assets/girlmenu.jpg";
+import { RootState } from "../../Global state/store";
+import Logo from "../ui/Logo/Logo";
 import SocialIcons from "../ui/SocialIcons/SocialIcons";
 
 
@@ -39,7 +39,7 @@ function Menu({ closingMenu }: MenuProps) {
             onClick={() => closeMenuFn()}
           >
             <Logo color="black" />
-            <div className="flex  items-center justify-center sm:ml-36">
+            <div className="flex items-center justify-center sm:ml-36">
               <div className=" relative">
                 <Link to="/favorite">
                   <GoHeart

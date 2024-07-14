@@ -37,7 +37,7 @@ function HomeTiles() {
         >
           <NavLinksHome title="ACCESSORIES" link="/clothing/jewelry" />
         </div>
-        {/* bottom rught tile */}
+        {/* bottom right tile */}
         <div
           className="relative aspect-square max-h-full min-h-[500px] w-full bg-cover bg-top bg-no-repeat"
           style={{

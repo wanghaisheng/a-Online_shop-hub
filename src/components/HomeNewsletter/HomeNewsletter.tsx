@@ -23,12 +23,12 @@ function HomeNewsletter() {
               id="email"
               name="email"
               placeholder="ENTER YOUR E-MAIL ADDRESS"
+              autoComplete="email"
             ></input>
             <button
               type="submit"
               className="block h-full w-[32px] cursor-pointer border-[1px] border-l-0 sm:h-[37.6px] sm:w-[40px]"
             >
-              {" "}
               <LiaArrowRightSolid size={30} className="pl-1 pr-1 sm:pr-0" />
             </button>
           </span>

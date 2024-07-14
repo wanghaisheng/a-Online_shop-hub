@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { NavLink } from "react-router-dom";
 import mc1 from "../../assets/mc11.jpg";
 import mc2 from "../../assets/mc22.jpg";
 import mc3 from "../../assets/mc33.jpg";
@@ -7,7 +8,7 @@ import {
   BsChevronCompactRight,
   BsDashLg,
 } from "react-icons/bs";
-import { NavLink } from "react-router-dom";
+
 
 const images = [
   {

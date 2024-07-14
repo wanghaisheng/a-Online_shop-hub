@@ -1,16 +1,14 @@
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { GoHeart } from "react-icons/go";
+import { LiaShoppingBagSolid } from "react-icons/lia";
 import TransparentBtnNavigation from "../ui/TransparentBtnNavigation/TransparentBtnNavigation";
 import Logo from "../ui/Logo/Logo";
 import Menu from "../Menu/Menu";
-import { useEffect, useState } from "react";
-import { LiaShoppingBagSolid } from "react-icons/lia";
-import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../Global state/store";
 import { resetPingOnceCartAnimation } from "../../Global state/cart/cartSlice";
-import {
-  resetPingOnceAnimation,
-} from "../../Global state/favorite/favoriteSlice";
+import { resetPingOnceAnimation } from "../../Global state/favorite/favoriteSlice";
 
 type BarNavigationProps = {
   color: "white" | "black";
@@ -106,7 +104,7 @@ function BarNavigation({
                 </TransparentBtnNavigation>
                 {favoriteList.length > 0 ? (
                   <span
-                    className={`absolute bottom-[14px] right-[72px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white bg-black text-xs font-semibold text-white ${animatePingOnce ? "animate-pingOnce" : ""}`}
+                    className={`absolute bottom-[14px] right-[70px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white bg-black text-xs font-semibold text-white ${animatePingOnce ? "animate-pingOnce" : ""}`}
                   >
                     {favoriteList.length}
                   </span>
@@ -129,7 +127,7 @@ function BarNavigation({
             </TransparentBtnNavigation>
             {cartQuantity > 0 ? (
               <span
-                className={`absolute bottom-3 right-[13px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] 
+                className={`absolute bottom-3 right-[10px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] 
             border-white bg-black text-xs font-semibold text-white ${animatePingOnceCart ? "animate-pingOnceCart" : ""}`}
               >
                 {cartQuantity}
