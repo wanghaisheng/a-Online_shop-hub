@@ -28,9 +28,9 @@ function Clothing() {
 
 
   return (
-    <div className=" flex h-full w-full flex-col items-center justify-center">
+    <div className="flex h-full w-full flex-col items-center justify-center">
       <BarNavigation color="black" bgWhite={true} />
-      <div className=" mb-24 mt-28 flex h-full max-w-[1000px] flex-col items-center justify-center">
+      <div className="mb-24 mt-28 flex h-full max-w-[1000px] flex-col items-center justify-center">
         <h2 className="mb-4 text-center font-bold uppercase italic">
           {category}
         </h2>
@@ -38,13 +38,6 @@ function Clothing() {
           <ComponentToRender />
         ) : (
           <ErrorInfoBtn />
-          // <div>
-          //   <h3>Ups! Sorry, something went wrong...</h3>
-          //   <p className="p-5">Please go to Home page</p>
-          //   <button className="rounded-xl bg-black px-9 py-4 text-lg text-white">
-          //     <Link to="/">Home Page</Link>
-          //   </button>
-          // </div>
         )}
       </div>
       <Footer />

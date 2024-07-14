@@ -3,20 +3,20 @@ import FavoriteBtn from "../Favorite Button/FavoriteBtn";
 import AddingToCartBtn from "../Cart Buttons/AddingToCartBtn";
 
 type ProductIdForFetching = {
-    productId: string;
-}
+  productId: string;
+};
 
-function ProductItemStyling( {productId}: ProductIdForFetching ) {
+function ProductItemStyling({ productId }: ProductIdForFetching) {
+  //calling custom hook useFetchingProduct and forwarding string with specific product id from link props from QueryFetchedMen and so on...
+  const { data, isLoading, isError, error } = useFetchingProduct(productId);
 
-const { data, isLoading, isError, error } = useFetchingProduct(productId);
+  if (isLoading) {
+    return <h3 className="pb-24 pt-44">Loading product...</h3>;
+  }
 
-if (isLoading) {
-  return <h3 className="pt-44 pb-24">Loading product...</h3>;
-}
-
-if (isError) {
-  return <h4>{error.message}</h4>;
-}
+  if (isError) {
+    return <h4>{error.message}</h4>;
+  }
 
   return (
     <div className=" mb-10 mt-32 flex h-full max-w-[1000px] flex-col items-center justify-center">

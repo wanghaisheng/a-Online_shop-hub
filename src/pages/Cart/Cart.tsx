@@ -1,9 +1,8 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../Global state/store";
-import { useEffect } from "react";
 import FullCart from "../../components/Cart Full and Empty/FullCart";
 import EmptyCart from "../../components/Cart Full and Empty/EmptyCart";
-
 
 function Cart() {
   const cartList = useSelector((state: RootState) => state.cart.myCart);

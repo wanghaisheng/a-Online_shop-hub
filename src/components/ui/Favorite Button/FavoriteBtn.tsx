@@ -1,7 +1,7 @@
-import { GoHeart } from "react-icons/go";
-import { GoHeartFill } from "react-icons/go"; 
-import { AppDispatch, RootState } from "../../../Global state/store";
 import { useDispatch, useSelector } from "react-redux";
+import { GoHeart } from "react-icons/go";
+import { GoHeartFill } from "react-icons/go";
+import { AppDispatch, RootState } from "../../../Global state/store";
 import {
   addingFavorite,
   deletingFavorite,
@@ -18,8 +18,7 @@ import { ItemType } from "../../../types/types";
 //   category: string;
 // };
 
-
-function FavoriteBtn({item}: {item: ItemType}) {
+function FavoriteBtn({ item }: { item: ItemType }) {
   const dispatch = useDispatch<AppDispatch>();
 
   //we get the current state and check whether a given item is already there
@@ -27,7 +26,7 @@ function FavoriteBtn({item}: {item: ItemType}) {
     state.favorite.myFavorite.some((favItem) => favItem?.id === item?.id),
   );
 
-  //nandleStateFavorite uses item directly from the outer scope of the FavoriteBtn function
+  //handleStateFavorite uses item directly from the outer scope of the FavoriteBtn function
   const handleStateFavorite = () => {
     if (isFavorite) {
       dispatch(deletingFavorite(item?.id));

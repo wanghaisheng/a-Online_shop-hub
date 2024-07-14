@@ -3,7 +3,6 @@ import {
   BsInstagram,
   BsPinterest,
   BsTwitterX,
-//   BsYoutube,
   BsGithub,
 } from "react-icons/bs";
 import {  } from "react-icons/bs";
@@ -20,10 +19,6 @@ function SocialIcons() {
         size={23}
         className="mr-4 h-[25px] w-[25px] cursor-pointer hover:fill-pink-400"
       />
-      {/* <BsYoutube
-        size={25}
-        className="mr-4 h-[25px] w-[25px] cursor-pointer hover:fill-red-600"
-      /> */}
       <BsTwitterX
         size={23}
         className="mr-4 h-[25px] w-[25px] cursor-pointer hover:fill-amber-400"

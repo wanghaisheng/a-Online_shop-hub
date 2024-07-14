@@ -11,7 +11,6 @@ interface ProductsArrayProps {
 function CategoryItemStyling({ products }: ProductsArrayProps) {
   //console.log(products);
 
-  // function CategoryItemStyling({ item }: { item: ItemType }) {
   const [filter, setFilter] = useState<string | null>(null);
 
   const handleSorting = (newFilter: string | null) => {
@@ -35,8 +34,6 @@ function CategoryItemStyling({ products }: ProductsArrayProps) {
       <FilterClothing onSorting={handleSorting} />
       <div className="grid h-full w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 lg:gap-16">
         {filteredProductsInClothing?.map((item: ItemType) => (
-          // <CategoryItemStyling item={item} key={item.id} />
-          // stare
           <div
             key={item?.id}
             className="group relative w-full max-w-[300px] lg:h-[550px] lg:max-w-[400px]"
@@ -51,7 +48,6 @@ function CategoryItemStyling({ products }: ProductsArrayProps) {
             </Link>
             <FavoriteBtn item={item} />
           </div>
-          // stare
         ))}
       </div>
     </>
