@@ -1,16 +1,16 @@
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { IoTrashOutline } from "react-icons/io5";
+import { TfiMinus, TfiPlus } from "react-icons/tfi";
+import { FcGoogle } from "react-icons/fc";
 import {
   addingProductToCart,
   deletingProductFromCart,
   productQuantitySubtraction,
 } from "../../Global state/cart/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../Global state/store";
-import { TfiMinus } from "react-icons/tfi";
-import { TfiPlus } from "react-icons/tfi";
-import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
 import CartNavBar from "./CartNavBar";
+
 
 type ItemType = {
   id: number;
@@ -37,7 +37,7 @@ function FullCart() {
 
   return (
     <div className="flex h-full min-h-dvh w-full max-w-[1500px] flex-col items-center">
-      <CartNavBar color="black"/>
+      <CartNavBar color="black" />
       <div className="mt-10 h-full w-full max-w-[1400px] pl-5 lg:pl-20">
         <div className=" mb-10 text-left text-3xl font-medium">
           YOUR CART ({cartQuantity})
@@ -116,14 +116,14 @@ function FullCart() {
                 Process Order
               </button>
             </div>
-            <div className="mb-5 ml-2 md:ml-10 font-bold md:mb-0 md:text-right text-center">
+            <div className="mb-5 ml-2 text-center font-bold md:mb-0 md:ml-10 md:text-right">
               <div>
                 <span className=" text-xl">TOTAL</span>
                 <span className="ml-3 text-3xl">
                   {cartTotalAmount.toFixed(2)} USD
                 </span>
               </div>
-              <div className="text-sm font-normal text-slate-600 md:text-left text-center pt-1">
+              <div className="pt-1 text-center text-sm font-normal text-slate-600 md:text-left">
                 Taxes Included
               </div>
             </div>

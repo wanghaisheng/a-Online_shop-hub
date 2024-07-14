@@ -106,8 +106,7 @@ function BarNavigation({
                 </TransparentBtnNavigation>
                 {favoriteList.length > 0 ? (
                   <span
-                    className={`absolute bottom-[14px] right-20 flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
-            bg-black text-xs font-semibold text-white ${animatePingOnce ? "animate-pingOnce" : ""}`}
+                    className={`absolute bottom-[14px] right-[72px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white bg-black text-xs font-semibold text-white ${animatePingOnce ? "animate-pingOnce" : ""}`}
                   >
                     {favoriteList.length}
                   </span>
@@ -130,7 +129,7 @@ function BarNavigation({
             </TransparentBtnNavigation>
             {cartQuantity > 0 ? (
               <span
-                className={`absolute bottom-3 right-5 flex h-5 w-5 items-center justify-center rounded-full border-[1px] 
+                className={`absolute bottom-3 right-[13px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] 
             border-white bg-black text-xs font-semibold text-white ${animatePingOnceCart ? "animate-pingOnceCart" : ""}`}
               >
                 {cartQuantity}

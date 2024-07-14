@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { BsArrowUpShort, BsArrowDownShort } from "react-icons/bs";
-import { BsSliders } from "react-icons/bs";
+import { BsArrowUpShort, BsArrowDownShort, BsSliders } from "react-icons/bs";
 
 
 interface FilterClothingProps {

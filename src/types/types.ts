@@ -16,19 +16,12 @@
 //   link: "/clothing/women" | "/clothing/jewelry" | "/clothing/men";
 // };
 
-
-
 //Logo
 // type ColorProps = {
 //   color: "white" | "black";
 // };
 
 // // BarNavigation
-// type ColorProps = {
-//   color: "white" | "black";
-// };
-
-// // BarNavigationWhiteBg
 // type ColorProps = {
 //   color: "white" | "black";
 // };

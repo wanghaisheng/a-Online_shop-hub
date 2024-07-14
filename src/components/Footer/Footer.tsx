@@ -1,7 +1,8 @@
-import { BsAndroid2, BsApple, BsDot } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { BsAndroid2, BsApple} from "react-icons/bs";
 import ExpandableContainer from "./ExpandableContainer";
 import SocialIcons from "../ui/SocialIcons/SocialIcons";
+import OtherCategoriesFooter from "./OtherCategoriesFooter";
+import CopyrightFooter from "./CopyrightFooter";
 import { footerLinks } from "./FooterLinks";
 
 
@@ -9,30 +10,11 @@ function Footer() {
   return (
     <footer
       id="footer"
-      className="mb-4 flex flex-col items-center justify-center border-t-[2px] pt-12"
+      className="mb-4 flex flex-col items-center justify-center border-t-[2px] pt-12 h-full"
     >
-      <div className=" h-[30px] w-full text-center">
-        <h3>OTHER CATEGORIES</h3>
-      </div>
-      <section className=" mt-7 w-dvw border-b-[2px] border-t-[2px] p-[15px] text-center">
-        <button>
-          <h3 className=" px-3 text-black">
-            <Link to="/clothing/women">WOMEN</Link>
-          </h3>
-        </button>
-        <button>
-          <h3 className=" border-x-[2px] px-3 text-black ">
-            <Link to="/clothing/men">MEN</Link>
-          </h3>
-        </button>
-        <button>
-          <h3 className=" px-3 text-black">
-            <Link to="/clothing/jewelry">JEWELRY</Link>
-          </h3>
-        </button>
-      </section>
+      <OtherCategoriesFooter />
       <ExpandableContainer />
-      <section className="m-10 hidden w-full flex-row items-start justify-evenly md:flex">
+      <section className="m-28 hidden w-full flex-row items-start justify-evenly md:flex">
         {footerLinks.map((el) => (
           <article className="ml-5 w-[220px] p-5 text-sm" key={el?.title}>
             <h3 className="pb-5">{el?.title}</h3>
@@ -83,7 +65,8 @@ function Footer() {
           </p>
         </article>
       </section>
-      <section className="container mt-10 flex h-full w-full flex-wrap items-center justify-center px-1 font-sans text-[13.5px]">
+      <CopyrightFooter />
+      {/* <section className="container mt-10 flex h-full w-full flex-wrap items-center justify-center px-1 font-sans text-[13.5px]">
         <a
           href="https://github.com/RosinskaK"
           target="_blank"
@@ -107,7 +90,7 @@ function Footer() {
         <a href="#footer" className="footer-footers">
           Unsubscribe from newsletter
         </a>
-      </section>
+      </section> */}
     </footer>
   );
 }
