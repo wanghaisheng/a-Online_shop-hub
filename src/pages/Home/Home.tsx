@@ -16,6 +16,7 @@ function Home() {
     <div className="relative h-full w-full max-w-[2000px]">
       <BarNavigation color="white" bgWhite={false} />
       <MainCarousel />
+      {/* Men section */}
       <section className="relative h-full w-full">
         {/* mobile image */}
         <div
@@ -33,28 +34,24 @@ function Home() {
         ></div>
         <NavLinksHome title="Men" link="/clothing/men" />
       </section>
-
-      <section className="relative h-full w-full">
+      {/* Blooming time section*/}
+      <section className="relative flex h-[720px] sm:h-[750px] w-full items-end bg-white-smoke min-[1600px]:h-[900px]">
         {/* mobile image */}
         <div
-          className="block h-[600px] w-full bg-cover bg-center bg-no-repeat sm:hidden"
+          className="top-0 block h-[650px] w-full bg-cover bg-center bg-no-repeat sm:hidden"
           style={{
             backgroundImage: `url(${springMobile})`,
           }}
         ></div>
         {/* desktop image */}
         <div
-          className="hidden h-[670px] w-full bg-cover bg-left-top bg-no-repeat sm:block xl:h-[700px] min-[1600px]:h-[950px]"
+          className="hidden h-[650px] w-full bg-cover bg-center bg-no-repeat sm:block xl:h-[650px] min-[1600px]:h-[800px]"
           style={{
             backgroundImage: `url(${spring})`,
           }}
         ></div>
-
-        <h1 className="absolute bottom-10 right-[-125px] p-2 text-right font-sans font-extralight text-pink-400 sm:p-5 sm:text-8xl">
-          Blooming{" "}
-          <span className="ml-14 inline-block origin-bottom-left -rotate-90 transform">
-            TIME!
-          </span>
+        <h1 className="absolute top-4 w-full p-2 text-center font-sans font-normal text-7xl text-pink-500 sm:p-5 sm:text-8xl xl:text-9xl xl:top-0">
+          Blooming <span className=" font-extralight">TIME!</span>
         </h1>
       </section>
       <HomeTiles />

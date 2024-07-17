@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchMen } from "../URLsForFetching/UrlsFetching";
 import { useEffect } from "react";
 import CategoryItemStyling from "../components/ui/CategoryItemStyling/CategoryItemStyling";
-//import { ItemType } from "../types/types";
 
 
 function QueryFetchedMen() {
@@ -28,11 +27,6 @@ function QueryFetchedMen() {
 
   return (
     <CategoryItemStyling products={fetchedMen?.data} />
-    // <div className="grid h-full w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 lg:gap-16">
-    //   {fetchedMen?.data?.map((item: ItemType) => (
-    // <CategoryItemStyling item={item} key={item.id} />
-    //   ))}
-    // </div>
   );
 }
 

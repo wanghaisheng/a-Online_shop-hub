@@ -14,7 +14,7 @@ function Footer() {
     >
       <OtherCategoriesFooter />
       <ExpandableContainer />
-      <section className="m-28 hidden w-full flex-row items-start justify-evenly md:flex">
+      <section className="m-20 hidden w-full flex-row items-start justify-evenly md:flex">
         {footerLinks.map((el) => (
           <article className="ml-5 w-[220px] p-5 text-sm" key={el?.title}>
             <h3 className="pb-5">{el?.title}</h3>

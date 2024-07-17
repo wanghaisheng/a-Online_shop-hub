@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { NavLink } from "react-router-dom";
 import mc1 from "../../assets/mc11.jpg";
 import mc2 from "../../assets/mc22.jpg";
-import mc3 from "../../assets/mc33.jpg";
+import mc3 from "../../assets/mc3.jpg";
 import {
   BsChevronCompactLeft,
   BsChevronCompactRight,
@@ -15,7 +15,7 @@ const images = [
     image: mc1,
     title: "GLAMOUR AND CHIC",
     font: "font-LibreBodoni",
-    color: "text-rose-300",
+    color: "text-black",
   },
   {
     image: mc2,
@@ -63,7 +63,7 @@ function MainCarousel() {
         className="aspect-[16/9] max-h-full min-h-[600px] w-full bg-cover bg-center bg-no-repeat duration-700"
       ></div>
       <h1
-        className={`absolute bottom-[180px] block cursor-pointer text-center ${images[imageIndex].color} ${images[imageIndex].font} leading-[41px] w-[250px]`}
+        className={`absolute bottom-[180px] block cursor-pointer text-center ${images[imageIndex].color} ${images[imageIndex].font} w-[250px] leading-[41px]`}
       >
         <NavLink to="/clothing/women">
           {images[imageIndex].title}
@@ -75,7 +75,6 @@ function MainCarousel() {
           </p>
         </NavLink>
       </h1>
-
       <div
         className="absolute bottom-[50%] left-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:left-8"
         data-test-id="carousel-arrow-left"
@@ -92,9 +91,9 @@ function MainCarousel() {
         {images.map((_, index) => (
           <button key={index} onClick={() => setImageIndex(index)}>
             {index === imageIndex ? (
-              <BsDashLg size={60} className="text-white hover:scale-110" />
+                <BsDashLg size={55} className="text-black hover:scale-110" />
             ) : (
-              <BsDashLg size={50} className="text-black hover:scale-110" />
+              <div className="h-[3.5px] w-9 rounded-full border-[1px] border-black hover:scale-110 mx-1"></div>
             )}
           </button>
         ))}

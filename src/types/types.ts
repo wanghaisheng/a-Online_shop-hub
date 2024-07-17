@@ -10,6 +10,17 @@
   category: string;
 };
 
+// FullCart
+// type ItemType = {
+//   id: number;
+//   description: string;
+//   image: string;
+//   title: string;
+//   price: number;
+//   category: string;
+//   productQuantity: number;
+// };
+
 // //NavLinksHome
 // type NavLinksHomeProps = {
 //   title: string;
@@ -21,25 +32,9 @@
 //   color: "white" | "black";
 // };
 
-// // BarNavigation
-// type ColorProps = {
-//   color: "white" | "black";
-// };
-
 // // CartNavBar
 // type colorProps = {
 //   color: "black" | "white";
-// };
-
-// FullCart
-// type ItemType = {
-//   id: number;
-//   description: string;
-//   image: string;
-//   title: string;
-//   price: number;
-//   category: string;
-//   productQuantity: number;
 // };
 
 // ExpandableContainer

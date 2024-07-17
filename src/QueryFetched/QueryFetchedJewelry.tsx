@@ -2,10 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchJewelry } from "../URLsForFetching/UrlsFetching";
 import CategoryItemStyling from "../components/ui/CategoryItemStyling/CategoryItemStyling";
 import { useEffect } from "react";
-// import { ItemType } from "../types/types";
-// import FilterClothing from "../components/FilterClothing/FilterClothing";
-
-
 
 
 function QueryFetchedJewelry() {
@@ -32,11 +28,6 @@ function QueryFetchedJewelry() {
 
   return (
     <CategoryItemStyling products={fetchedJewelry?.data} />
-    // {/* <div className="grid h-full w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 lg:gap-16">
-    //   {fetchedJewelry?.data?.map((item: ItemType) => (
-    //     <CategoryItemStyling item={item} key={item.id} />
-    //   ))}
-    // </div> */}
   );
 }
 
