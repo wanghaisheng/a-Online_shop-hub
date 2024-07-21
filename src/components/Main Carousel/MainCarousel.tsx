@@ -27,7 +27,7 @@ const images = [
     image: mc3,
     title: "Dolce Vita",
     font: "font-GreatVibes",
-    color: "text-amber-500",
+    color: "text-orange-300",
   },
 ];
 

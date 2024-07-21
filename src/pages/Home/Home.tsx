@@ -9,6 +9,7 @@ import manSolo from "../../assets/mansolo.jpg";
 import imgMix from "../../assets/secMix.jpg";
 import spring from "../../assets/spring.jpg";
 import springMobile from "../../assets/springmobile.jpg";
+import SliderHome from "../../components/SliderHome/SliderHome";
 
 
 function Home() {
@@ -55,6 +56,7 @@ function Home() {
         </h1>
       </section>
       <HomeTiles />
+      <SliderHome />
       <HomeNewsletter />
       <Footer />
     </div>
