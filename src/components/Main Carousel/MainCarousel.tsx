@@ -63,7 +63,7 @@ function MainCarousel() {
         className="aspect-[16/9] max-h-full min-h-[600px] w-full bg-cover bg-center bg-no-repeat duration-700"
       ></div>
       <h1
-        className={`absolute bottom-[180px] block cursor-pointer text-center ${images[imageIndex].color} ${images[imageIndex].font} w-[250px] leading-[41px]`}
+        className={`absolute bottom-[180px] block cursor-pointer text-center ${images[imageIndex].color} ${images[imageIndex].font} w-[280px] leading-[41px]`}
       >
         <NavLink to="/clothing/women">
           {images[imageIndex].title}
@@ -76,13 +76,13 @@ function MainCarousel() {
         </NavLink>
       </h1>
       <div
-        className="absolute bottom-[50%] left-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:left-8"
+        className="absolute bottom-[50%] left-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:left-8 drop-shadow-md"
         data-test-id="carousel-arrow-left"
       >
         <BsChevronCompactLeft size={40} onClick={prevSlide} />
       </div>
       <div
-        className="absolute bottom-[50%] right-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:right-8"
+        className="absolute bottom-[50%] right-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:right-8 drop-shadow-md"
         data-test-id="carousel-arrow-right"
       >
         <BsChevronCompactRight size={40} onClick={nextSlide} />
