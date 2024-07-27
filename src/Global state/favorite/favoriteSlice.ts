@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 interface FavoriteType {
   id: number;
@@ -11,8 +12,6 @@ interface FavoriteType {
 
 type FavoriteStateType = {
   myFavorite: FavoriteType[];
-
-
   animationPingOnce: boolean;
 };
 
@@ -20,8 +19,6 @@ const storedData = sessionStorage.getItem("myFavorite");  //checking if storedDa
 
 const initialState: FavoriteStateType = {
   myFavorite: storedData ? JSON.parse(storedData) : [],
-
-  
   animationPingOnce: false,
 };
 
@@ -33,6 +30,7 @@ const favoriteSlice = createSlice({
     addingFavorite: (state, action) => {
       state.myFavorite.push(action.payload);
       sessionStorage.setItem("myFavorite", JSON.stringify(state.myFavorite));
+      toast(`❤️️ ${action.payload.title} - added to favorite`, {theme: "dark",});
     },
     deletingFavorite: (state, action) => {
       state.myFavorite = state.myFavorite.filter(

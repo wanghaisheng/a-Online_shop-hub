@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 interface CartType {
   id: number;
@@ -14,7 +15,6 @@ type CartStateType = {
   myCart: CartType[];
   cartQuantity: number;
   cartTotalAmount: number;
-  // animationPingOnce: boolean;
   animationPingOnceCart: boolean;
 };
 
@@ -35,7 +35,6 @@ const initialState: CartStateType = {
         0,
       )
     : 0,
-  // animationPingOnce: false,
   animationPingOnceCart: false,
 };
 
@@ -49,10 +48,12 @@ const cartSlice = createSlice({
       );
       if (productIndex >= 0) {
         state.myCart[productIndex].productQuantity += 1;
+        toast.info(`Increased ${action.payload.title} quantity!`);
       } else {
         //adding new property to state productQuantity with default value 1
         const product = { ...action.payload, productQuantity: 1 };
         state.myCart.push(product);
+        toast.success(`${action.payload.title} added to cart`);
       }
       state.cartQuantity = state.myCart.reduce(
         (acc, item) => acc + item.productQuantity,
@@ -65,6 +66,8 @@ const cartSlice = createSlice({
       sessionStorage.setItem("myCart", JSON.stringify(state.myCart));
     },
     deletingProductFromCart: (state, action) => {
+      const deletedProduct = state.myCart.find(
+        (item) => item.id === action.payload);
       state.myCart = state.myCart.filter((item) => item.id !== action.payload);
       state.cartQuantity = state.myCart.reduce(
         (acc, item) => acc + item.productQuantity,
@@ -75,6 +78,10 @@ const cartSlice = createSlice({
         0,
       );
       sessionStorage.setItem("myCart", JSON.stringify(state.myCart));
+      if (deletedProduct)
+      toast.error(
+        `${deletedProduct?.title} removed from cart`,
+      );
     },
     productQuantitySubtraction: (state, action) => {
       const productIndex = state.myCart.findIndex(
@@ -97,12 +104,6 @@ const cartSlice = createSlice({
         sessionStorage.setItem("myCart", JSON.stringify(state.myCart));
       }
     },
-    // triggerPingOnceAnimation: (state) => {
-    //   state.animationPingOnce = true;
-    // },
-    // resetPingOnceAnimation: (state) => {
-    //   state.animationPingOnce = false;
-    // },
     triggerPingOnceCartAnimation: (state) => {
       state.animationPingOnceCart = true;
     },
@@ -117,8 +118,6 @@ export const {
   addingProductToCart,
   deletingProductFromCart,
   productQuantitySubtraction,
-  // triggerPingOnceAnimation,
-  // resetPingOnceAnimation,
   triggerPingOnceCartAnimation,
   resetPingOnceCartAnimation,
 } = cartSlice.actions;
