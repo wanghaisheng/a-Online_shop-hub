@@ -11,7 +11,7 @@
 };
 
 // FullCart
-// type ItemType = {
+// type CartItemType = {
 //   id: number;
 //   description: string;
 //   image: string;
@@ -32,13 +32,8 @@
 //   color: "white" | "black";
 // };
 
-// // CartNavBar
-// type colorProps = {
-//   color: "black" | "white";
-// };
-
-// ExpandableContainer
-  // type ContainerContentProps = {
+// FooterLinks
+  // type FooterLinksProps = {
   //   title: string;
   //   line1: string;
   //   line2: string;

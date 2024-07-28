@@ -11,7 +11,13 @@ import Product from "./pages/Product/Product";
 function App() {
   return (
     <Router>
-      <ToastContainer closeOnClick theme="colored" position="bottom-right" />
+      <ToastContainer
+        closeOnClick
+        theme="colored"
+        position="bottom-right"
+        newestOnTop
+        limit={4}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/favorite" element={<Favorite />} />

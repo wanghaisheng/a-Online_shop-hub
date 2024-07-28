@@ -21,21 +21,21 @@ function BarNavigation({
   bgWhite = false,
   visibleHeartIcon = true,
 }: BarNavigationProps) {
+
   const [openMenu, setOpenMenu] = useState(false);
 
   const cartQuantity = useSelector(
     (state: RootState) => state.cart.cartQuantity,
   );
-
   const favoriteList = useSelector(
     (state: RootState) => state.favorite.myFavorite,
   );
 
   const dispatch = useDispatch();
+
   const animatePingOnce = useSelector(
     (state: RootState) => state.favorite.animationPingOnce,
   );
-
   const animatePingOnceCart = useSelector(
     (state: RootState) => state.cart.animationPingOnceCart,
   );
@@ -58,12 +58,11 @@ function BarNavigation({
 
   const handlingOpenMenu = () => {
     setOpenMenu(true);
-    console.log("menu is open");
+    //console.log("menu is open");
   };
-
   const handlingClosingMenu = () => {
     setOpenMenu(false);
-    console.log("menu is closed");
+    //console.log("menu is closed");
   };
 
   return (
@@ -122,7 +121,6 @@ function BarNavigation({
                 size={30}
                 className="relative cursor-pointer drop-shadow-md"
                 fill={`${color}`}
-                // style={{ paddingBottom: "2px" }}
               />
             </TransparentBtnNavigation>
             {cartQuantity > 0 ? (

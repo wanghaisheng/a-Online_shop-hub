@@ -15,11 +15,11 @@ function CartNavBar({ color }: colorProps) {
   );
 
   return (
-    <section className=" z-40 flex h-14 w-full items-center justify-between">
+    <section className="z-40 flex h-14 w-full items-center justify-between">
       <TransparentBtnNavigation link="/">
         <BsArrowLeft
           size={32}
-          className="ml-2 mt-2 cursor-pointer"
+          className="mt-1 cursor-pointer"
           fill={`${color}`}
         />
       </TransparentBtnNavigation>
