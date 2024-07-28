@@ -30,7 +30,7 @@ const favoriteSlice = createSlice({
     addingFavorite: (state, action) => {
       state.myFavorite.push(action.payload);
       sessionStorage.setItem("myFavorite", JSON.stringify(state.myFavorite));
-      toast(`❤️️ ${action.payload.title} - added to favorite`, {theme: "dark",});
+      toast(`❤️️ ${action.payload.title} - added to favorite`);
     },
     deletingFavorite: (state, action) => {
       state.myFavorite = state.myFavorite.filter(

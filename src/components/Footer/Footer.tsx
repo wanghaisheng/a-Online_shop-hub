@@ -10,13 +10,13 @@ function Footer() {
   return (
     <footer
       id="footer"
-      className="mb-4 flex flex-col items-center justify-center border-t-[2px] pt-12 h-full"
+      className="mb-1 flex flex-col items-center justify-center border-t-[2px] pt-12 h-full"
     >
       <OtherCategoriesFooter />
       <ExpandableContainer />
-      <section className="m-20 hidden w-full flex-row items-start justify-evenly md:flex">
+      <section className="m-14 hidden w-full flex-row items-start justify-evenly lg:flex">
         {footerLinks.map((el) => (
-          <article className="ml-5 w-[220px] p-5 text-sm" key={el?.title}>
+          <article className="ml-5 w-[200px] p-5 text-sm" key={el?.title}>
             <h3 className="pb-5">{el?.title}</h3>
             <a
               href="#footer"
@@ -66,31 +66,6 @@ function Footer() {
         </article>
       </section>
       <CopyrightFooter />
-      {/* <section className="container mt-10 flex h-full w-full flex-wrap items-center justify-center px-1 font-sans text-[13.5px]">
-        <a
-          href="https://github.com/RosinskaK"
-          target="_blank"
-          className="block cursor-pointer pb-1 text-slate-500 hover:text-pink-400 hover:underline hover:underline-offset-1"
-        >
-          Created by &copy;Kasia Rosińska
-        </a>
-        <BsDot className="fill-slate-500" />
-        <a href="#footer" className="footer-footers">
-          Terms & Conditions
-        </a>
-        <BsDot className="fill-slate-500" />
-        <a href="#footer" className="footer-footers">
-          Cookies
-        </a>
-        <BsDot className="fill-slate-500" />
-        <a href="#footer" className="footer-footers">
-          Privacy policy
-        </a>
-        <BsDot className="fill-slate-500" />
-        <a href="#footer" className="footer-footers">
-          Unsubscribe from newsletter
-        </a>
-      </section> */}
     </footer>
   );
 }

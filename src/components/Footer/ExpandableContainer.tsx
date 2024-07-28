@@ -13,7 +13,7 @@ const ExpandableContainer: React.FC = () => {
 
   
   return (
-    <section className=" m-16 flex w-full flex-col items-center justify-center md:hidden pb-10">
+    <section className="m-14 flex w-full flex-col items-center justify-center lg:hidden pb-10">
       {/* order of arguments in map matters!!! first is an element of the array then is an index of el. in array */}
       {footerLinks.map((el, index) => (
         <article

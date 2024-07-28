@@ -2,7 +2,7 @@ import { BsDot } from "react-icons/bs";
 
 function CopyrightFooter() {
   return (
-    <section className="container mt-10 flex flex-wrap items-center justify-center px-1 font-sans text-[13.5px] h-fit">
+    <section className="container mt-8 p-3 flex flex-wrap items-center justify-center px-1 font-sans text-[13.5px] mx-1">
       <a
         href="https://github.com/RosinskaK"
         target="_blank"

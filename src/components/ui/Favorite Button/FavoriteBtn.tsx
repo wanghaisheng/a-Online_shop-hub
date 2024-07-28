@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { GoHeart } from "react-icons/go";
-import { GoHeartFill } from "react-icons/go";
 import { AppDispatch, RootState } from "../../../Global state/store";
+import { GoHeart, GoHeartFill } from "react-icons/go";
 import {
   addingFavorite,
   deletingFavorite,
@@ -9,14 +8,6 @@ import {
 } from "../../../Global state/favorite/favoriteSlice";
 import { ItemType } from "../../../types/types";
 
-// type ItemType = {
-//   id: number;
-//   description: string;
-//   image: string;
-//   title: string;
-//   price: number;
-//   category: string;
-// };
 
 function FavoriteBtn({ item }: { item: ItemType }) {
   const dispatch = useDispatch<AppDispatch>();
@@ -41,7 +32,7 @@ function FavoriteBtn({ item }: { item: ItemType }) {
       {isFavorite ? (
         <GoHeartFill
           size={26}
-          className=" cursor-pointer fill-red-600 transition duration-500"
+          className=" cursor-pointer fill-red-600 transition duration-500 "
           //dodać animacje!!!!!!!!!!!!!!!!
         />
       ) : (
