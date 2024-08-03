@@ -1,8 +1,36 @@
 # Online_shop project
 
+Project built in React💙
+
 fashion e-commerce shop
 
+
+
+➡️ Project Link: 
+
+Online_shop has a mobile version 📱 !!
+
+## Screenshots
+
+
+
 ## About the Project
+
+
+
+## Table of Contents
+- [About the project](#about-the-project)
+- [Usage](#usage)
+- [Technologies and Tools Used](#technologies-and-tools-used)
+- [Setup](#setup)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+- [Contact](#contact)
+
+
+## Usage
+
+
 
 ## Technologies Used
 
@@ -14,9 +42,7 @@ fashion e-commerce shop
 
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
-CSS Modules
-
-React icons
+**CSS Modules**
 
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
@@ -29,4 +55,56 @@ React icons
 ![Testing-Library](https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white)
 
 
+## Setup
 
+This project uses npm as package manager
+
+```bash
+  npm install
+```
+To run locally
+clone the project
+
+```bash
+  git clone https://github.com/RosinskaK/Online_shop.git
+```
+
+Go to the project directory
+
+```bash
+  cd Online_shop
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+## Acknowledgements
+
+- [Fake Store API](https://fakestoreapi.com/docs)
+- [React icons](https://react-icons.github.io/react-icons/)
+- [Swiper](https://swiperjs.com/get-started)
+- [React-toastify](https://fkhadra.github.io/react-toastify/introduction)
+- [Canva](https://www.canva.com/)
+- [Netlify](https://www.netlify.com/)
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Contact
+
+Created by Kasia Rosińska [@RosinskaK](https://www.linkedin.com/in/katarzyna-rosinska/) - feel free to contact me! 👋
+
+Live link:
