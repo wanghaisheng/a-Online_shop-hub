@@ -13,7 +13,6 @@ function HomeNewsletter() {
           SUBSCRIBE TO OUR NEWSLETTER
         </p>
       </div>
-
       <div className="h-full w-full p-6 pt-5 md:p-20 md:pt-0 lg:pt-20">
         <form className="flex flex-col">
           <span className="flex">
@@ -36,7 +35,7 @@ function HomeNewsletter() {
             <label className={styles.form_checkbox}>
               <input type="checkbox" id="checkbox" />
               <span className={styles.checkbox}></span>
-              <p className=" pr-14 font-extralight 2xl:max-w-[750px] font-sans text-xs sm:text-sm">
+              <p className="pr-14 font-extralight 2xl:max-w-[750px] font-sans text-xs sm:text-sm">
                 I have read and understand the information regarding the use of
                 my personal data contained in the Privacy Policy and consent to
                 receiving personalized commercial communications from

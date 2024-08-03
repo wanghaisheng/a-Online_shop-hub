@@ -34,7 +34,7 @@ const images = [
 function MainCarousel() {
   const [imageIndex, setImageIndex] = useState(0);
 
-  const autoSlideCarouselIsActive: boolean = true; //activating auto slider in Carousel if true, if false is auto slider is off
+  const autoSlideCarouselIsActive: boolean = true; //activating auto slider in Carousel if true, if false auto slider is off
 
   const autoSlideInterval: number = 5000; //a time in miliseconds of how long Carousel displays specyfic image
 
@@ -87,7 +87,7 @@ function MainCarousel() {
       >
         <BsChevronCompactRight size={40} onClick={nextSlide} />
       </div>
-      <div className=" absolute bottom-1 flex cursor-pointer gap-[1px]">
+      <div className="absolute bottom-1 flex cursor-pointer gap-[1px]">
         {images.map((_, index) => (
           <button key={index} onClick={() => setImageIndex(index)}>
             {index === imageIndex ? (

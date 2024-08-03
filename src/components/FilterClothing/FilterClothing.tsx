@@ -6,6 +6,7 @@ interface FilterClothingProps {
   onSorting: (filter: string | null) => void;
 }
 
+//receiving props from CategoryItemStyling 
 
 function FilterClothing( {onSorting}: FilterClothingProps ) {
   const [showOptions, setShowOptions] = useState(false);
@@ -14,7 +15,7 @@ function FilterClothing( {onSorting}: FilterClothingProps ) {
   return (
     <div className="flex h-full w-full py-7 align-top">
       <button
-        className="mr-3 flex sm:items-center "
+        className="mr-3 flex sm:items-center"
         onClick={() => setShowOptions(!showOptions)}
       >
         <span className="mt-2 sm:py-2 sm:pr-2 sm:mt-0">Filter</span>
@@ -32,14 +33,14 @@ function FilterClothing( {onSorting}: FilterClothingProps ) {
             price low to high
           </button>
           <button
-            className="my-1 flex  items-center bg-black p-2 text-white sm:mx-3 sm:my-0"
+            className="my-1 flex items-center bg-black p-2 text-white sm:mx-3 sm:my-0"
             onClick={() => onSorting("price-descending")}
           >
             <BsArrowDownShort size={23} />
             price high to low
           </button>
           <button
-            className=" my-1 bg-black p-2 text-white sm:mx-3 sm:my-0"
+            className="my-1 bg-black p-2 text-white sm:mx-3 sm:my-0"
             onClick={() => onSorting(null)}
           >
             default

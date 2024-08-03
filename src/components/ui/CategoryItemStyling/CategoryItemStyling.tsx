@@ -8,6 +8,8 @@ interface ProductsArrayProps {
   products: ItemType[];
 }
 
+//receiving props from QueryFetchedMen/Women/Jewelry
+
 function CategoryItemStyling({ products }: ProductsArrayProps) {
   //console.log(products);
 
@@ -17,7 +19,7 @@ function CategoryItemStyling({ products }: ProductsArrayProps) {
     setFilter(newFilter);
   };
 
-  //slice() creates copie of the original array to avoid mutating the original array
+  //slice() creates a copy of the original array to avoid mutating the original array
   const filteredProductsInClothing = products.slice().sort((a, b) => {
     switch (filter) {
       case "price-ascending":
@@ -41,9 +43,10 @@ function CategoryItemStyling({ products }: ProductsArrayProps) {
             <Link to={`/product/${item?.id}`}>
               <img
                 src={item?.image}
-                className=" h-[380px] w-full max-w-[300px] rounded-[2px] border-[1px] border-transparent bg-white bg-cover bg-center bg-no-repeat object-contain p-5 hover:border-[1px] hover:border-slate-600 lg:h-[500px] lg:max-w-[450px]"
+                loading="lazy"
+                className="h-[380px] w-full max-w-[300px] rounded-[2px] border-[1px] border-transparent bg-white bg-cover bg-center bg-no-repeat object-contain p-5 hover:border-[1px] hover:border-slate-600 lg:h-[500px] lg:max-w-[450px]"
               />
-              <h6 className=" truncate">{item?.title}</h6>
+              <h6 className="truncate">{item?.title}</h6>
               <h5 className="font-bold">{item?.price?.toFixed(2)} USD</h5>
             </Link>
             <FavoriteBtn item={item} />

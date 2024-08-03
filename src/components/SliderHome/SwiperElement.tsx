@@ -6,7 +6,6 @@ type dataIndexProps = {
   productId: string;
 };
 
-
 function SwiperElement({ productId }: dataIndexProps) {
     
   const { data, isLoading, isError, error } = useFetchingProduct(productId);
@@ -27,12 +26,13 @@ function SwiperElement({ productId }: dataIndexProps) {
         <img
           src={data?.image}
           alt={data?.title}
-          className="h-[85%] w-[270px] bg-white bg-center bg-no-repeat object-contain p-3  "
+          className="h-[85%] w-[270px] bg-white bg-center bg-no-repeat object-contain p-3"
+          loading="lazy"
         />
         <h5 className="bg-white-smoke py-2 font-bold pl-1">
           {data?.price?.toFixed(2)} USD
         </h5>
-        <h6 className=" w-auto max-w-[270px] truncate bg-white-smoke pr-8 pl-1">
+        <h6 className="w-auto max-w-[270px] truncate bg-white-smoke pr-8 pl-1">
           {data?.title}
         </h6>
       </Link>

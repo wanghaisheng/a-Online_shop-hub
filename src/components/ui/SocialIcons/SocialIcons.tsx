@@ -6,7 +6,7 @@ import {
   BsGithub,
 } from "react-icons/bs";
 import {  } from "react-icons/bs";
-;
+
 
 function SocialIcons() {
   return (

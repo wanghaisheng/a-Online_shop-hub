@@ -19,7 +19,7 @@ function Product() {
 
 
   return (
-    <div className=" flex h-full w-full flex-col items-center justify-center">
+    <div className="flex h-full w-full flex-col items-center justify-center">
       <BarNavigation color="black" bgWhite={true} />
       {productId ? (
         <ProductItemStyling productId={productId} />

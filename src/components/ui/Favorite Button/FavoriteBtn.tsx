@@ -28,11 +28,11 @@ function FavoriteBtn({ item }: { item: ItemType }) {
   };
 
   return (
-    <button className=" absolute right-2 top-2" onClick={handleStateFavorite}>
+    <button className="absolute right-2 top-2" onClick={handleStateFavorite}>
       {isFavorite ? (
         <GoHeartFill
           size={26}
-          className=" cursor-pointer fill-red-600 transition duration-500 "
+          className="cursor-pointer fill-red-600 transition duration-500"
           //dodać animacje!!!!!!!!!!!!!!!!
         />
       ) : (

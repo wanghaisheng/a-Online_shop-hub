@@ -20,7 +20,7 @@ function Favorite() {
   return (
     <div className="flex h-full min-h-dvh w-full flex-col items-center justify-center">
       <BarNavigation color="black" bgWhite={false} visibleHeartIcon={false} />
-      <div className="mt-20 h-full max-w-[1500px] ">
+      <div className="mt-20 h-full max-w-[1500px]">
         {favoriteList.length > 0 ? (
           <div className="mb-10 mt-10 pl-5 text-3xl font-medium">
             YOUR WISH LIST ({favoriteList.length})

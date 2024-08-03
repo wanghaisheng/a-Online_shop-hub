@@ -5,14 +5,6 @@ import { deletingFavorite } from "../../../Global state/favorite/favoriteSlice";
 import AddingToCartBtn from "../Cart Buttons/AddingToCartBtn";
 import { ItemType } from "../../../types/types";
 
-// type ItemType = {
-//   id: number;
-//   description: string;
-//   image: string;
-//   title: string;
-//   price: number;
-//   category: string;
-// };
 
 function FavoriteItemStyling({ item }: { item: ItemType }) {
   const dispatch = useDispatch();

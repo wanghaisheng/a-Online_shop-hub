@@ -7,7 +7,7 @@ type ProductIdForFetching = {
 };
 
 function ProductItemStyling({ productId }: ProductIdForFetching) {
-  //calling custom hook useFetchingProduct and forwarding string with specific product id from link props from QueryFetchedMen and so on...
+  //calling custom hook useFetchingProduct and forwarding string with specific product id from link props from Product component
   const { data, isLoading, isError, error } = useFetchingProduct(productId);
 
   if (isLoading) {
@@ -19,7 +19,7 @@ function ProductItemStyling({ productId }: ProductIdForFetching) {
   }
 
   return (
-    <div className=" mb-10 mt-32 flex h-full max-w-[1000px] flex-col items-center justify-center">
+    <div className="mb-10 mt-32 flex h-full max-w-[1000px] flex-col items-center justify-center">
       <div className="flex h-full w-full max-w-[550px] flex-col items-center justify-center px-7 sm:max-w-[600px] lg:h-[550px] lg:max-w-[950px] lg:flex-row lg:items-start">
         <img
           src={data?.image}
@@ -27,17 +27,17 @@ function ProductItemStyling({ productId }: ProductIdForFetching) {
           loading="lazy"
         />
         <div className="lg:pl-5">
-          <h2 className=" pt-3 text-xl md:text-3xl lg:pt-0">{data?.title}</h2>
+          <h2 className="pt-3 text-xl md:text-3xl lg:pt-0">{data?.title}</h2>
           <h3 className="pt-3 text-right font-sans text-xl md:text-2xl">
             {data?.price?.toFixed(2)} USD
           </h3>
           <p className="mb-1 font-sans">in Stock</p>
-          <div className="relative mt-14 ">
+          <div className="relative mt-14">
             <AddingToCartBtn item={data} />
             <FavoriteBtn item={data} />
           </div>
           <p className="mb-10 mt-10">
-            <span className=" font-semibold">Product description:</span>{" "}
+            <span className="font-semibold">Product description:</span>{" "}
             <span className="font-sans text-sm">{data?.description}</span>
           </p>
         </div>

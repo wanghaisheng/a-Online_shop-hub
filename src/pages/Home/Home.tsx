@@ -52,7 +52,7 @@ function Home() {
           }}
         ></div>
         <h1 className="absolute top-4 w-full p-2 text-center font-sans font-normal text-7xl text-pink-500 sm:p-5 sm:text-8xl xl:text-9xl xl:top-0">
-          Blooming <span className=" font-extralight">TIME!</span>
+          Blooming <span className="font-extralight">TIME!</span>
         </h1>
       </section>
       <HomeTiles />

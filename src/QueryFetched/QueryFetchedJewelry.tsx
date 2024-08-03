@@ -1,11 +1,9 @@
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchJewelry } from "../URLsForFetching/UrlsFetching";
 import CategoryItemStyling from "../components/ui/CategoryItemStyling/CategoryItemStyling";
-import { useEffect } from "react";
-
 
 function QueryFetchedJewelry() {
-
   const fetchedJewelry = useQuery({
     queryKey: ["jewelry"],
     queryFn: fetchJewelry,
@@ -25,10 +23,7 @@ function QueryFetchedJewelry() {
     return <h3>{JSON.stringify(fetchedJewelry?.error.message)}</h3>;
   }
 
-
-  return (
-    <CategoryItemStyling products={fetchedJewelry?.data} />
-  );
+  return <CategoryItemStyling products={fetchedJewelry?.data} />;
 }
 
 export default QueryFetchedJewelry;

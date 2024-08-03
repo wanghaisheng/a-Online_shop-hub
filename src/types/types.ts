@@ -1,4 +1,3 @@
-
 //QueryFetchedJewelry, QueryFetchedMen, QueryFetchedWomen, FavoriteItemStyling, FavoriteBtn
 //CategoryItemStyling, AddingToCartBtn
  export type ItemType = {

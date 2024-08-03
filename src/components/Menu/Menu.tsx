@@ -8,7 +8,6 @@ import { RootState } from "../../Global state/store";
 import Logo from "../ui/Logo/Logo";
 import SocialIcons from "../ui/SocialIcons/SocialIcons";
 
-
 type MenuProps = {
   closingMenu: () => void;
 };
@@ -16,9 +15,13 @@ type MenuProps = {
 function Menu({ closingMenu }: MenuProps) {
   const [closeMenu, setCloseMenu] = useState("block");
 
-  const favoriteList = useSelector((state: RootState) => state.favorite.myFavorite);
+  const favoriteList = useSelector(
+    (state: RootState) => state.favorite.myFavorite,
+  );
 
-   const cartQuantity = useSelector((state: RootState) => state.cart.cartQuantity);
+  const cartQuantity = useSelector(
+    (state: RootState) => state.cart.cartQuantity,
+  );
 
   function closeMenuFn() {
     setCloseMenu("none");
@@ -26,10 +29,10 @@ function Menu({ closingMenu }: MenuProps) {
 
   return (
     <div
-      className=" fixed left-0 top-0 z-50 h-dvh w-dvw bg-white"
+      className="fixed left-0 top-0 z-50 h-dvh w-dvw bg-white"
       style={{ display: closeMenu }}
     >
-      <div className=" flex h-full w-full lg:justify-between">
+      <div className="flex h-full w-full lg:justify-between">
         <div>
           <button className="ml-4 p-5 text-xl" onClick={closingMenu}>
             X
@@ -40,7 +43,7 @@ function Menu({ closingMenu }: MenuProps) {
           >
             <Logo color="black" />
             <div className="flex items-center justify-center sm:ml-36">
-              <div className=" relative">
+              <div className="relative">
                 <Link to="/favorite">
                   <GoHeart
                     title="Favorite"
@@ -60,21 +63,18 @@ function Menu({ closingMenu }: MenuProps) {
                   ""
                 )}
               </div>
-              <div className=" relative">
+              <div className="relative">
                 <Link to="/cart">
                   <LiaShoppingBagSolid
                     title="cart"
                     size={31}
-                    className=" ml-7 cursor-pointer fill-black"
+                    className="ml-7 cursor-pointer fill-black"
                     style={{ paddingBottom: "2px" }}
                     onClick={() => closeMenuFn()}
                   />
                 </Link>
                 {cartQuantity > 0 ? (
-                  <span
-                    className=" absolute bottom-[1px] right-[-5px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
-            bg-black text-xs font-semibold text-white"
-                  >
+                  <span className="absolute bottom-[1px] right-[-5px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white bg-black text-xs font-semibold text-white">
                     {cartQuantity}
                   </span>
                 ) : (
@@ -114,11 +114,15 @@ function Menu({ closingMenu }: MenuProps) {
               </h2>
             </button>
           </div>
-          <div className=" container absolute bottom-6 flex  pl-20">
+          <div className="container absolute bottom-6 flex  pl-20">
             <SocialIcons />
           </div>
         </div>
-        <img src={girlMenu} className=" relative hidden lg:block"></img>
+        <img
+          src={girlMenu}
+          className="relative hidden lg:block"
+          loading="lazy"
+        />
         <h5 className="absolute bottom-10 right-0 p-10 text-2xl font-bold text-black lg:text-white">
           Discover
         </h5>
