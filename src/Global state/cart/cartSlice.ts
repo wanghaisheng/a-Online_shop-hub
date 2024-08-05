@@ -113,7 +113,7 @@ const cartSlice = createSlice({
   },
 });
 
-//acttions
+//actions
 export const {
   addingProductToCart,
   deletingProductFromCart,
