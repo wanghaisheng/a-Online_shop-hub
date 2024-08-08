@@ -15,13 +15,13 @@ Online_shop has a mobile version 📱 !!
 
 ## About the Project
 
-• Built with React, React Router DOM, Vite,
-• SessionStorage stores data during active browser session,
-• TypeScript ensures type safety and improves code quality,
-• React Query manages server state, caching and efficient data fetching,
-• Redux Toolkit ensures effective state management,
-• tested with unit tests using React Testing Library with Jest,
-• styled with TailwindCSS project is fully responsive, utilizes RWD principles.
+- Built with React, React Router DOM, Vite,
+- SessionStorage stores data during active browser session,
+- TypeScript ensures type safety and improves code quality,
+- React Query manages server state, caching and efficient data fetching,
+- Redux Toolkit ensures effective state management,
+- tested with unit tests using React Testing Library with Jest,
+- styled with TailwindCSS project is fully responsive, utilizes RWD principles.
 
 
 ## Table of Contents
