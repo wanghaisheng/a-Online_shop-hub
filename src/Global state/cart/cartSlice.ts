@@ -67,7 +67,8 @@ const cartSlice = createSlice({
     },
     deletingProductFromCart: (state, action) => {
       const deletedProduct = state.myCart.find(
-        (item) => item.id === action.payload);
+        (item) => item.id === action.payload,
+      );
       state.myCart = state.myCart.filter((item) => item.id !== action.payload);
       state.cartQuantity = state.myCart.reduce(
         (acc, item) => acc + item.productQuantity,
@@ -79,9 +80,7 @@ const cartSlice = createSlice({
       );
       sessionStorage.setItem("myCart", JSON.stringify(state.myCart));
       if (deletedProduct)
-      toast.error(
-        `${deletedProduct?.title} removed from cart`,
-      );
+        toast.error(`${deletedProduct?.title} removed from cart`);
     },
     productQuantitySubtraction: (state, action) => {
       const productIndex = state.myCart.findIndex(
@@ -92,6 +91,7 @@ const cartSlice = createSlice({
           state.myCart[productIndex].productQuantity -= 1;
         } else if (state.myCart[productIndex].productQuantity === 1) {
           state.myCart = state.myCart.filter((p) => p.id !== action.payload.id);
+          toast.error("product removed from cart");
         }
         state.cartQuantity = state.myCart.reduce(
           (acc, item) => acc + item.productQuantity,
