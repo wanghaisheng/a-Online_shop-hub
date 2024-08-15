@@ -35,7 +35,7 @@ function FullCart() {
     <div className="flex h-full min-h-dvh w-full max-w-[1500px] flex-col items-center">
       <CartNavBar color="black" />
       <div className="mt-10 h-full w-full max-w-[1400px] pl-5 lg:pl-20">
-        <div className="mb-10 text-left text-3xl font-medium">
+        <div className="mb-10 text-left text-2xl font-medium">
           YOUR CART ({cartQuantity})
         </div>
         <div className="mb-10 flex h-full flex-col gap-5 md:justify-start">

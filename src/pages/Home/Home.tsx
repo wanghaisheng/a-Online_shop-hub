@@ -28,7 +28,7 @@ function Home() {
         ></div>
         {/* desktop image */}
         <div
-          className="hidden h-[760px] max-h-full w-full bg-cover bg-top bg-no-repeat lg:block"
+          className="hidden min-h-[760px] max-h-screen w-auto bg-cover bg-top bg-no-repeat lg:block"
           style={{
             backgroundImage: `url(${imgMix})`,
           }}

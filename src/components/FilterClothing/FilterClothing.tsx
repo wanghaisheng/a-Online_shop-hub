@@ -13,7 +13,7 @@ function FilterClothing( {onSorting}: FilterClothingProps ) {
 
   
   return (
-    <div className="flex h-full w-full py-7 align-top">
+    <div className="flex h-full w-full py-3 align-top">
       <button
         className="mr-3 flex sm:items-center"
         onClick={() => setShowOptions(!showOptions)}

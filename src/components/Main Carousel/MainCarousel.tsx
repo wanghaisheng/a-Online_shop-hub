@@ -57,7 +57,7 @@ function MainCarousel() {
   }, [autoSlideCarouselIsActive, autoSlideInterval, nextSlide]);
 
   return (
-    <div className="relative m-auto flex h-[600px] w-full max-w-[2000px] justify-center md:h-[750px]">
+    <div className="relative m-auto flex h-[600px] w-auto max-w-[2000px] justify-center md:min-h-screen md:max-h-screen ">
       <div
         style={{ backgroundImage: `url(${images[imageIndex].image})` }}
         className="aspect-[16/9] max-h-full min-h-[600px] w-full bg-cover bg-center bg-no-repeat duration-700"

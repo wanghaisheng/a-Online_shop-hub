@@ -24,19 +24,19 @@ function CartNavBar({ color }: colorProps) {
         />
       </TransparentBtnNavigation>
       <Logo color={color} />
-      <div className="relative mt-2 pr-2">
+      <div className="relative">
         <TransparentBtnNavigation link="/favorite">
           <GoHeart
             title="Favorite"
-            size={30}
-            className="cursor-pointer "
+            size={25}
+            className="cursor-pointer"
             fill={`${color}`}
           />
         </TransparentBtnNavigation>
         {favoriteList.length > 0 ? (
+          // dot icon that shows amount of items in favorite
           <span
-            className="absolute bottom-[17px] right-[18px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white
-            bg-black text-xs font-semibold text-white"
+            className="absolute bottom-[10px] right-[5px] flex h-[18px] w-[18px] items-center justify-center rounded-full border-[1px] border-white bg-black text-xs font-semibold text-white"
           >
             {favoriteList.length}
           </span>

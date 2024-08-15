@@ -1,13 +1,7 @@
 @import "generic/reset.css";
 
 #root {
-  /* max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;*/
-
   width: 100vw;
-  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
