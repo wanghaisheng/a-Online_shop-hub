@@ -10,15 +10,16 @@ const cartTotalAmount = useSelector(
 );
 
   return (
-    <div className="flex min-w-[100px] flex-col-reverse md:max-w-[860px] md:flex-row md:justify-between md:pr-5">
+    <div className="flex min-w-[100px] w-full flex-col-reverse md:max-w-[860px] md:flex-row md:justify-between md:pr-5">
       <div className="flex flex-col-reverse items-center md:flex-row mr-2 sm:mr-0">
-        <button className="mt-2 flex items-center justify-center rounded-full bg-gray-800 px-5 py-3 font-sans md:mt-0 md:w-40 w-dvw sm:w-[280px]">
+        <button className="mt-2 flex items-center justify-center rounded-full bg-gray-800 px-5 py-3 font-sans md:mt-0 md:w-40 w-full 
+        sm:w-[280px]">
           <FcGoogle size={21} />
           <span className="text-lg font-medium leading-none text-white">
             Pay
           </span>
         </button>
-        <button className="md:ml-3 w-dvw sm:w-[300px] rounded-full bg-cyan-400 py-3 font-sans font-semibold uppercase hover:font-bold md:w-[285px]">
+        <button className="md:ml-3 w-full sm:w-[300px] rounded-full bg-cyan-400 py-3 font-sans font-semibold uppercase hover:font-bold md:w-[280px]">
           Process Order
         </button>
       </div>

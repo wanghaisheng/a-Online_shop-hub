@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer
       id="footer"
-      className="mb-1 flex flex-col items-center justify-center border-t-[2px] pt-12 h-full"
+      className="pb-1 flex flex-col items-center justify-center border-t-[2px] pt-12 h-full w-full"
     >
       <OtherCategoriesFooter />
       <ExpandableContainer />

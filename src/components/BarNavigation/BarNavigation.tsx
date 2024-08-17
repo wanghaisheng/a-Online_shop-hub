@@ -9,7 +9,6 @@ import Menu from "../Menu/Menu";
 import { RootState } from "../../Global state/store";
 import { resetPingOnceCartAnimation } from "../../Global state/cart/cartSlice";
 import { resetPingOnceAnimation } from "../../Global state/favorite/favoriteSlice";
-import logo from "/Online_ShopLogo.png";
 
 type BarNavigationProps = {
   color: "white" | "black";
@@ -22,7 +21,6 @@ function BarNavigation({
   bgWhite = false,
   visibleHeartIcon = true,
 }: BarNavigationProps) {
-
   const [openMenu, setOpenMenu] = useState(false);
 
   const cartQuantity = useSelector(
@@ -85,10 +83,12 @@ function BarNavigation({
                 color={`${color}`}
               />
             </button>
-
+            {/* mobile logo */}
             <span className="sm:hidden">
               <TransparentBtnNavigation link="/">
-                <img src={logo} className="h-8 w-8"></img>
+                <p className={` text-2xl leading-none text-${color}`}>
+                  Online_shop
+                </p>
               </TransparentBtnNavigation>
             </span>
             <span className="hidden sm:block">

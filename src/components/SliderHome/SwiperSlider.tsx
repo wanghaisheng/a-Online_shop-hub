@@ -12,7 +12,7 @@ function SwiperSlider() {
       <Swiper
         slidesPerView={"auto"}
         centeredSlides={false}
-        spaceBetween={25}
+        spaceBetween={14}
         freeMode={true}
         modules={[FreeMode]}
         className="mySwiper"
