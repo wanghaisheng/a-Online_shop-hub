@@ -29,10 +29,10 @@ function Menu({ closingMenu }: MenuProps) {
 
   return (
     <div
-      className="fixed left-0 top-0 z-50 h-dvh w-dvw bg-white"
+      className="fixed left-0 top-0 z-50 h-dvh min-h-screen w-dvw bg-white"
       style={{ display: closeMenu }}
     >
-      <div className="flex h-full w-full lg:justify-between">
+      <div className="flex h-full w-full lg:justify-between min-h-screen">
         <div>
           <button className="ml-4 p-5 text-xl" onClick={closingMenu}>
             X
@@ -42,7 +42,7 @@ function Menu({ closingMenu }: MenuProps) {
             onClick={() => closeMenuFn()}
           >
             <Logo color="black" />
-            <div className="flex items-center justify-center sm:ml-36">
+            <div className="flex items-center justify-center ml-11 sm:ml-36">
               <div className="relative">
                 <Link to="/favorite">
                   <GoHeart
@@ -54,8 +54,7 @@ function Menu({ closingMenu }: MenuProps) {
                 </Link>
                 {favoriteList.length > 0 ? (
                   <span
-                    className="absolute bottom-0 right-[-5px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white 
-            bg-black text-xs font-semibold text-white"
+                    className="absolute bottom-0 right-[-5px] flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-white bg-black text-xs font-semibold text-white"
                   >
                     {favoriteList.length}
                   </span>
@@ -83,7 +82,7 @@ function Menu({ closingMenu }: MenuProps) {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-start pl-20 pt-28">
+          <div className="flex flex-col items-start sm:pl-20 md:pt-28 pl-14 pt-16">
             <button onClick={closingMenu}>
               <h2
                 onClick={() => closeMenuFn()}
@@ -114,7 +113,7 @@ function Menu({ closingMenu }: MenuProps) {
               </h2>
             </button>
           </div>
-          <div className="container absolute bottom-6 flex  pl-20">
+          <div className="container absolute bottom-6 flex sm:pl-20 justify-center sm:justify-normal">
             <SocialIcons />
           </div>
         </div>
@@ -123,10 +122,10 @@ function Menu({ closingMenu }: MenuProps) {
           className="relative hidden lg:block"
           loading="lazy"
         />
-        <h5 className="absolute bottom-10 right-0 p-10 text-2xl font-bold text-black lg:text-white">
+        <h5 className="absolute bottom-20 sm:bottom-10 right-0 p-10 text-2xl font-bold text-black lg:text-white">
           Discover
         </h5>
-        <p className="absolute bottom-4 right-0 p-10 text-lg text-black lg:text-white">
+        <p className="absolute bottom-14 sm:bottom-4 right-0 p-10 text-lg text-black lg:text-white">
           Our Shop!
         </p>
       </div>
