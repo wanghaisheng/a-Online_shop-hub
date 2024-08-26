@@ -28,7 +28,7 @@ function Home() {
         ></div>
         {/* desktop image */}
         <div
-          className="hidden min-h-[760px] max-h-screen w-auto bg-cover bg-top bg-no-repeat lg:block"
+          className="hidden max-h-screen min-h-screen w-auto bg-cover bg-top bg-no-repeat lg:block"
           style={{
             backgroundImage: `url(${imgMix})`,
           }}
@@ -36,7 +36,7 @@ function Home() {
         <NavLinksHome title="Men" link="/clothing/men" />
       </section>
       {/* Blooming time section*/}
-      <section className="relative flex h-[720px] sm:h-[750px] w-full items-end bg-white-smoke min-[1600px]:h-[900px]">
+      <section className="relative flex h-[720px] w-full items-end bg-white-smoke sm:h-[750px] min-[1400px]:h-[950px]">
         {/* mobile image */}
         <div
           className="top-0 block h-[650px] w-full bg-cover bg-center bg-no-repeat sm:hidden"
@@ -46,12 +46,12 @@ function Home() {
         ></div>
         {/* desktop image */}
         <div
-          className="hidden h-[650px] w-full bg-cover bg-center bg-no-repeat sm:block xl:h-[650px] min-[1600px]:h-[800px]"
+          className="hidden h-[650px] w-full bg-cover bg-center bg-no-repeat sm:block xl:h-[650px] min-[1400px]:h-[850px]"
           style={{
             backgroundImage: `url(${spring})`,
           }}
         ></div>
-        <h1 className="absolute top-4 w-full p-2 text-center font-sans font-normal text-7xl text-pink-500 sm:p-5 sm:text-8xl xl:text-9xl xl:top-0">
+        <h1 className="absolute top-4 w-full p-2 text-center font-sans text-7xl font-normal text-pink-500 sm:p-5 sm:text-8xl xl:top-0 xl:text-9xl">
           Blooming <span className="font-extralight">TIME!</span>
         </h1>
       </section>

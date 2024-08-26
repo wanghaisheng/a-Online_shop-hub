@@ -29,7 +29,7 @@ function Menu({ closingMenu }: MenuProps) {
 
   return (
     <div
-      className="fixed left-0 top-0 z-50 h-dvh min-h-screen w-dvw bg-white"
+      className="fixed left-0 top-0 z-50 h-screen w-dvw bg-white"
       style={{ display: closeMenu }}
     >
       <div className="flex h-full w-full lg:justify-between">
@@ -111,7 +111,7 @@ function Menu({ closingMenu }: MenuProps) {
               </h2>
             </button>
           </div>
-          <div className="container absolute bottom-[60px] sm:bottom-4 flex justify-center border-b-[2px] sm:border-b-0 sm:justify-normal sm:pl-20 pb-2">
+          <div className="container absolute bottom-[60px] sm:bottom-4 flex justify-center border-b-[2px] sm:border-b-0 sm:justify-normal sm:pl-20 pb-3">
             <SocialIcons />
           </div>
         </div>
