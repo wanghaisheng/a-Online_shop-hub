@@ -30,7 +30,7 @@ function Clothing() {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center">
       <BarNavigation color="black" bgWhite={true} />
-      <div className="mb-24 mt-16 flex h-full max-w-[1000px] flex-col items-center justify-center">
+      <div className="mb-24 mt-24 flex h-full max-w-[1000px] flex-col items-center justify-center">
         <h2 className="text-center font-bold uppercase italic">
           {category}
         </h2>
