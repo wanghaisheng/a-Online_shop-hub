@@ -11,10 +11,9 @@ import spring from "../../assets/spring.jpg";
 import springMobile from "../../assets/springmobile.jpg";
 import SliderHome from "../../components/SliderHome/SliderHome";
 
-
 function Home() {
   return (
-    <div className="relative h-full w-full max-w-[2000px]">
+    <div className=" relative h-full w-full">
       <BarNavigation color="white" bgWhite={false} />
       <MainCarousel />
       {/* Men section */}
@@ -28,7 +27,7 @@ function Home() {
         ></div>
         {/* desktop image */}
         <div
-          className="hidden max-h-screen min-h-screen w-auto bg-cover bg-top bg-no-repeat lg:block"
+          className="hidden max-h-full min-h-screen w-full aspect-[16/9] bg-cover bg-top bg-no-repeat lg:block"
           style={{
             backgroundImage: `url(${imgMix})`,
           }}

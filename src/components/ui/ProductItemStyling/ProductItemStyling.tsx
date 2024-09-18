@@ -19,7 +19,7 @@ function ProductItemStyling({ productId }: ProductIdForFetching) {
   }
 
   return (
-    <div className="mb-10 mt-24 flex h-full max-w-[1000px] flex-col items-center justify-center">
+    <div className="mb-10 mt-24 flex h-full max-w-[1000px] flex-col items-center justify-center grow">
       <div className="flex h-full w-full max-w-[550px] flex-col items-center justify-center px-7 sm:max-w-[600px] lg:h-[550px] lg:max-w-[950px] lg:flex-row lg:items-start">
         <img
           src={data?.image}

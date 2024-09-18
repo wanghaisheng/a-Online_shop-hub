@@ -29,7 +29,7 @@ function Menu({ closingMenu }: MenuProps) {
 
   return (
     <div
-      className="fixed left-0 top-0 z-50 h-screen w-dvw bg-white"
+      className="fixed left-0 top-0 z-50 h-full w-dvw bg-white max-h-lvh min-h-svh"
       style={{ display: closeMenu }}
     >
       <div className="flex h-full w-full lg:justify-between">
