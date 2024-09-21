@@ -29,7 +29,7 @@ function Menu({ closingMenu }: MenuProps) {
 
   return (
     <div
-      className="fixed left-0 top-0 z-50 h-full w-dvw bg-white max-h-lvh min-h-svh"
+      className="fixed left-0 top-0 z-50 h-lvh w-dvw bg-white"
       style={{ display: closeMenu }}
     >
       <div className="flex h-full w-full lg:justify-between">
@@ -120,10 +120,10 @@ function Menu({ closingMenu }: MenuProps) {
           className="relative hidden lg:block"
           loading="lazy"
         />
-        <h5 className="absolute bottom-28 right-0 p-10 text-2xl font-bold text-black sm:bottom-10 lg:text-white">
+        <h5 className="absolute bottom-32 right-0 p-10 text-2xl font-bold text-black sm:bottom-10 lg:text-white">
           Discover
         </h5>
-        <p className="absolute bottom-[90px] right-0 p-10 text-lg text-black sm:bottom-4 lg:text-white">
+        <p className="absolute bottom-[100px] right-0 p-10 text-lg text-black sm:bottom-4 lg:text-white">
           Our Shop!
         </p>
       </div>

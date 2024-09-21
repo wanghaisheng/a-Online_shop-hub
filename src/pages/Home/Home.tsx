@@ -27,7 +27,7 @@ function Home() {
         ></div>
         {/* desktop image */}
         <div
-          className="hidden max-h-full min-h-screen w-full aspect-[16/9] bg-cover bg-top bg-no-repeat lg:block"
+          className="hidden aspect-[16/9] max-h-full min-h-screen w-full bg-cover bg-top bg-no-repeat lg:block"
           style={{
             backgroundImage: `url(${imgMix})`,
           }}
@@ -35,7 +35,7 @@ function Home() {
         <NavLinksHome title="Men" link="/clothing/men" />
       </section>
       {/* Blooming time section*/}
-      <section className="relative flex h-[720px] w-full items-end bg-white-smoke sm:h-[750px] min-[1400px]:h-[950px]">
+      <section className="relative flex h-[720px] w-full items-end bg-white-smoke sm:h-[750px] min-[1400px]:h-[950px] min-[1900px]:h-[1400px]">
         {/* mobile image */}
         <div
           className="top-0 block h-[650px] w-full bg-cover bg-center bg-no-repeat sm:hidden"
@@ -45,7 +45,7 @@ function Home() {
         ></div>
         {/* desktop image */}
         <div
-          className="hidden h-[650px] w-full bg-cover bg-center bg-no-repeat sm:block xl:h-[650px] min-[1400px]:h-[850px]"
+          className="hidden h-[650px] w-full bg-cover bg-center bg-no-repeat sm:block xl:h-[650px] min-[1400px]:h-[850px] min-[1900px]:h-[1300px]"
           style={{
             backgroundImage: `url(${spring})`,
           }}

@@ -57,10 +57,10 @@ function MainCarousel() {
   }, [autoSlideCarouselIsActive, autoSlideInterval, nextSlide]);
 
   return (
-    <div className="relative m-auto flex h-[600px] w-auto justify-center md:min-h-screen md:max-h-screen ">
+    <div className="relative m-auto flex h-auto max-h-screen min-h-[600px] w-full justify-center">
       <div
         style={{ backgroundImage: `url(${images[imageIndex].image})` }}
-        className="aspect-[16/9] max-h-full min-h-[600px] w-full bg-cover bg-center bg-no-repeat duration-700"
+        className="aspect-[16/9] h-auto max-h-screen min-h-[600px] w-full bg-cover bg-center bg-no-repeat duration-700"
       ></div>
       <h1
         className={`absolute bottom-[180px] block cursor-pointer text-center ${images[imageIndex].color} ${images[imageIndex].font} w-[280px] leading-[41px]`}
@@ -76,13 +76,13 @@ function MainCarousel() {
         </NavLink>
       </h1>
       <div
-        className="absolute bottom-[50%] left-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:left-8 drop-shadow-md"
+        className="absolute bottom-[50%] left-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white drop-shadow-md hover:scale-110 md:left-8"
         data-test-id="carousel-arrow-left"
       >
         <BsChevronCompactLeft size={40} onClick={prevSlide} />
       </div>
       <div
-        className="absolute bottom-[50%] right-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white hover:scale-110 md:right-8 drop-shadow-md"
+        className="absolute bottom-[50%] right-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white drop-shadow-md hover:scale-110 md:right-8"
         data-test-id="carousel-arrow-right"
       >
         <BsChevronCompactRight size={40} onClick={nextSlide} />
@@ -91,9 +91,9 @@ function MainCarousel() {
         {images.map((_, index) => (
           <button key={index} onClick={() => setImageIndex(index)}>
             {index === imageIndex ? (
-                <BsDashLg size={55} className="text-black hover:scale-110" />
+              <BsDashLg size={55} className="text-black hover:scale-110" />
             ) : (
-              <div className="h-[3.5px] w-9 rounded-full border-[1px] border-black hover:scale-110 mx-1"></div>
+              <div className="mx-1 h-[3.5px] w-9 rounded-full border-[1px] border-black hover:scale-110"></div>
             )}
           </button>
         ))}
