@@ -111,7 +111,7 @@ function Menu({ closingMenu }: MenuProps) {
               </h2>
             </button>
           </div>
-          <div className="container absolute bottom-[60px] sm:bottom-4 flex justify-center border-b-[2px] sm:border-b-0 sm:justify-normal sm:pl-20 pb-3">
+          <div className="container absolute bottom-[100px] sm:bottom-4 flex justify-center border-b-[2px] sm:border-b-0 sm:justify-normal sm:pl-20 pb-3">
             <SocialIcons />
           </div>
         </div>
@@ -120,10 +120,10 @@ function Menu({ closingMenu }: MenuProps) {
           className="relative hidden lg:block"
           loading="lazy"
         />
-        <h5 className="absolute bottom-32 right-0 p-10 text-2xl font-bold text-black sm:bottom-10 lg:text-white">
+        <h5 className="absolute bottom-36 right-0 p-10 text-2xl font-bold text-black sm:bottom-10 lg:text-white">
           Discover
         </h5>
-        <p className="absolute bottom-[100px] right-0 p-10 text-lg text-black sm:bottom-4 lg:text-white">
+        <p className="absolute bottom-[120px] right-0 p-10 text-lg text-black sm:bottom-4 lg:text-white">
           Our Shop!
         </p>
       </div>

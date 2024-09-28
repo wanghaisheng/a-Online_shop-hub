@@ -57,48 +57,51 @@ function MainCarousel() {
   }, [autoSlideCarouselIsActive, autoSlideInterval, nextSlide]);
 
   return (
-    <div className="relative m-auto flex h-auto max-h-screen min-h-[600px] w-full justify-center">
-      <div
-        style={{ backgroundImage: `url(${images[imageIndex].image})` }}
-        className="aspect-[16/9] h-auto max-h-screen min-h-[600px] w-full bg-cover bg-center bg-no-repeat duration-700"
-      ></div>
-      <h1
-        className={`absolute bottom-[180px] block cursor-pointer text-center ${images[imageIndex].color} ${images[imageIndex].font} w-[280px] leading-[41px]`}
-      >
-        <NavLink to="/clothing/women">
-          {images[imageIndex].title}
-          <p
-            className="absolute right-1/2 top-1/2 block -translate-y-1/2 translate-x-1/2 transform cursor-pointer border-b-2 font-Oswald text-lg font-normal text-white"
-            style={{ marginTop: "75px", textDecorationThickness: "1.5px" }}
-          >
-            View all
-          </p>
-        </NavLink>
-      </h1>
-      <div
-        className="absolute bottom-[50%] left-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white drop-shadow-md hover:scale-110 md:left-8"
-        data-test-id="carousel-arrow-left"
-      >
-        <BsChevronCompactLeft size={40} onClick={prevSlide} />
+    // <div className="h-screen w-full">
+      <div className="relative flex h-[calc(100vh-12px)] max-h-screen min-h-[600px] w-full justify-center 3xl:h-[90vh]">
+        <div
+          style={{ backgroundImage: `url(${images[imageIndex].image})` }}
+          className="h-full max-h-screen min-h-[600px] w-full bg-cover bg-center bg-no-repeat duration-700"
+        ></div>
+        {/*  */}
+        <h1
+          className={`absolute bottom-[180px] block cursor-pointer text-center ${images[imageIndex].color} ${images[imageIndex].font} w-[280px] leading-[41px]`}
+        >
+          <NavLink to="/clothing/women">
+            {images[imageIndex].title}
+            <p
+              className="absolute right-1/2 top-1/2 block -translate-y-1/2 translate-x-1/2 transform cursor-pointer border-b-2 font-Oswald text-lg font-normal text-white"
+              style={{ marginTop: "75px", textDecorationThickness: "1.5px" }}
+            >
+              View all
+            </p>
+          </NavLink>
+        </h1>
+        <div
+          className="absolute bottom-[50%] left-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white drop-shadow-md hover:scale-110 md:left-8"
+          data-test-id="carousel-arrow-left"
+        >
+          <BsChevronCompactLeft size={40} onClick={prevSlide} />
+        </div>
+        <div
+          className="absolute bottom-[50%] right-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white drop-shadow-md hover:scale-110 md:right-8"
+          data-test-id="carousel-arrow-right"
+        >
+          <BsChevronCompactRight size={40} onClick={nextSlide} />
+        </div>
+        <div className="absolute bottom-1 flex cursor-pointer gap-[1px]">
+          {images.map((_, index) => (
+            <button key={index} onClick={() => setImageIndex(index)}>
+              {index === imageIndex ? (
+                <BsDashLg size={55} className="text-black hover:scale-110" />
+              ) : (
+                <div className="mx-1 h-[3.5px] w-9 rounded-full border-[1px] border-black hover:scale-110"></div>
+              )}
+            </button>
+          ))}
+        </div>
       </div>
-      <div
-        className="absolute bottom-[50%] right-3 -translate-x-0 translate-y-[50%] cursor-pointer text-white drop-shadow-md hover:scale-110 md:right-8"
-        data-test-id="carousel-arrow-right"
-      >
-        <BsChevronCompactRight size={40} onClick={nextSlide} />
-      </div>
-      <div className="absolute bottom-1 flex cursor-pointer gap-[1px]">
-        {images.map((_, index) => (
-          <button key={index} onClick={() => setImageIndex(index)}>
-            {index === imageIndex ? (
-              <BsDashLg size={55} className="text-black hover:scale-110" />
-            ) : (
-              <div className="mx-1 h-[3.5px] w-9 rounded-full border-[1px] border-black hover:scale-110"></div>
-            )}
-          </button>
-        ))}
-      </div>
-    </div>
+    // </div>
   );
 }
 

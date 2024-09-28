@@ -6,6 +6,9 @@ export default {
       colors: {
         "white-smoke": "#f5f5f5",
       },
+      screens: {
+        '3xl': '1700px',
+      },
       keyframes: {
         pingOnce: {
           "0%, 100%": { transform: "scale(1)", opacity: "1" },
