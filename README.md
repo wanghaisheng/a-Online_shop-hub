@@ -1,16 +1,13 @@
-# Online_shop project
+# <img src='./public/Online_ShopLogo.png' alt="screenshot" width="70" height="auto" /> Online_shop project
 
 Project built in React💙
 
 A responsive e-commerce application simulating an online fashion shop, where users can browse fashion items, add them to cart and favorites. Integrated with the <a href="https://fakestoreapi.com/docs" target="_blank" rel="noreferrer" rel="noopener"> FakeStore API </a> to dynamically display product data.
 
 
-➡️ Project Link: 
+➡️ Project Link: https://onlineshop2024.netlify.app/
 
 Online_shop has a mobile version 📱 !!
-
-## Screenshots
-
 
 
 ## About the Project
@@ -32,6 +29,20 @@ Online_shop has a mobile version 📱 !!
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 - [Contact](#contact)
+
+
+## Screenshots
+
+<div align="center"> 
+  <img src="./public/os-fullPage.png" alt="screenshot" width="405" height="auto"/>
+  <img src="./public/os-category.png" alt="screenshot" width="405" height="auto"/>
+  <img src="./public/os-menu.png" alt="screenshot" />
+  <img src="./public/os-swiper.png" alt="screenshot" />
+  <img src="./public/os-product.png" alt="screenshot" width="405" height="auto"/>
+  <img src="./public/os-cart.png" alt="screenshot" width="405" height="auto"/>
+  <img src='./public/os-mobile-2.png' alt="screenshot" />
+  <img src="./public/os-mobile-1.png" alt="screenshot" />
+</div>
 
 
 ## Usage
@@ -113,4 +124,4 @@ Start the server
 
 Created by Kasia Rosińska [@RosinskaK](https://www.linkedin.com/in/katarzyna-rosinska/) - feel free to contact me! 👋
 
-Live link:
+Live link: https://onlineshop2024.netlify.app/
