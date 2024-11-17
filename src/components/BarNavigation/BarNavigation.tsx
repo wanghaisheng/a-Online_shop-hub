@@ -95,7 +95,7 @@ function BarNavigation({
               <Logo color={color} />
             </span>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center pr-2">
             {/* FAVORITE ICON */}
             {visibleHeartIcon ? (
               <>
@@ -110,7 +110,7 @@ function BarNavigation({
                 {favoriteList.length > 0 ? (
                   // dot icon that shows amount of items in favorite
                   <span
-                    className={`absolute bottom-[13px] right-[53px] flex h-[18px] w-[18px] items-center justify-center rounded-full border-[1px] border-white bg-black text-xs font-semibold text-white ${animatePingOnce ? "animate-pingOnce" : ""}`}
+                    className={`absolute bottom-[13px] right-[60px] flex h-[18px] w-[18px] items-center justify-center rounded-full border-[2px] border-white bg-black text-xs font-semibold text-white ${animatePingOnce ? "animate-pingOnce" : ""}`}
                   >
                     {favoriteList.length}
                   </span>
@@ -133,7 +133,7 @@ function BarNavigation({
             {cartQuantity > 0 ? (
               // dot icon that shows amount of items added to cart
               <span
-                className={`absolute bottom-3 right-[9px] flex h-[18px] w-[18px] items-center justify-center rounded-full border-[1px] 
+                className={`absolute bottom-3 right-[13px] flex h-[18px] w-[18px] items-center justify-center rounded-full border-[2px] 
             border-white bg-black text-xs font-semibold text-white ${animatePingOnceCart ? "animate-pingOnceCart" : ""}`}
               >
                 {cartQuantity}

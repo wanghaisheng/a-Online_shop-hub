@@ -23,7 +23,7 @@ function ProductItemStyling({ productId }: ProductIdForFetching) {
       <div className="flex h-full w-full max-w-[550px] flex-col items-center justify-center px-7 sm:max-w-[600px] lg:h-[550px] lg:max-w-[950px] lg:flex-row lg:items-start">
         <img
           src={data?.image}
-          className="h-[400px] w-full max-w-[300px] bg-white bg-center bg-no-repeat object-contain p-8 lg:h-[500px] lg:max-w-[400px]"
+          className="h-[400px] w-[300px] bg-white bg-center bg-no-repeat object-contain p-4 lg:h-[500px] lg:w-[380px] lg:min-w-[380px]"
           loading="lazy"
         />
         <div className="lg:pl-5">

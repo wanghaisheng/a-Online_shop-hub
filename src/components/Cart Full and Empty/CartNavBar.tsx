@@ -15,7 +15,7 @@ function CartNavBar({ color }: colorProps) {
   );
 
   return (
-    <section className="z-40 flex h-14 w-full items-center justify-between">
+    <section className="z-40 flex h-14 w-full items-center justify-between px-5">
       <TransparentBtnNavigation link="/">
         <BsArrowLeft
           size={32}
@@ -36,7 +36,7 @@ function CartNavBar({ color }: colorProps) {
         {favoriteList.length > 0 ? (
           // dot icon that shows amount of items in favorite
           <span
-            className="absolute bottom-[10px] right-[5px] flex h-[18px] w-[18px] items-center justify-center rounded-full border-[1px] border-white bg-black text-xs font-semibold text-white"
+            className="absolute bottom-[10px] right-[5px] flex h-[18px] w-[18px] items-center justify-center rounded-full border-[2px] border-white bg-black text-xs font-semibold text-white"
           >
             {favoriteList.length}
           </span>
